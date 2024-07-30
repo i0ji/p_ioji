@@ -4,6 +4,19 @@
   border: none;
 }
 
+body {
+  background-color: rgb(26, 4, 4);
+  background-image: url("./assets/bg.jpg");
+  background-size: cover;
+  zoom: 1;
+}
+
+#root {
+  max-width: 1200px;
+  margin: 0 auto;
+  height: 100vh;
+}
+
 *,
 *::before,
 *::after {
