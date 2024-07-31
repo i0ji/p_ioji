@@ -24,13 +24,11 @@
     "noFallthroughCasesInSwitch": true,
 
     /* Alias */
+    "baseUrl": "src",
     "paths": {
-      "components/*" : ["components/*"],
-      "declarations/*" : ["declarations/*"],
-      "assets/*" : ["assets/*"],
-      "data/*" : ["data/*"],
-      "styles/*" : ["styles/*"],
-      "src/*" : ["./*"]
+      "components/*": ["components/*"],
+      "pages/*": ["pages/*"],
+      "styles/*": ["styles/*"]
     }
   },
   "include": ["src"]
