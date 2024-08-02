@@ -1,0 +1,34 @@
+@import 'styles/_font.scss';
+
+* {
+  padding: 0;
+  margin: 0;
+  border: none;
+}
+
+body {
+  background-color: rgb(26, 4, 4);
+  background-image: url("./assets/bg.jpg");
+  background-size: cover;
+  zoom: 1;
+}
+
+#root {
+  max-width: 1200px;
+  margin: 0 auto;
+  height: 100vh;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+a, a:link, a:visited  {
+  text-decoration: none;
+}
+
+a:hover  {
+  text-decoration: none;
+}

@@ -1,0 +1,21 @@
+@import "styles/mixins";
+
+h1 {
+  font-size: xx-large;
+  font-weight: 900;
+}
+
+section {
+  width: 90vw;
+  height: 90vh;
+
+  @include flex_centered;
+
+  border: 11px solid red;
+}
+
+.homepage {
+  flex-direction: column;
+  justify-content: space-between;
+  
+}

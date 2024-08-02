@@ -1,0 +1,19 @@
+.hammerButton {
+  width: 200px;
+  height: 200px;
+
+  border-radius: 50%;
+
+  background-image: url("assets/icons/hammer.webp");
+  background-position: center;
+  background-size: cover;
+
+  transition: 0.5s all ease;
+
+  cursor: pointer;
+}
+
+.hammerButton:hover {
+  transform: scale(1.01);
+  filter: blur(.5px);
+}

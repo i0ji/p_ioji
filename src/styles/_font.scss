@@ -1,0 +1,14 @@
+@font-face {
+  font-family: "Chakra";
+  src:
+    local("Chakra"),
+    url("assets/font/Chakra.ttf") format("ttf");
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+}
+
+body {
+  font-family: Chakra, sans-serif;
+  line-height: 27px;
+}
