@@ -27,6 +27,22 @@ export default function App() {
           element={<HomePage />}
           path="/home"
         />
+        {/* <Route
+          element={<HomePage />}
+          path="/about"
+        />
+        <Route
+          element={<HomePage />}
+          path="/git"
+        />
+        <Route
+          element={<HomePage />}
+          path="/examples"
+        />
+        <Route
+          element={<HomePage />}
+          path="/contacts"
+        /> */}
 
       </Routes>
 

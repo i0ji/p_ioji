@@ -3,11 +3,13 @@ import { NavLink } from "react-router-dom";
 
 export default function HammerButton() {
   return (
-    <NavLink  to="/home">
+    <NavLink to="/home">
+      
       <button
         className={styles.hammerButton}
       >
       </button>
+
     </NavLink>
   );
 }
