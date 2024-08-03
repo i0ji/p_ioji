@@ -7,7 +7,7 @@ export default function App() {
 
 
   // ---------- CONSOLE
-  
+
   const location = useLocation();
   console.log("PATHNAME: ", location.pathname);
 
