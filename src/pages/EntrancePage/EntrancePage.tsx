@@ -1,3 +1,4 @@
+import styles from "./EntrancePage.module.scss";
 import { HammerButton } from "components/index";
 
 
@@ -5,8 +6,10 @@ import { HammerButton } from "components/index";
 
 export default function EntrancePage() {
     return (
-        <section>
+        <section className={styles.entrance}>
+
             <HammerButton />
+
         </section>
     )
 }

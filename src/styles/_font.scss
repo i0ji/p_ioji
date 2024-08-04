@@ -1,14 +1,14 @@
 @font-face {
-  font-family: "Chakra";
+  font-family: "Oswald";
   src:
-    local("Chakra"),
-    url("assets/font/Chakra.ttf") format("ttf");
+    local("Oswald"),
+    url("assets/font/oswald.ttf") format("ttf");
   font-style: normal;
-  font-weight: 600;
+  font-weight: bold;
   font-display: swap;
 }
 
 body {
-  font-family: Chakra, sans-serif;
+  font-family: Oswald, sans-serif;
   line-height: 27px;
 }
