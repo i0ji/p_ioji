@@ -28,7 +28,8 @@
     "paths": {
       "components/*": ["components/*"],
       "pages/*": ["pages/*"],
-      "styles/*": ["styles/*"]
+      "styles/*": ["styles/*"],
+      "declarations/*": ["declarations/*"]
     }
   },
   "include": ["src"]

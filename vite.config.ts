@@ -17,6 +17,7 @@ export default defineConfig({
       pages: "/src/pages",
       styles: "/src/styles",
       src: ".",
+      declarations: "/src/declarations"
     },
   },
   server: {
