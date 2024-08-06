@@ -24,10 +24,23 @@ export default function HomePage() {
                             Examples
                         </NavLink>
                     </li>
+                    <li>
+                        <NavLink to="/examples">
+                            Contacts
+                        </NavLink>
+                    </li>
+                    <li>
+                        <NavLink to="/examples">
+                            Cat
+                        </NavLink>
+                    </li>
                 </ul>
             </nav>
-            <h1>HELLO!</h1>
-            <p>My name is Ioann, I`m frontend developer/devops engineer</p>
+            <div className={styles.homepage_info}>
+                <h1>HELLO!</h1>
+                <p>My name is Ioann, I`m frontend developer/devops engineer</p>
+            </div>
+
             <NavLink to={"/"}>
                 BACK
             </NavLink>

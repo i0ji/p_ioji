@@ -1,9 +1,20 @@
+@import "styles/mixins";
+
+
+//RECHECK NAME
 main {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include flex_centered;
 
     height: 100vh;
 
     overflow: hidden;
 }
+
+section {
+    @include flex_centered;
+  
+    width: 90vw;
+    height: 90vh;
+
+    border: 10px solid teal;
+  }

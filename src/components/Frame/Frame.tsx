@@ -1,11 +1,11 @@
 
 import styles from "./Frame.module.scss";
-import { IProps } from "declarations/types";
+import { Children } from "react";
 
-export default function Frame(children: IProps) {
+export default function Frame() {
     return (
         <section className={styles.commonFrame}>
-            {children}
+        
         </section>
     )
 }

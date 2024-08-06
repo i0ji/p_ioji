@@ -5,16 +5,24 @@ h1 {
   font-weight: 900;
 }
 
-section {
-  @include flex_centered;
-
-  width: 90vw;
-  height: 90vh;
-}
-
 .homepage {
   width: 100%;
 
   flex-direction: column;
   justify-content: space-between;
+
+  > nav > ul {
+    display: flex;
+    justify-content: space-between;
+    
+    list-style: none;
+
+    > li {
+      margin: 0 10px;
+    }
+  }
+
+  &_main {
+    background-color: yellowgreen;
+  }
 }
