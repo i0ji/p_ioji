@@ -20,7 +20,7 @@ export default function HomePage() {
                     </li>
                     <li>
                         Contacts
-                    </li>
+                    </li> 
                 </ul>
 
 
