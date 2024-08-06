@@ -1,13 +1,13 @@
 import "./App.scss";
 import { Route, Routes, useLocation } from 'react-router-dom';
-import { HomePage, EntrancePage } from "pages/index";
+import { HomePage, EntrancePage, GitPage } from "pages/index";
 
 
 export default function App() {
 
 
   // ---------- CONSOLE
-  
+
   const location = useLocation();
   console.log("PATHNAME: ", location.pathname);
 
@@ -27,6 +27,23 @@ export default function App() {
           element={<HomePage />}
           path="/home"
         />
+        <Route
+          element={<GitPage />}
+          path="/git"
+        />
+        {/* <Route
+          element={<HomePage />}
+          path="/about"
+        />
+    
+        <Route
+          element={<HomePage />}
+          path="/examples"
+        />
+        <Route
+          element={<HomePage />}
+          path="/contacts"
+        /> */}
 
       </Routes>
 

@@ -6,16 +6,15 @@ h1 {
 }
 
 section {
-  width: 90vw;
-  height: 90vh;
-
   @include flex_centered;
 
-  border: 11px solid red;
+  width: 90vw;
+  height: 90vh;
 }
 
 .homepage {
+  width: 100%;
+
   flex-direction: column;
   justify-content: space-between;
-
 }

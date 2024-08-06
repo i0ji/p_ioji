@@ -10,27 +10,24 @@ export default function HomePage() {
             <nav>
                 <ul>
                     <li>
-                        About
+                        <NavLink to="/about">
+                            About
+                        </NavLink>
                     </li>
                     <li>
-                        Git
+                        <NavLink to="/git">
+                            Git
+                        </NavLink>
                     </li>
                     <li>
-                        Examples
+                        <NavLink to="/examples">
+                            Examples
+                        </NavLink>
                     </li>
-                    <li>
-                        Contacts
-                    </li> 
                 </ul>
-
-
-
-
-
-
             </nav>
             <h1>HELLO!</h1>
-            <p>My name is IOANN, I`m frontend engeneer</p>
+            <p>My name is Ioann, I`m frontend developer/devops engineer</p>
             <NavLink to={"/"}>
                 BACK
             </NavLink>

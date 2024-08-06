@@ -1,4 +1,4 @@
-@import 'styles/_font.scss';
+@import "styles/_font.scss";
 
 * {
   padding: 0;
@@ -7,16 +7,22 @@
 }
 
 body {
-  background-color: rgb(26, 4, 4);
-  background-image: url("./assets/bg.jpg");
+  background: linear-gradient(
+    90deg,
+    rgba(2, 0, 36, 1) 8%,
+    rgba(36, 51, 93, 1) 50%,
+    rgba(29, 106, 111, 1) 91%
+  );
+  // background-image: url("./assets/bg.jpg");
   background-size: cover;
+
   zoom: 1;
 }
 
 #root {
   max-width: 1200px;
-  margin: 0 auto;
   height: 100vh;
+  margin: 0 auto;
 }
 
 *,
@@ -25,10 +31,15 @@ body {
   box-sizing: border-box;
 }
 
-a, a:link, a:visited  {
+a,
+a:link,
+a:visited {
   text-decoration: none;
+  color: inherit;
+  transition: 0.5s all ease-in-out;
 }
 
-a:hover  {
+a:hover {
   text-decoration: none;
+  color: white;
 }
