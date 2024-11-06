@@ -9,7 +9,7 @@ export default function TextTyping() {
 
 
     return (
-        <div className='glitch'>
+        <div>
             <TypeAnimation
                 sequence={['Well', 500, 'Well, oh...', 500, 'Well, here we are...', 500]}
                 style={{ fontSize: '2em' }}
