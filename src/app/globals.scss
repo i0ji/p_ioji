@@ -1,0 +1,12 @@
+@import "../styles/reset";
+@import "../styles/mixin";
+
+body {
+  @include flex-center;
+  height: 100vh;
+  background: #131313;
+  color: #fff;
+  font-size: 36px;
+  font-family: 'Fira Mono', monospace;
+  letter-spacing: -7px;
+}

@@ -1,0 +1,7 @@
+@import "../styles/mixin";
+
+.main {
+  @include flex-center;
+  height: 40vh;
+  width: 40vw;
+}
