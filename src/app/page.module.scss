@@ -1,3 +1,5 @@
+@use '@/styles/vars' as *;
+
 .main {
-  background-color: red;
+  background-color: $brandGray;
 }
