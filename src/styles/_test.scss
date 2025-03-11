@@ -1,0 +1,17 @@
+//FIXME
+//LATER
+//OPTION
+
+@mixin test($borderColor, $bgColor) {
+  @if $borderColor != null {
+    border: 3px solid $borderColor;
+  }
+
+  @if $bgColor != null {
+    background-color: $bgColor;
+  }
+}
+
+.test {
+  @include test(red, yellow);
+}
