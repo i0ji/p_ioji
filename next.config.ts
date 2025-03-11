@@ -8,7 +8,7 @@ const nextConfig: NextConfig = {
     unoptimized: false,
   },
   basePath: '',
-  assetPrefix: './',
+  assetPrefix: '.',
   webpack: (config) => {
     // config.resolve.alias['@styles'] = './src/styles/*';
     config.module.rules.push({
