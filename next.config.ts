@@ -5,7 +5,24 @@ const nextConfig: NextConfig = {
   output: 'export',
   images: {
     //FIXME
-    unoptimized: false
+    unoptimized: false,
+  },
+  basePath: '',
+  assetPrefix: '.',
+  webpack: (config) => {
+    config.resolve.alias['@styles'] = './src/styles/*';
+    config.module.rules.push({
+      test: /\.(woff|woff2|eot|ttf|otf)$/,
+      use: {
+        loader: 'file-loader',
+        options: {
+          name: '[name].[hash].[ext]',
+          outputPath: 'fonts/',
+          publicPath: '/_next/static/fonts/',
+        },
+      },
+    });
+    return config;
   },
 };
 
