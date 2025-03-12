@@ -49,12 +49,3 @@
     }
   }
 }
-
-// @keyframes glitch-skew {
-//   $steps: 10;
-//   @for $i from 0 through $steps {
-//     #{percentage($i*(1/$steps))} {
-//       transform: skew((random(10) - 5) + deg);
-//     }
-//   }
-// }

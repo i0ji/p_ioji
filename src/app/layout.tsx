@@ -1,4 +1,3 @@
-import './reset.scss';
 import './globals.scss';
 
 export default function RootLayout({
