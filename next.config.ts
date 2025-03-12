@@ -1,7 +1,9 @@
 import type { NextConfig } from 'next';
 
 //LATER
+//OPTION
 const isProd = process.env.NODE_ENV === 'production';
+const repoName = 'p_ioji';
 
 const nextConfig: NextConfig = {
   reactStrictMode: true,
@@ -10,10 +12,8 @@ const nextConfig: NextConfig = {
     //FIXME
     unoptimized: false,
   },
-  // basePath: isProd ? '/p_ioji' : '.',
-  // assetPrefix: isProd ? '/p_ioji/' : '',
-  basePath: '',
-  assetPrefix: '.',
+  basePath: isProd ? `/${repoName}` : '',
+  assetPrefix: isProd ? `/${repoName}/` : '',
   webpack: (config) => {
     config.resolve.alias['@styles'] = './src/styles/*';
     return config;
