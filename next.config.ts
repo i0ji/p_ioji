@@ -11,7 +11,7 @@ const nextConfig: NextConfig = {
     unoptimized: false,
   },
   basePath: isProd ? '/p_ioji' : '',
-  assetPrefix: isProd ? '/p_ioji/' : '',
+  assetPrefix: isProd ? '/p_ioji/' : '.',
   webpack: (config) => {
     config.resolve.alias['@styles'] = './src/styles/*';
     return config;
