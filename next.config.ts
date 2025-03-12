@@ -1,5 +1,8 @@
 import type { NextConfig } from 'next';
 
+//LATER
+const isProd = process.env.NODE_ENV === 'production';
+
 const nextConfig: NextConfig = {
   reactStrictMode: true,
   output: 'export',
@@ -7,8 +10,8 @@ const nextConfig: NextConfig = {
     //FIXME
     unoptimized: false,
   },
-  basePath: '',
-  assetPrefix: '.',
+  basePath: isProd ? '/p_ioji' : '',
+  assetPrefix: isProd ? '/p_ioji/' : '',
   webpack: (config) => {
     // config.resolve.alias['@styles'] = './src/styles/*';
     config.module.rules.push({
