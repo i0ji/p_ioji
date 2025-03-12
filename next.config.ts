@@ -10,8 +10,10 @@ const nextConfig: NextConfig = {
     //FIXME
     unoptimized: false,
   },
-  basePath: isProd ? '/p_ioji' : '',
-  assetPrefix: isProd ? '/p_ioji/' : '.',
+  // basePath: isProd ? '/p_ioji' : '.',
+  // assetPrefix: isProd ? '/p_ioji/' : '',
+  basePath: '',
+  assetPrefix: '.',
   webpack: (config) => {
     config.resolve.alias['@styles'] = './src/styles/*';
     return config;
