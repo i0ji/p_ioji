@@ -1,5 +1,11 @@
-@use '@/styles/vars' as *;
+@use '@/styles/index' as *;
 
 .main {
-  background-color: $brandGray;
+  @include flex(null, center, center);
+
+  text-align: center;
+  width: 500px;
+  height: 500px;
+
+  // border: 5px solid $brandTurquoise;
 }

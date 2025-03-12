@@ -2,7 +2,7 @@ export default function Examples() {
 
   return (
     <section>
-      <h1 className="fontBold">xccc ioji</h1>
+      <h1 className="fontBold">EXAMPLES</h1>
     </section>
   );
 }

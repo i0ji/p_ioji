@@ -8,7 +8,9 @@ export default function Home() {
   return (
     <main className={s.main}>
       <Link href="/main">
-        <h1 className="fontBold">ioji</h1>
+        <h1 className={`fontBold ${s.glitch}`} data-text="ioji">
+          ioji
+        </h1>
       </Link>
     </main>
   );
