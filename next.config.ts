@@ -13,18 +13,7 @@ const nextConfig: NextConfig = {
   basePath: isProd ? '/p_ioji' : '',
   assetPrefix: isProd ? '/p_ioji/' : '',
   webpack: (config) => {
-    // config.resolve.alias['@styles'] = './src/styles/*';
-    config.module.rules.push({
-      test: /\.(woff|woff2|eot|ttf|otf)$/,
-      use: {
-        loader: 'file-loader',
-        options: {
-          name: '[name].[hash].[ext]',
-          outputPath: 'fonts/',
-          publicPath: '/_next/static/fonts/',
-        },
-      },
-    });
+    config.resolve.alias['@styles'] = './src/styles/*';
     return config;
   },
 };
