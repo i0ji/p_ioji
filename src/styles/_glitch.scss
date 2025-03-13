@@ -1,3 +1,4 @@
+@use 'sass:math';
 @use '@/styles/mixin' as *;
 
 .glitch {
@@ -11,8 +12,6 @@
   color: white;
   font-size: 4em;
   letter-spacing: 0.5em;
-
-  //   animation: glitch-skew 1s infinite linear alternate-reverse;
 
   &::before {
     @include glitchCopy;
@@ -30,12 +29,33 @@
   }
 }
 
+// @keyframes glitch-anim {
+//   $steps: 20;
+//   @for $i from 0 through $steps {
+//     #{percentage($i*(1/$steps))} {
+//       clip: rect(random(100) + px, 9999px, random(100) + px, 0);
+//       transform: skew(math.div(random(100), 100) + deg);
+//     }
+//   }
+// }
+
+// @keyframes glitch-anim2 {
+//   $steps: 5;
+//   @for $i from 0 through $steps {
+//     #{percentage($i*(1/$steps))} {
+//       clip: rect(random(100) + px, 9999px, random(100) + px, 0);
+//       transform: skew(calc(random(100) / 100) + deg);
+//     }
+//   }
+// }
+
+
 @keyframes glitch-anim {
   $steps: 20;
   @for $i from 0 through $steps {
-    #{percentage($i*(1/$steps))} {
-      clip: rect(random(100) + px, 9999px, random(100) + px, 0);
-      transform: skew((random(100) / 100) + deg);
+    #{math.percentage(math.div($i, $steps))} {
+      clip: rect(math.random(100) + px, 9999px, math.random(100) + px, 0);
+      transform: skew(math.div(math.random(100), 100) + deg);
     }
   }
 }
@@ -43,9 +63,9 @@
 @keyframes glitch-anim2 {
   $steps: 5;
   @for $i from 0 through $steps {
-    #{percentage($i*(1/$steps))} {
-      clip: rect(random(100) + px, 9999px, random(100) + px, 0);
-      transform: skew((random(100) / 100) + deg);
+    #{math.percentage(math.div($i, $steps))} {
+      clip: rect(math.random(100) + px, 9999px, math.random(100) + px, 0);
+      transform: skew(math.div(math.random(100), 100) + deg);
     }
   }
 }
