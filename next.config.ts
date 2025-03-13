@@ -12,7 +12,7 @@ const nextConfig: NextConfig = {
     //FIXME
     unoptimized: false,
   },
-  basePath: isProd ? `/${repoName}` : '',
+  basePath: isProd ? `/${repoName}` : './',
   assetPrefix: isProd ? `/${repoName}/` : '',
   webpack: (config) => {
     config.resolve.alias['@styles'] = './src/styles/*';
