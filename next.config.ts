@@ -1,10 +1,5 @@
 import type { NextConfig } from 'next';
 
-//LATER
-//OPTION
-const isProd = process.env.NODE_ENV === 'production';
-const repoName = 'p_ioji';
-
 const nextConfig: NextConfig = {
   reactStrictMode: true,
   output: 'export',
@@ -13,9 +8,9 @@ const nextConfig: NextConfig = {
     unoptimized: false,
   },
   basePath: '',
-  assetPrefix: '.',
+  assetPrefix: '/',
   webpack: (config) => {
-    config.resolve.alias['@styles'] = './src/styles/*';
+    config.resolve.alias['@/styles'] = './src/styles/*';
     return config;
   },
 };
