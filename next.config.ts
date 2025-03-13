@@ -1,5 +1,7 @@
 import type { NextConfig } from 'next';
 
+const isProd = process.env.NODE_ENV === 'production';
+
 const nextConfig: NextConfig = {
   reactStrictMode: true,
   output: 'export',
@@ -7,12 +9,14 @@ const nextConfig: NextConfig = {
     //FIXME
     unoptimized: false,
   },
-  basePath: '',
-  assetPrefix: '/',
+  pageExtensions: ['js', 'jsx', 'mdx', 'ts', 'tsx'],
+  basePath: isProd ? '/p_ioji' : '',
+  assetPrefix: isProd ? '/p_ioji/' : '',
   webpack: (config) => {
-    config.resolve.alias['@/styles'] = './src/styles/*';
+    config.resolve.alias['@styles'] = './src/styles/*';
     return config;
   },
 };
 
 export default nextConfig;
+ 
