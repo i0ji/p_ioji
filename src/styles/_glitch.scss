@@ -1,0 +1,60 @@
+@use 'sass:math';
+@use '@/styles/mixin' as *;
+
+.glitch {
+  color: white;
+  font-size: 4em;
+  letter-spacing: 0.5em;
+}
+
+.glitch:hover {
+  position: relative;
+  color: white;
+  font-size: 4em;
+  letter-spacing: 0.5em;
+
+  &::before {
+    @include glitchCopy;
+    left: 2px;
+    text-shadow: -2px 0 #ff00c1;
+    clip: rect(44px, 450px, 56px, 0);
+    animation: glitch-anim 5s infinite linear alternate-reverse;
+  }
+
+  &::after {
+    @include glitchCopy;
+    left: -2px;
+    text-shadow: -2px 0 #00fff9, 2px 2px #ff00c1;
+    animation: glitch-anim2 1s infinite linear alternate-reverse;
+  }
+}
+
+@keyframes glitch-anim {
+  $steps: 20;
+  @for $i from 0 through $steps {
+    #{math.percentage(math.div($i, $steps))} {
+      clip: rect(
+        math.random(100) + px,
+        9999px,
+        math.random(100) + px,
+        0
+      );
+      transform: skew(math.div(math.random(100), 100) + deg);
+    }
+  }
+}
+
+@keyframes glitch-anim2 {
+  $steps: 5;
+  @for $i from 0 through $steps {
+    #{math.percentage(math.div($i, $steps))} {
+      clip: rect(
+        math.random(100) + px,
+        9999px,
+        math.random(100) + px,
+        0
+      );
+      transform: skew(math.div(math.random(100), 100) + deg);
+    }
+  }
+}

@@ -1,7 +1,9 @@
+import s from "./page.module.scss"
+
 export default function Main() {
   return (
-    <section>
-      <h1 className="fontBold">xccc ioji</h1>
+    <section className={s.mainPage}>
+      <h1>MAIN</h1>
     </section>
   );
 }
