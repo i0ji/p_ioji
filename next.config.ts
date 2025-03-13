@@ -7,7 +7,7 @@ const nextConfig: NextConfig = {
   output: 'export',
   images: {
     //FIXME
-    unoptimized: false,
+    unoptimized: true,
   },
   pageExtensions: ['js', 'jsx', 'mdx', 'ts', 'tsx'],
   basePath: isProd ? '/p_ioji' : '',
@@ -19,4 +19,3 @@ const nextConfig: NextConfig = {
 };
 
 export default nextConfig;
- 
