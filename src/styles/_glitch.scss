@@ -1,22 +1,23 @@
 @use 'sass:math';
 @use '@/styles/mixin' as *;
+@use '@/styles/vars' as *;
 
 .glitch {
   color: white;
-  font-size: 4em;
-  letter-spacing: 0.5em;
+  font-size: 6em;
+  // letter-spacing: 0.5em;
 }
 
 .glitch:hover {
   position: relative;
   color: white;
-  font-size: 4em;
-  letter-spacing: 0.5em;
+  font-size: 6em;
+  // letter-spacing: 0.5em;
 
   &::before {
     @include glitchCopy;
     left: 2px;
-    text-shadow: -2px 0 #ff00c1;
+    text-shadow: -2px 0 $brandTurquoise;
     clip: rect(44px, 450px, 56px, 0);
     animation: glitch-anim 5s infinite linear alternate-reverse;
   }

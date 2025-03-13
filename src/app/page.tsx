@@ -8,12 +8,14 @@ export default function Home() {
   const tag = 'ioji';
 
   return (
-    <main className={s.main}>
-      <Link href="/main">
-        <h1 className={`fontBold ${s.glitch}`} data-text={tag}>
-          {tag}
-        </h1>
-      </Link>
+    <main className={s.entrance}>
+      <div className={s.entrance__window}>
+        <Link href="/main">
+          <h1 className={`fontBold ${s.glitch}`} data-text={tag}>
+            {tag}
+          </h1>
+        </Link>
+      </div>
     </main>
   );
 }
