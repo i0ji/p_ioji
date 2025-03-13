@@ -11,7 +11,7 @@ const nextConfig: NextConfig = {
   },
   pageExtensions: ['js', 'jsx', 'mdx', 'ts', 'tsx'],
   basePath: '/p_ioji',
-  assetPrefix: './',
+  assetPrefix: '.',
   webpack: (config) => {
     config.resolve.alias['@styles'] = './src/styles/*';
     return config;
