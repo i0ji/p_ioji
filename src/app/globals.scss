@@ -20,20 +20,19 @@ a:hover {
 }
 
 html {
+  @include flex(null, center, center);
+
   height: 100vh;
 
   background-color: $brandGray;
-
   overflow: hidden;
 
   body {
     height: 100vh;
-    @include flex(column, center, center);
-
-    margin: auto auto;
-
     max-width: 1440px;
 
-    // border: 1px solid $brandTurquoise;
+    margin: 0 auto;
+
+    overflow: hidden;
   }
 }
