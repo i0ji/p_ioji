@@ -9,7 +9,7 @@ export default function Home() {
     <main className={s.main}>
       <Link href="/main">
         <h1 className={`fontBold ${s.glitch}`} data-text="ioji">
-          ioji
+          ioji.
         </h1>
       </Link>
     </main>
