@@ -10,7 +10,7 @@ const nextConfig: NextConfig = {
     unoptimized: true,
   },
   pageExtensions: ['js', 'jsx', 'mdx', 'ts', 'tsx'],
-  basePath: '/p_ioji',
+  basePath: isProd ? '/p_ioji' : '',
   assetPrefix: './',
   webpack: (config) => {
     config.resolve.alias['@styles'] = './src/styles/*';
