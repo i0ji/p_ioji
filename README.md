@@ -8,4 +8,6 @@ v: 0.0.1
 First commit, add deps, reset style, markup, aliases; <br>
 d: 12.03.25 
 v: 0.0.1
-Make preliminary style and folder structure; add glitch; set deploy to gh-pages;
+Make preliminary style and folder structure; add glitch; set deploy to gh-pages;<br>
+d: 13.03.25 
+v: 0.0.2
