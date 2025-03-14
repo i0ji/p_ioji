@@ -1,4 +1,7 @@
+'use client'
+
 import {useState} from 'react';
+import Button from '@/components/Button/Button'
 
 const TabsPage = () => {
     const [activeTab, setActiveTab] = useState('tab1');
@@ -16,6 +19,7 @@ const TabsPage = () => {
                 {activeTab === 'tab2' && <p>Контент вкладки 2</p>}
                 {activeTab === 'tab3' && <p>Контент вкладки 3</p>}
             </div>
+            <Button></Button>
         </div>
     );
 };
