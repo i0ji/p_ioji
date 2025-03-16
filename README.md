@@ -11,4 +11,7 @@ v: 0.0.1
 Make preliminary style and folder structure; add glitch; set deploy to gh-pages;<br>
 d: 13.03.25 
 v: 0.0.2
-Set paths, glitch effect + dart sass 3 adaptation;
+Set paths, glitch effect + dart sass 3 adaptation;<br>
+d: 16.03.25 
+v: 0.0.3
+Add tabs/markup; Start styling;
