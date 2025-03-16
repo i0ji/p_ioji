@@ -1,0 +1,55 @@
+@use '@/styles/index' as *;
+
+.tabs__layout {
+  width: 80vw;
+  height: 80vh;
+
+  position: relative;
+
+  border: 1px solid cyan;
+  border-radius: 0.5rem;
+
+  overflow: hidden;
+
+  header {
+    background-color: cyan;
+    text-align: center;
+  }
+
+  nav {
+    width: 100%;
+    border: 1px solid cadetblue;
+
+    h1 {
+      text-align: center;
+    }
+
+    ul {
+      display: grid;
+      grid-template-columns: repeat(
+        auto-fit,
+        minmax(150px, 1fr)
+      );
+      list-style: none;
+      align-items: center;
+      justify-content: center;
+
+      .tabs__active {
+        background-color: $brandTurquoise;
+        color: $brandGray;
+        border: 1px solid gray;
+      }
+
+      li {
+        @include flex(null, center, center);
+
+        height: 3rem;
+
+        transition: .5s ease all;
+
+        border: .5px solid gray;
+        border-radius: 5px 5px 0 0;
+      }
+    }
+  }
+}

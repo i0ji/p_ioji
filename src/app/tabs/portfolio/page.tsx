@@ -1,7 +1,3 @@
-export default function Protfolio() {
-    return (
-        <div>
-            PROTFOLIO
-        </div>
-    );
+export default function Portfolio() {
+  return <div>PROTFOLIO</div>;
 }

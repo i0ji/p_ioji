@@ -1,7 +1,3 @@
 export default function Cat() {
-    return (
-        <div>
-CAT
-        </div>
-    );
+  return <div>something interesting about my lovely cat!</div>;
 }
