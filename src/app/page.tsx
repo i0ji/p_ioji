@@ -4,7 +4,7 @@ import s from './page.module.scss';
 
 export default function Home() {
     //CONSOLE
-    console.log('v: 0.0.2');
+    console.log('v: 0.0.3');
     //LATER
     const tag = 'ioji';
 

@@ -1,0 +1,13 @@
+@use '@/styles/index' as *;
+
+.tabs_layout {
+  width: 80vw;
+  height: 80vh;
+
+  position: relative;
+
+  border: 1px solid cyan;
+  border-radius: .5rem;
+
+  @include visual_test(red, null)
+}
