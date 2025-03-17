@@ -2,23 +2,32 @@ import s from './Button.module.scss';
 
 import {useRouter} from 'next/navigation';
 
-export default function Button(props: {
-    route: string;
-    text: string;
-}) {
-    const router = useRouter();
 
-    const handleMove = () => {
+export default function Button(props: ButtonPropsModel) {
+
+    const route = useRouter();
+
+
+    const handleHome = () => {
+        route.push('/');
+    }
+
+    const handleBack = () => {
         if (window.history.length > 1) {
-            router.back();
-        } else {
-            router.push(props.route);
+            route.back();
         }
+    }
+
+    const buttonHandlers = {
+        home: handleHome,
+        back: handleBack,
     };
 
+
     return (
-        <button className={s.commonButton} onClick={handleMove}>
+        <button className={s.commonButton} onClick={buttonHandlers[props.type]}>
             {props.text}
         </button>
-    );
+    )
+
 }

@@ -1,20 +1,25 @@
 'use client';
 
 import React from "react";
-import {usePathname} from 'next/navigation';
+import {usePathname, useRouter} from 'next/navigation';
 
 import Link from 'next/link';
 import {Button} from '@/components/index';
 
 import s from './layout.module.scss';
 
-export default function TabsLayout({
-                                       children,
-                                   }: {
-    children: React.ReactNode;
-}) {
+export default function TabsLayout({children}: { children: React.ReactNode }) {
+
     const currentPath = usePathname();
+
     console.log(currentPath);
+
+    const tabs = [
+        {href: '/tabs', label: 'Main'},
+        {href: '/tabs/about', label: 'About'},
+        {href: '/tabs/portfolio', label: 'Portfolio'},
+        {href: '/tabs/cat', label: 'Cat'},
+    ];
 
     return (
         <section className={s.tabs__layout}>
@@ -26,50 +31,17 @@ export default function TabsLayout({
             <nav>
                 <h1>Navigation</h1>
                 <ul>
-                    <Link href="/tabs">
-                        <li
-                            className={
-                                currentPath === '/tabs' ? s.tabs__active : ''
-                            }
-                        >
-                            Main
+                    {tabs.map((link) => (
+                        <li key={link.href} className={currentPath === link.href ? s.tabs__active : ''}>
+                            <Link href={link.href}>{link.label}
+                            </Link>
                         </li>
-                    </Link>
-                    <Link href="/tabs/about">
-                        <li
-                            className={
-                                currentPath === '/tabs/about'
-                                    ? s.tabs__active
-                                    : ''
-                            }
-                        >
-                            About
-                        </li>
-                    </Link>
-                    <Link href="/tabs/portfolio">
-                        <li
-                            className={
-                                currentPath === '/tabs/portfolio'
-                                    ? s.tabs__active
-                                    : ''
-                            }
-                        >
-                            Portfolio
-                        </li>
-                    </Link>
-                    <Link href="/tabs/cat">
-                        <li
-                            className={
-                                currentPath === '/tabs/cat' ? s.tabs__active : ''
-                            }
-                        >
-                            Cat
-                        </li>
-                    </Link>
+                    ))}
                 </ul>
             </nav>
-            <Button text={'Назад'} route={'/'}/>
+
             <div>{children}</div>
+            <Button type={'home'} text={'НА СТАРТ'}/>
         </section>
     );
 }
