@@ -14,4 +14,7 @@ v: 0.0.2
 Set paths, glitch effect + dart sass 3 adaptation;<br>
 d: 16.03.25 
 v: 0.0.3
-Add tabs/markup; Start styling;
+Add tabs/markup and now on attempts with theese tabs and laout;<br>
+d: 17.03.25
+v: 0.0.3
+Small style touches/chore;
