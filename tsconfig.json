@@ -22,23 +22,22 @@
         "name": "next"
       }
     ],
-    "typeRoots": ["./services"],
     "baseUrl": ".",
     "paths": {
-      "@/*": [
-        "./src/*"
-      ],
-      "components": [
-        "./src/components/*"
-      ]
-    }
+      "@/*": ["./src/*"],
+      "components/*": ["./src/components/*"]
+    },
+    "typeRoots": [
+      "./node_modules/@types",
+      "./services"
+    ]
   },
   "include": [
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts",
-    "services/*.d.ts"
+    "services/declarations.d.ts"
   ],
   "exclude": [
     "node_modules"

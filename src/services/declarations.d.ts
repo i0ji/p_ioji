@@ -1,7 +1,9 @@
 declare global {
-    interface ButtonPropsModel {
-        text?: string;
-        type: 'home' | 'back';
+    namespace Components {
+        interface ButtonPropsModel {
+            text?: string;
+            type: 'home' | 'back';
+        }
     }
 }
 

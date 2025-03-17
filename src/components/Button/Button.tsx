@@ -2,7 +2,6 @@ import s from './Button.module.scss';
 
 import {useRouter} from 'next/navigation';
 
-
 export default function Button(props: ButtonPropsModel) {
 
     const route = useRouter();
@@ -11,7 +10,7 @@ export default function Button(props: ButtonPropsModel) {
     const handleHome = () => {
         route.push('/');
     }
-
+``
     const handleBack = () => {
         if (window.history.length > 1) {
             route.back();

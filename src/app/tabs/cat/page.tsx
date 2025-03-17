@@ -2,7 +2,7 @@
 
 import React from "react";
 
-import {Button} from "@/components";
+import {Button} from "components/index";
 
 export default function Cat() {
     return (

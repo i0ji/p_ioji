@@ -4,7 +4,7 @@ import React from "react";
 import {usePathname, useRouter} from 'next/navigation';
 
 import Link from 'next/link';
-import {Button} from '@/components/index';
+import {Button} from 'components/index';
 
 import s from './layout.module.scss';
 

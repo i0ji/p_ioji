@@ -1,3 +1,9 @@
+import {Button} from "components/index";
+
 export default function About() {
-  return <div>ABOUT</div>;
+    return (
+        <div>
+            <Button type={'home'}></Button>
+            ABOUT</div>
+    );
 }
