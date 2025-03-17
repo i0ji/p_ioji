@@ -28,11 +28,16 @@ html {
   overflow: hidden;
 
   body {
-    height: 100vh;
+    height: 90%;
     max-width: 1440px;
+    @include flex(null, center, center);
 
     margin: 0 auto;
 
     overflow: hidden;
+
+    a {
+      color: inherit;
+    }
   }
 }
