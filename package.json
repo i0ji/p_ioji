@@ -1,6 +1,6 @@
 {
   "name": "p_ioji",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "private": true,
   "scripts": {
     "dev": "next dev --turbopack",
@@ -22,5 +22,11 @@
     "eslint": "^9",
     "eslint-config-next": "15.2.2",
     "typescript": "^5"
+  },
+  "pnpm": {
+    "ignoredBuiltDependencies": [
+      "@parcel/watcher",
+      "sharp"
+    ]
   }
 }
