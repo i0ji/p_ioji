@@ -1,13 +1,9 @@
-'use client'
+import {CommonButton} from "components/index";
 
-import React from "react";
-
-import {Button} from "components/index";
-
-export default function Cat() {
+export default function CatPage() {
     return (
         <div>
-            <Button text={'НАЗАД'} type={'back'}/>
+            <CommonButton text={'НАЗАД'} type={'back'}/>
             something interesting about my lovely cat!
         </div>
     );

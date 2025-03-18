@@ -1,10 +1,11 @@
 'use client';
 
 import React from "react";
-import {usePathname, useRouter} from 'next/navigation';
+import {usePathname} from 'next/navigation';
 
 import Link from 'next/link';
-import {Button} from 'components/index';
+import {CommonButton} from 'components/index';
+
 
 import s from './layout.module.scss';
 
@@ -33,7 +34,7 @@ export default function TabsLayout({children}: { children: React.ReactNode }) {
                 <ul>
                     {tabs.map((link) => (
                         <li key={link.href} className={currentPath === link.href ? s.tabs__active : ''}>
-                            <Link href={link.href}>{link.label}
+                            <Link href={link.href.toLowerCase()}>{link.label}
                             </Link>
                         </li>
                     ))}
@@ -41,7 +42,7 @@ export default function TabsLayout({children}: { children: React.ReactNode }) {
             </nav>
 
             <div>{children}</div>
-            <Button type={'home'} text={'НА СТАРТ'}/>
+            <CommonButton text={'НА СТАРТ'} type={'home'}/>
         </section>
     );
 }

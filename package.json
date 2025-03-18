@@ -4,15 +4,17 @@
   "private": true,
   "scripts": {
     "dev": "next dev --turbopack",
-    "build": "next build",
+    "inspect": "cross-env NODE_OPTIONS='--inspect' next dev",
+    "build": "next build --mode production",
     "start": "next start",
     "lint": "next lint"
   },
   "dependencies": {
-    "next": "15.2.2",
+    "cross-env": "^7.0.3",
+    "next": "15.2.3",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
-    "sass": "^1.85.1"
+    "sass": "^1.86.0"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
@@ -20,7 +22,7 @@
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "eslint": "^9",
-    "eslint-config-next": "15.2.2",
+    "eslint-config-next": "15.2.3",
     "typescript": "^5"
   },
   "pnpm": {

@@ -1,3 +1,3 @@
-import Button from "./Button/Button";
+import CommonButton from "components/CommonButton/CommonButton";
 
-export {Button};
+export {CommonButton};

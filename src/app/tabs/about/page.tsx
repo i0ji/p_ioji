@@ -1,11 +1,11 @@
 'use client';
 
-import {Button} from "components/index";
+import CommonButton from "components/CommonButton/CommonButton";
 
-export default function About() {
+export default function AboutTab() {
     return (
         <div>
-            <Button type={'home'}></Button>
+            <CommonButton text={'back'} type={'home'}/>
             ABOUT</div>
     );
 }
