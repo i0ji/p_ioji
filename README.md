@@ -17,4 +17,8 @@ v: 0.0.3
 Add tabs/markup and now on attempts with theese tabs and laout;<br>
 d: 17.03.25
 v: 0.0.3
-Small style touches/chore;
+Small style touches/chore;<br>
+d: 18.03.25
+v: 0.0.4
+An issue w/'use client' and chunks after reloading page;
+Button still does not work properly;
