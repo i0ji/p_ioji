@@ -1,7 +1,8 @@
 <h1>Hello!</h1>
 
-I deicided to create my own page using NEXT!
+Current version: 0.0.4
 
+Decide to create my own page using NEXT!
 
 d: 11.03.25
 v: 0.0.1

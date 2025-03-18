@@ -3,7 +3,7 @@ import Link from 'next/link';
 import s from './page.module.scss';
 
 export default function Home() {
-  console.log('v: 0.0.2');
+  console.log('v: 0.0.4');
 
   return (
     <main className={s.main}>
