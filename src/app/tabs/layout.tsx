@@ -24,8 +24,7 @@ export default function TabsLayout({children}: { children: React.ReactNode }) {
     return (
         <section className={s.tabs__layout}>
             <header>
-                <h2>Главная страница</h2>
-                <p>Добро пожаловать на главную страницу вкладок!</p>
+                <h2>Welcome!</h2>
 
             </header>
 

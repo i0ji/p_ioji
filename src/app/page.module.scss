@@ -8,5 +8,10 @@
 
   &__window {
     @include flex(null, center, center);
+
+    padding: 110px;
+
+    border: 1px solid $brandTurquoise;
+    border-radius: .5rem;
   }
 }
