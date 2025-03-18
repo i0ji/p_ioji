@@ -4,13 +4,11 @@
   "private": true,
   "scripts": {
     "dev": "next dev --turbopack",
-    "inspect": "cross-env NODE_OPTIONS='--inspect' next dev",
-    "build": "next build --mode production",
+    "build": "next build",
     "start": "next start",
     "lint": "next lint"
   },
   "dependencies": {
-    "cross-env": "^7.0.3",
     "next": "15.2.3",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",

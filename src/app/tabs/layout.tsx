@@ -18,8 +18,8 @@ export default function TabsLayout({children}: { children: React.ReactNode }) {
     const tabs = [
         {href: '/tabs', label: 'Main'},
         {href: '/tabs/about', label: 'About'},
-        {href: '/tabs/portfolio', label: 'Portfolio'},
         {href: '/tabs/cat', label: 'Cat'},
+        {href: '/tabs/portfolio', label: 'Portfolio'},
     ];
 
     return (
@@ -27,6 +27,7 @@ export default function TabsLayout({children}: { children: React.ReactNode }) {
             <header>
                 <h2>Главная страница</h2>
                 <p>Добро пожаловать на главную страницу вкладок!</p>
+
             </header>
 
             <nav>
@@ -42,7 +43,7 @@ export default function TabsLayout({children}: { children: React.ReactNode }) {
             </nav>
 
             <div>{children}</div>
-            <CommonButton text={'НА СТАРТ'} type={'home'}/>
+            <CommonButton text={'На старт!'} type={'home'}/>
         </section>
     );
 }
