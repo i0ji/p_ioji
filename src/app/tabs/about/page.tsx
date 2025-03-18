@@ -1,3 +1,5 @@
+'use client';
+
 import {Button} from "components/index";
 
 export default function About() {
