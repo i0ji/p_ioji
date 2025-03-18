@@ -1,3 +1,3 @@
-export default function About() {
-  return <div>ABOUT</div>;
+export default function AboutTab() {
+    return (<div>ABOUT</div>);
 }

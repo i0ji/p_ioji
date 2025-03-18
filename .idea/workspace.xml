@@ -4,7 +4,71 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d9944d90-90c6-4b85-8e50-d0b5b6f042a6" name="Changes" comment="" />
+    <list default="true" id="d9944d90-90c6-4b85-8e50-d0b5b6f042a6" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/out/_next/static/7WNqKtLC2NE6T4GMi_aTZ/_buildManifest.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/_next/static/chunks/226-88b0e9caffce7523.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/_next/static/chunks/641.c330c4f7ba1c894d.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/_next/static/chunks/684.df5f2a54b779dd44.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/_next/static/chunks/720-16993083bd64bc8b.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/_next/static/chunks/app/_not-found/page-37daa0b9dc25084c.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/_next/static/chunks/app/layout-8419f9c2aa53bfc5.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/_next/static/chunks/app/page-ba26eee3281661e1.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/_next/static/chunks/app/tabs/about/page-8a78c07c3220c50a.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/_next/static/chunks/app/tabs/cat/page-9ac9787f3d7e7399.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/_next/static/chunks/app/tabs/layout-5ab7b8a895c1ef34.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/_next/static/chunks/app/tabs/main/page-e7eaadd870359ae9.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/_next/static/chunks/app/tabs/page-75bca5b0d5bf4cc9.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/_next/static/chunks/app/tabs/portfolio/page-bb605342805b1c87.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/_next/static/chunks/main-1d1972f231b0ffe9.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/_next/static/chunks/main-app-e8067a1e2bdc27bf.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/_next/static/chunks/pages/_app-6b5a5000869acc36.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/_next/static/chunks/pages/_error-1f12aab84f6fc5bd.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/_next/static/chunks/webpack-020aaa23fc9781eb.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/_next/static/css/72237b8bdbdca6c6.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/_next/static/css/ad58b7abde551df4.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/_next/static/css/c1c51410d4f38be8.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/CommonButton/CommonButton.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/services/declarations.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/404.html" beforeDir="false" afterPath="$PROJECT_DIR$/out/404.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/_next/static/1OyZ1_nGRFnfRruJVyMTK/_ssgManifest.js" beforeDir="false" afterPath="$PROJECT_DIR$/out/_next/static/1OyZ1_nGRFnfRruJVyMTK/_ssgManifest.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/_next/static/XFyyuSi6XLVLBNB-PJTLz/_ssgManifest.js" beforeDir="false" afterPath="$PROJECT_DIR$/out/_next/static/7WNqKtLC2NE6T4GMi_aTZ/_ssgManifest.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/_next/static/chunks/388.d160d1657cf866e3.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/_next/static/chunks/617.7ddff21b348ef32f.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/_next/static/chunks/7a447d9f-2f046a0fee41e1fb.js" beforeDir="false" afterPath="$PROJECT_DIR$/out/_next/static/chunks/d6a958b6-e734a531cab97c00.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/_next/static/chunks/7a447d9f-9c63f33d9bf5822a.js" beforeDir="false" afterPath="$PROJECT_DIR$/out/_next/static/chunks/7a447d9f-9c63f33d9bf5822a.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/_next/static/chunks/app/_not-found/page-1cfb7dc7c366c7ad.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/_next/static/chunks/framework-da7034a8257752c4.js" beforeDir="false" afterPath="$PROJECT_DIR$/out/_next/static/chunks/framework-93dce7e9c6d6ae1a.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/_next/static/chunks/main-293960b144249363.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/_next/static/chunks/main-app-1db08d87fae78acb.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/_next/static/chunks/pages/_app-12036b8475b05476.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/_next/static/chunks/pages/_error-f1a08b065473eeb1.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/out/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/index.txt" beforeDir="false" afterPath="$PROJECT_DIR$/out/index.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/tabs.html" beforeDir="false" afterPath="$PROJECT_DIR$/out/tabs.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/tabs.txt" beforeDir="false" afterPath="$PROJECT_DIR$/out/tabs.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/tabs/about.html" beforeDir="false" afterPath="$PROJECT_DIR$/out/tabs/about.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/tabs/about.txt" beforeDir="false" afterPath="$PROJECT_DIR$/out/tabs/about.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/tabs/cat.html" beforeDir="false" afterPath="$PROJECT_DIR$/out/tabs/cat.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/tabs/cat.txt" beforeDir="false" afterPath="$PROJECT_DIR$/out/tabs/cat.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/tabs/main.html" beforeDir="false" afterPath="$PROJECT_DIR$/out/tabs/main.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/tabs/main.txt" beforeDir="false" afterPath="$PROJECT_DIR$/out/tabs/main.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/tabs/portfolio.html" beforeDir="false" afterPath="$PROJECT_DIR$/out/tabs/portfolio.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/tabs/portfolio.txt" beforeDir="false" afterPath="$PROJECT_DIR$/out/tabs/portfolio.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pnpm-lock.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pnpm-lock.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/layout.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/tabs/about/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/tabs/about/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/tabs/cat/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/tabs/cat/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/tabs/layout.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/tabs/layout.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/tabs/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/tabs/layout.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/tabs/main/page.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/tabs/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/tabs/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/tabs/portfolio/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/tabs/portfolio/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Button/Button.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/CommonButton/CommonButton.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Button/Button.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/tsconfig.json" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -13,18 +77,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "i0ji"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;i0ji&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/i0ji/p_ioji.git",
-    "accountId": "9e984689-eff1-42dd-a69d-66b9ed8100a6"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/i0ji/p_ioji.git&quot;,
+    &quot;accountId&quot;: &quot;9e984689-eff1-42dd-a69d-66b9ed8100a6&quot;
   }
-}]]></component>
+}</component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 1
 }</component>
@@ -37,7 +101,7 @@
   "keyToString": {
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "feature/tabs",
+    "git-widget-placeholder": "Merging deploy",
     "ignore.virus.scanning.warn.message": "true",
     "last_opened_file_path": "C:/WS plugins/Dark-Plus-1.0.10/Dark-Plus/lib/instrumented-Dark-Plus-1.0.10.jar",
     "node.js.detected.package.eslint": "true",
@@ -46,7 +110,7 @@
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "pnpm",
     "settings.editor.selected.configurable": "preferences.lookFeel",
-    "ts.external.directory.path": "C:\\Program Files\\JetBrains\\WebStorm 2024.3.5\\plugins\\javascript-plugin\\jsLanguageServicesImpl\\external",
+    "ts.external.directory.path": "C:\\Users\\adm.ivan.udodenko\\Documents\\scripts\\01.PERSONAL\\p_ioji\\node_modules\\typescript\\lib",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
