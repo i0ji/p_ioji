@@ -22,4 +22,7 @@ Small style touches/chore;<br>
 d: 18.03.25
 v: 0.0.4
 An issue w/'use client' and chunks after reloading page;
-Button still does not work properly;
+Button still does not work properly;<br>
+d: 23.03.25
+v: 0.0.4
+Chore/updates
