@@ -23,6 +23,9 @@ d: 18.03.25
 v: 0.0.4
 An issue w/'use client' and chunks after reloading page;
 Button still does not work properly;<br>
+d: 23.03.25
+v: 0.0.4
+Chore/updates;<br>
 d: 27.03.25
 v: 0.0.4
-Deps update;
+Chore/updates;<br>
