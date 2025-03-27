@@ -6,10 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="d9944d90-90c6-4b85-8e50-d0b5b6f042a6" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/globals.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/globals.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/page.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/page.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/_glitch.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/_glitch.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,7 +41,7 @@
     "RunOnceActivity.git.unshallow": "true",
     "git-widget-placeholder": "feature/tabs",
     "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "C:/WS plugins/Dark-Plus-1.0.10/Dark-Plus/lib/instrumented-Dark-Plus-1.0.10.jar",
+    "last_opened_file_path": "C:/Users/adm.ivan.udodenko/Documents/scripts/05.PROJECTS/p_katerina_semenova_next",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -84,6 +80,9 @@
       <workItem from="1741935228829" duration="362000" />
       <workItem from="1741935610714" duration="844000" />
       <workItem from="1742191772229" duration="5898000" />
+      <workItem from="1742369783079" duration="3171000" />
+      <workItem from="1742380026180" duration="117000" />
+      <workItem from="1742382412199" duration="36000" />
     </task>
     <servers />
   </component>
