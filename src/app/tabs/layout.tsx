@@ -4,7 +4,7 @@ import React from 'react';
 import { usePathname } from 'next/navigation';
 
 import Link from 'next/link';
-import { CommonButton } from 'components/index';
+import { CommonButton } from '@/components/index';
 
 import s from './layout.module.scss';
 
@@ -24,40 +24,6 @@ export default function TabsLayout({
     { href: '/tabs/portfolio', label: 'Portfolio' },
   ];
 
-  //CURRENT
-  //BUTTON ANIMATION
-  const rippleButton = document.querySelector(
-    '.ripple-button'
-  ) as HTMLElement;
-
-  function mousePositionToCustomProp(
-    event: Event,
-    element: HTMLElement
-  ) {
-    if (!(event instanceof MouseEvent)) return;
-    let posX = event.offsetX;
-    let posY = event.offsetY;
-
-    element.style.setProperty('--x', posX + 'px');
-    element.style.setProperty('--y', posY + 'px');
-  }
-  if (rippleButton)
-    rippleButton.addEventListener('click', (e) => {
-      mousePositionToCustomProp(e, rippleButton);
-      //CONSOLE
-      console.log('CLICK');
-      rippleButton.classList.add('s.pulse');
-      rippleButton.addEventListener(
-        'animationend',
-        () => {
-          rippleButton!.classList.remove('s.pulse');
-        },
-        { once: true }
-      );
-    });
-
-  //CURRENT
-
   return (
     <section className={s.tabs__layout}>
       <header>
@@ -71,11 +37,9 @@ export default function TabsLayout({
           {tabs.map((link) => (
             <li
               key={link.href}
-              className={`
-                ${
-                  currentPath === link.href ? s.tabs__active : ''
-                } ${s.rippleButton}
-              `}
+              className={
+                currentPath === link.href ? s.tabs__active : ''
+              }
             >
               <Link href={link.href.toLowerCase()}>
                 {link.label}

@@ -1,12 +1,13 @@
 'use client';
 
-import { CommonButton } from 'components/index';
+import { CommonButton } from '@/components/index';
+import s from './cat.module.scss';
 
 export default function CatPage() {
   return (
-    <div>
-      {/* <CommonButton text={'HOME'} type={'home'} /> */}
+    <section className={s.tab__cat}>
+      <CommonButton text={'HOME'} type={'home'} />
       something interesting about my lovely cat!
-    </div>
+    </section>
   );
 }

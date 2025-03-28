@@ -1,3 +1,3 @@
 export default function TabsPage() {
-    return <section>bookmarks</section>;
+  return <section>bookmarks</section>;
 }
