@@ -39,6 +39,12 @@ importers:
       eslint-config-next:
         specifier: 15.2.4
         version: 15.2.4(eslint@9.22.0)(typescript@5.8.2)
+      nanoid:
+        specifier: ^5.1.5
+        version: 5.1.5
+      react-ripplejs:
+        specifier: ^1.0.4
+        version: 1.0.4
       typescript:
         specifier: ^5
         version: 5.8.2
@@ -1146,6 +1152,11 @@ packages:
     engines: {node: ^10 || ^12 || ^13.7 || ^14 || >=15.0.1}
     hasBin: true
 
+  nanoid@5.1.5:
+    resolution: {integrity: sha512-Ir/+ZpE9fDsNH0hQ3C68uyThDXzYcim2EqcZ8zn8Chtt1iylPT9xXJB0kPCnqzgcEGikO9RxSrh63MsmVCU7Fw==}
+    engines: {node: ^18 || >=20}
+    hasBin: true
+
   natural-compare@1.4.0:
     resolution: {integrity: sha512-OWND8ei3VtNC9h7V60qff3SVobHr996CTwgxubgyQYEpg290h9J0buyECNNJexkFm5sOajh5G116RYA1c8ZMSw==}
 
@@ -1276,6 +1287,9 @@ packages:
 
   react-is@16.13.1:
     resolution: {integrity: sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==}
+
+  react-ripplejs@1.0.4:
+    resolution: {integrity: sha512-FJA3ZHVjftb5IRO7yEfkafgdfuOo3iQ3Gjikea2LAEzK/eZVes0yjMFAekurFWj5XH4pif/kPnsoUbsStjbzUA==}
 
   react@19.0.0:
     resolution: {integrity: sha512-V8AVnmPIICiWpGfm6GLzCR/W5FXLchHop40W4nXBmdlEceh16rCN8O8LNWm5bh5XUX91fh7KpA+W0TgMKmgTpQ==}
@@ -2775,6 +2789,8 @@ snapshots:
 
   nanoid@3.3.9: {}
 
+  nanoid@5.1.5: {}
+
   natural-compare@1.4.0: {}
 
   next@15.2.4(react-dom@19.0.0(react@19.0.0))(react@19.0.0)(sass@1.86.0):
@@ -2912,6 +2928,8 @@ snapshots:
       scheduler: 0.25.0
 
   react-is@16.13.1: {}
+
+  react-ripplejs@1.0.4: {}
 
   react@19.0.0: {}
 

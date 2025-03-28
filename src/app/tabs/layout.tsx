@@ -6,7 +6,12 @@ import { usePathname } from 'next/navigation';
 import Link from 'next/link';
 import { CommonButton } from '@/components/index';
 
+import { nanoid } from 'nanoid';
+
 import s from './layout.module.scss';
+
+//CURRENT
+import Ripple from 'react-ripplejs';
 
 export default function TabsLayout({
   children,
@@ -18,10 +23,10 @@ export default function TabsLayout({
   console.log(currentPath);
 
   const tabs = [
-    { href: '/tabs', label: 'Main' },
-    { href: '/tabs/about', label: 'About' },
-    { href: '/tabs/cat', label: 'Cat' },
-    { href: '/tabs/portfolio', label: 'Portfolio' },
+    { href: '/tabs', label: 'Main', id: 10001 },
+    { href: '/tabs/about', label: 'About', id: 10002},
+    { href: '/tabs/cat', label: 'Cat', id: 10003 },
+    { href: '/tabs/portfolio', label: 'Portfolio', id: 10003 },
   ];
 
   return (
@@ -40,10 +45,16 @@ export default function TabsLayout({
               className={
                 currentPath === link.href ? s.tabs__active : ''
               }
+              id={link.id}
             >
-              <Link href={link.href.toLowerCase()}>
-                {link.label}
-              </Link>
+              <Ripple
+                // boolean?, default: false
+                opacity={''} // string?, default: ""
+              >
+                <Link href={link.href.toLowerCase()}>
+                  {link.label}
+                </Link>
+              </Ripple>
             </li>
           ))}
         </ul>

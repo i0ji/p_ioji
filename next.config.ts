@@ -5,6 +5,8 @@ const isProd = process.env.NODE_ENV === 'production';
 
 const nextConfig: NextConfig = {
   reactStrictMode: true,
+
+  //OPTION
   // output: 'export',
   ...(isProd ? { output: 'export' } : {}),
   images: {
@@ -13,6 +15,7 @@ const nextConfig: NextConfig = {
   },
   pageExtensions: ['js', 'jsx', 'mdx', 'ts', 'tsx'],
   basePath: isProd ? '/p_ioji' : '',
+  //OPTION
   // assetPrefix: './',
   webpack: (config) => {
     config.resolve.alias['@styles'] = './src/styles/*';
