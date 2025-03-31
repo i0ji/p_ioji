@@ -1,30 +1,26 @@
 @use '@/styles/index' as *;
 
 .commonButton {
-  bottom: 1rem;
-  right: 1rem;
-
   width: 15%;
-  height: 5%;
-
+  height: 40px;
 
   color: $brandTurquoise;
   background: #333;
   border-radius: 10px;
   box-shadow: 0px 1px 2px rgba(0, 255, 255, 0.5),
-  0px 2px 4px rgba(0, 255, 255, 0.5),
-  0px 4px 8px rgba(0, 255, 255, 0.5),
-  0px 8px 16px rgba(0, 255, 255, 0.5);
+    0px 2px 4px rgba(0, 255, 255, 0.5),
+    0px 4px 8px rgba(0, 255, 255, 0.5),
+    0px 8px 16px rgba(0, 255, 255, 0.5);
 
-  transition: .4s all;
+  transition: 0.4s all;
 }
 
 .commonButton:hover {
   transform: scale(1.01);
   box-shadow: 0px 2px 4px rgba(0, 255, 255, 0.7),
-  0px 4px 8px rgba(0, 255, 255, 0.5),
-  0px 8px 16px rgba(0, 255, 255, 0.5),
-  0px 12px 24px rgba(0, 255, 255, 0.5);
+    0px 4px 8px rgba(0, 255, 255, 0.5),
+    0px 8px 16px rgba(0, 255, 255, 0.5),
+    0px 12px 24px rgba(0, 255, 255, 0.5);
 }
 
 .commonButton:active {

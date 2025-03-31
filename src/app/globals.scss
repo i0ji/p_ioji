@@ -20,18 +20,19 @@ a:hover {
 }
 
 html {
-  @include flex(null, center, center);
+  // @include flex(null, center, center);
 
   height: 100vh;
+
+  scroll-snap-type: y mandatory;
 
   background-color: $brandGray;
   overflow: hidden;
 
   body {
-    .entrance__window {
-      height: 90%;
-      max-width: 1440px;
-      @include flex(null, center, center);
+    height: 90%;
+    max-width: 1440px;
+    // @include flex(null, center, center);
 
       margin: 0 auto;
 
@@ -42,4 +43,4 @@ html {
       }
     }
   }
-}
+

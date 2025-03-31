@@ -1,1 +1,0 @@
-(self.webpackChunk_N_E=self.webpackChunk_N_E||[]).push([[963],{4441:(e,s,r)=>{"use strict";r.r(s),r.d(s,{default:()=>t});var n=r(7485);function t(){return(0,n.jsx)("section",{children:"bookmarks"})}},4501:(e,s,r)=>{Promise.resolve().then(r.bind(r,4441))}},e=>{var s=s=>e(e.s=s);e.O(0,[4,226,358],()=>s(4501)),_N_E=e.O()}]);
