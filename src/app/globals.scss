@@ -20,7 +20,7 @@ a:hover {
 }
 
 html {
-  @include flex(null, center, center);
+  // @include flex(null, center, center);
 
   height: 100vh;
 
@@ -30,7 +30,7 @@ html {
   body {
     height: 90%;
     max-width: 1440px;
-    @include flex(null, center, center);
+    // @include flex(null, center, center);
 
     margin: 0 auto;
 

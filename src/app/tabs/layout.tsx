@@ -23,10 +23,10 @@ export default function TabsLayout({
   console.log(currentPath);
 
   const tabs = [
-    { href: '/tabs', label: 'Main', id: 10001 },
-    { href: '/tabs/about', label: 'About', id: 10002},
-    { href: '/tabs/cat', label: 'Cat', id: 10003 },
-    { href: '/tabs/portfolio', label: 'Portfolio', id: 10003 },
+    { href: '/tabs', label: 'Main' },
+    { href: '/tabs/about', label: 'About' },
+    { href: '/tabs/cat', label: 'Cat' },
+    { href: '/tabs/portfolio', label: 'Portfolio' },
   ];
 
   return (
@@ -45,13 +45,12 @@ export default function TabsLayout({
               className={
                 currentPath === link.href ? s.tabs__active : ''
               }
-              id={link.id}
             >
               <Ripple
                 // boolean?, default: false
                 opacity={''} // string?, default: ""
               >
-                <Link href={link.href.toLowerCase()}>
+                <Link href={link.href}>
                   {link.label}
                 </Link>
               </Ripple>
