@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { CommonButton } from 'components/index';
 
 export default function CatPage() {
@@ -6,5 +7,18 @@ export default function CatPage() {
       <CommonButton text={'HOME'} type={'home'} />
       something interesting about my lovely cat!
     </div>
+=======
+'use client';
+
+import { CommonButton } from '@/components/index';
+import s from './cat.module.scss';
+
+export default function CatPage() {
+  return (
+    <section className={s.tab__cat}>
+      <CommonButton text={'HOME'} type={'home'} />
+      something interesting about my lovely cat!
+    </section>
+>>>>>>> feature/tabs_button_style
   );
 }

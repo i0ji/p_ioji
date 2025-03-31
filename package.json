@@ -1,12 +1,13 @@
 {
   "name": "p_ioji",
-  "version": "0.0.3",
+  "version": "0.0.4a",
   "private": true,
   "scripts": {
     "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "clean": "rd /s /q .next && rd /s /q"
   },
   "dependencies": {
     "next": "15.2.4",
@@ -21,6 +22,8 @@
     "@types/react-dom": "^19",
     "eslint": "^9",
     "eslint-config-next": "15.2.4",
+    "nanoid": "^5.1.5",
+    "react-ripplejs": "^1.0.4",
     "typescript": "^5"
   },
   "pnpm": {

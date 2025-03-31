@@ -4,9 +4,14 @@ import React from 'react';
 import { usePathname } from 'next/navigation';
 
 import Link from 'next/link';
-import { CommonButton } from 'components/index';
+import { CommonButton } from '@/components/index';
+
+import { nanoid } from 'nanoid';
 
 import s from './layout.module.scss';
+
+//CURRENT
+import Ripple from 'react-ripplejs';
 
 export default function TabsLayout({
   children,
@@ -41,9 +46,14 @@ export default function TabsLayout({
                 currentPath === link.href ? s.tabs__active : ''
               }
             >
-              <Link href={link.href.toLowerCase()}>
-                {link.label}
-              </Link>
+              <Ripple
+                // boolean?, default: false
+                opacity={''} // string?, default: ""
+              >
+                <Link href={link.href}>
+                  {link.label}
+                </Link>
+              </Ripple>
             </li>
           ))}
         </ul>
