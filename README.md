@@ -31,4 +31,7 @@ d: 28.03.25
 v: 0.0.4a
 Refactor config to fix multiple rerender/next chunks issues while changing tabs;
 Add <b>react-ripplejs lib</b> to implement button animation;
-Add <b>nanoid lib</b> to get unique ids;
+Add <b>nanoid lib</b> to get unique ids;<br>
+d: 31.03.25
+v: 0.0.4a
+Chore/updates;
