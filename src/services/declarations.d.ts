@@ -13,7 +13,7 @@ declare global {
       year: number;
       headder: string;
       description: string;
-      technologies: Array<string>;
+      technologies?: Array<string>;
     }
   }
 }
