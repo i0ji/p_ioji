@@ -1,9 +1,20 @@
 'use client';
 
-import { useEffect } from 'react';
+import { roadmapData } from 'public/roadmap/roadmapData';
 
-import RoadmapCard from 'components/RoadmapCard/RoadmapCard';
+import { RoadmapCard } from 'components/index';
 
 export default function Roadmap() {
-  return <RoadmapCard></RoadmapCard>;
+  return (
+    <div>
+      {roadmapData.map((elem) => (
+        <RoadmapCard
+          year={elem.year}
+          headder={elem.headder}
+          description={elem.description}
+          technologies={elem.technologies}
+        />
+      ))}
+    </div>
+  );
 }
