@@ -13,21 +13,17 @@
     "next": "15.2.4",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
-    "sass": "^1.86.0"
+    "sass": "^1.86.1"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
-    "@react-spring/parallax": "^9.7.5",
     "@types/node": "^22",
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "eslint": "^9",
     "eslint-config-next": "15.2.4",
-    "motion": "^12.6.2",
     "nanoid": "^5.1.5",
-    "react-ripplejs": "^1.0.4",
-    "react-scroll-parallax": "^3.4.5",
-    "react-spring": "^9.7.5",
+    "rellax": "^1.12.1",
     "typescript": "^5"
   },
   "pnpm": {

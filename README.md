@@ -56,4 +56,7 @@ d: 31.03.25
 v: 0.0.5
 Chore/updates;
 Basic markup refactor;
-Add Framer-Motion, react-scroll-parallax and react-spring to test the implementation of some features;
+Add Framer-Motion, react-scroll-parallax and react-spring to test the implementation of some features;<br>
+d: 01.04.25
+v: 0.0.5
+Setting new color scheme;

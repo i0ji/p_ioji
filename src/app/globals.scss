@@ -20,27 +20,25 @@ a:hover {
 }
 
 html {
-  // @include flex(null, center, center);
-
   height: 100vh;
 
   scroll-snap-type: y mandatory;
 
-  background-color: $brandGray;
+  background-color: $main;
   overflow: hidden;
+
+  font-family: 'Source Code Pro', monospace;
 
   body {
     height: 90%;
     max-width: 1440px;
-    // @include flex(null, center, center);
 
-      margin: 0 auto;
+    margin: 0 auto;
 
-      overflow: hidden;
+    overflow: hidden;
 
-      a {
-        color: inherit;
-      }
+    a {
+      color: inherit;
     }
   }
-
+}
