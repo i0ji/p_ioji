@@ -1,13 +1,9 @@
 @use '@/styles/index' as *;
 
 .tabs__layout {
-  width: 80vw;
-  height: 80vh;
-
-  border: 1px solid cyan;
+  margin-top: 1rem;
   border-radius: 0.5rem;
-
-  overflow: hidden;
+  font-size: 1.5em;
 
   header {
     background-color: cyan;
@@ -16,9 +12,9 @@
 
   nav {
     width: 100%;
-    border: 1px solid cadetblue;
 
     h1 {
+      border-radius: 0.5rem;
       text-align: center;
     }
 
@@ -26,16 +22,15 @@
       display: grid;
       grid-template-columns: repeat(
         auto-fit,
-                      minmax(150px, 1fr)
+        minmax(150px, 1fr)
       );
       list-style: none;
       align-items: center;
       justify-content: center;
 
       .tabs__active {
-        background-color: $brandTurquoise;
-        color: $brandGray;
-        //border: 1px solid #d2d2d2;
+        color: $main;
+        background-color: $accent_5;
         transform: scale(1.02);
       }
 
@@ -44,10 +39,10 @@
 
         height: 3rem;
 
-        transition: .2s ease all;
+        transition: 0.5s ease all;
 
-        border: .5px solid gray;
-        border-radius: 5px 5px 0 0;
+        border: 0.5px solid gray;
+        border-radius: 5px;
 
         a {
           @include flex(null, center, center);
