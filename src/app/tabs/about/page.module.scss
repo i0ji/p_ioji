@@ -1,3 +1,66 @@
 .tab__about {
+  background-color: rgba(0, 255, 255, 0.103);
+
+  .timeline-container {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+  }
+  
+  .timeline-line {
+    position: absolute;
+    left: 50%;
+    width: 4px;
+    background: linear-gradient(to bottom, #6a11cb, #2575fc);
+    top: 0;
+    bottom: 0;
+    transform: translateX(-50%);
+  }
+  
+  .timeline-item {
+    display: flex;
+    margin-bottom: 100px;
+    position: relative;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+  }
+  
+  .timeline-item.visible {
+    opacity: 1;
+  }
+  
+  .timeline-dot {
+    width: 20px;
+    height: 20px;
+    background: #2575fc;
+    border-radius: 50%;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+    box-shadow: 0 0 0 4px white, 0 0 0 6px #2575fc;
+  }
+  
+  .timeline-content {
+    width: calc(50% - 60px);
+    padding: 20px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 5px 25px rgba(0,0,0,0.1);
+  }
+  
+  .timeline-item:nth-child(odd) .timeline-content {
+    margin-left: auto;
+    text-align: right;
+  }
+  
+  .timeline-item:nth-child(even) .timeline-content {
+    margin-right: auto;
+  }
+}
+
+.tab__about {
   background-color: cyan;
 }

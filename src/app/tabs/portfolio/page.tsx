@@ -1,3 +1,3 @@
 export default function PortfolioTab() {
-    return <div>Portfolio</div>;
+  return <div>Portfolio</div>;
 }

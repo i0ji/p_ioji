@@ -1,6 +1,4 @@
-'use client';
-
-import { CommonButton } from '@/components/index';
+import { CommonButton } from 'components/index';
 import s from './cat.module.scss';
 
 export default function CatPage() {

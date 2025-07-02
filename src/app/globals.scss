@@ -20,17 +20,18 @@ a:hover {
 }
 
 html {
-  @include flex(null, center, center);
-
   height: 100vh;
 
-  background-color: $brandGray;
+  scroll-snap-type: y mandatory;
+
+  background-color: $main;
   overflow: hidden;
+
+  font-family: 'Source Code Pro', monospace;
 
   body {
     height: 90%;
     max-width: 1440px;
-    @include flex(null, center, center);
 
     margin: 0 auto;
 
