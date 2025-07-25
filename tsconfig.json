@@ -1,0 +1,42 @@
+{
+  "compilerOptions": {
+    "target": "ESNext",
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "noEmit": true,
+    "esModuleInterop": true,
+    "module": "esnext",
+    "moduleResolution": "bundler",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "preserve",
+    "incremental": true,
+    "noImplicitAny": false,
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ],
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["src/*"],
+      "public/*": ["public/"],
+      "components/*": ["src/components/*"],
+      "services/*": ["src/services/*"],
+      "store/*": ["src/store/*"]
+    },
+    "typeRoots": ["./src/services"]
+  },
+  "include": [
+    "**/*.ts",
+    "**/*.tsx",
+    ".next/types/**/*.ts",
+    "next-env.d.ts",
+    "services/**/*.d.ts",
+    "build/types/**/*.ts",
+    "commitlint.config.cjs"
+, "src/components/Slides/Slides.tsx_copy"  ],
+  "exclude": ["node_modules"]
+}
