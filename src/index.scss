@@ -25,7 +25,13 @@ a:hover {
 }
 
 body {
-  max-width: 1600px;
+  // max-width: 1400px;
   margin: 0 auto;
-  
+  background: #4f3f5c;
+  background: linear-gradient(
+    90deg,
+    rgba(79, 63, 92, 1) 0%,
+    rgba(125, 93, 207, 1) 50%,
+    rgba(87, 39, 156, 1) 100%
+  );
 }
