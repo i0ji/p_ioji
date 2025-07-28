@@ -5,7 +5,7 @@ function App() {
   return (
     <>
       <Header />
-      <div className="snap-y h-screen overflow-y-scroll snap-mandatory scroll-smooth">
+      <div className="h-screen snap-y snap-mandatory overflow-y-scroll scroll-smooth">
         <Hero />
         <Portfolio />
         <About />

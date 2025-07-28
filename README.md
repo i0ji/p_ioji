@@ -1,69 +1,19 @@
-# React + TypeScript + Vite
+I deicided to create my own page using ~~NEXT~~ React!
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Current build:<br> 
+> d: 31.03.25 v: 0.0.4a Chore/updates;<br>
+> <b>d: 28.07.25 v: 0.1.0 Total refactor using React;</b>
+> full list of renovated technologies:
+> `React 19, vite, pnpm, commitlint/commitizen/husky, TS, SASS, tailwind, prettier, postcss`;<br>
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default tseslint.config([
-  globalIgnores(["dist"]),
-  {
-    files: ["**/*.{ts,tsx}"],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ["./tsconfig.node.json", "./tsconfig.app.json"],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-]);
-```
-
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from "eslint-plugin-react-x";
-import reactDom from "eslint-plugin-react-dom";
-
-export default tseslint.config([
-  globalIgnores(["dist"]),
-  {
-    files: ["**/*.{ts,tsx}"],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs["recommended-typescript"],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ["./tsconfig.node.json", "./tsconfig.app.json"],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-]);
-```
+Old build: 
+> d: 11.03.25 v: 0.0.1 First commit, add deps, reset style, markup, aliases;<br>
+> d: 12.03.25 v: 0.0.1 Make preliminary style and folder structure; add glitch; set deploy to gh-pages;<br>
+> d: 13.03.25 v: 0.0.2 Set paths, glitch effect + dart sass 3 adaptation;<br>
+> d: 16.03.25 v: 0.0.3 Add tabs/markup and now on attempts with theese tabs and laout;<br>
+> d: 17.03.25 v: 0.0.3 Small style touches/chore;<br>
+> d: 18.03.25 v: 0.0.4 An issue w/'use client' and chunks after reloading page; Button still does not work properly;<br>
+> d: 23.03.25 v: 0.0.4 Chore/updates;<br>
+> d: 27.03.25 v: 0.0.4 Chore/updates;<br>
+> d: 28.03.25 v: 0.0.4a Refactor config to fix multiple rerender/next chunks issues while changing tabs; Add react-ripplejs lib to implement button animation; Add nanoid lib to get unique ids;<br>
+Main markup and build environment set up ;
