@@ -1,7 +1,6 @@
 const heroData: Array<heroModel> = [
   {
-    title:
-      "System Administrator => DevOps engineer => Head of IT department",
+    title: "System Administrator => DevOps engineer => Head of IT department",
     period: "2023 - present",
     responsibilities: [
       "Migrated, configured, and maintained on-premises and cloud servers/services: successfully migrated and configured 30+ services across 3 resource pools.",
