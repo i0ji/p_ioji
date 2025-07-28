@@ -25,7 +25,8 @@
       "public/*": ["public/"],
       "components/*": ["src/components/*"],
       "services/*": ["src/services/*"],
-      "ui/*": ["src/components/ui/*"]
+      "ui/*": ["src/components/ui/*"],
+      "data/*": ["src/data/*"]
     },
     "typeRoots": ["./src/services"]
   },
