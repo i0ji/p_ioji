@@ -2,7 +2,7 @@ import { nanoid } from "nanoid";
 
 export default function Card({ data }: { data: heroModel }) {
   return (
-    <div className="m-4 block h-1/3 w-1/3 rounded-lg border border-gray-200 bg-white p-6 shadow-sm hover:scale-100 dark:border-gray-700 dark:bg-gray-800">
+    <div className="m-4 block h-1/3 w-1/3 rounded-lg border border-gray-200 bg-white p-6 shadow-lg drop-shadow-lg dark:border-gray-700 dark:bg-gray-800 transform transition-transform duration-300 hover:scale-[1.01]">
       <p className="text-xl font-bold text-gray-700 dark:text-gray-400">
         {data.title}
       </p>
