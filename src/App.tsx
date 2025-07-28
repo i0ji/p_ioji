@@ -1,13 +1,15 @@
-import "./App.scss";
-
-import { Header, Hero } from "components/index";
+import "./index.scss";
+import { Header, Hero, About, Portfolio } from "components/index";
 
 function App() {
   return (
     <>
-      <Header />c
-      <Hero />
-      <div className="text"></div>
+      <Header />
+      <div className="snap-y h-screen overflow-y-scroll snap-mandatory scroll-smooth">
+        <Hero />
+        <Portfolio />
+        <About />
+      </div>
     </>
   );
 }

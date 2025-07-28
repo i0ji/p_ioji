@@ -1,7 +1,10 @@
 export default function Hero() {
   return (
-    <section className="h-screen bg-gradient-to-r from-indigo-950 via-pink-900 to-fuchsia-950">
-      <div style={{ width: "100%" }}></div>
+    <section
+      id="hero"
+      className="h-screen snap-start bg-gradient-to-br from-cyan-800 from-5%"
+    >
+      true fe-dev;
     </section>
   );
 }

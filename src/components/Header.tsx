@@ -1,29 +1,11 @@
 export default function Header() {
-  const scrollToSection = (sectionId: string) => {
-    const element = document.getElementById(sectionId);
-    element?.scrollIntoView({ behavior: "smooth" });
-  };
-
   return (
-    <div className="fixed top-0 mx-auto w-full bg-zinc-900 py-4">
-      <button onClick={() => scrollToSection("cat")} className="text">
-        Кошка
-      </button>
-      <button
-        onClick={() => scrollToSection("projects")}
-        className="bg-slate-950"
-      >
-        Проекты
-      </button>
-      <button className="bg-sky-700 px-4 py-2 text-white hover:bg-sky-800 sm:px-8 sm:py-3">
-        ...
-      </button>
-      <button
-        onClick={() => scrollToSection("about")}
-        className="text-muted-foreground hover:text-foreground transition-colors"
-      >
-        Обо мне
-      </button>
+    <div className="backdrop-blur-xs h-{10rem} fixed top-0 mx-auto flex w-full justify-center bg-black bg-opacity-30 text-stone-200">
+      <nav className="flex h-10 w-2/4 justify-between align-middle">
+        <a href="#hero">Hero</a>
+        <a href="#portfolio">Portfolio</a>
+        <a href="#about">About</a>
+      </nav>
     </div>
   );
 }

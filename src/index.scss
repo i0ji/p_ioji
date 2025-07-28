@@ -34,4 +34,8 @@ body {
     rgba(125, 93, 207, 1) 50%,
     rgba(87, 39, 156, 1) 100%
   );
+
+  .header {
+    scroll-snap-type: y mandatory;
+  }
 }
