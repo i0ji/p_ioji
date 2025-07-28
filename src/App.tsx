@@ -1,5 +1,5 @@
 import "./index.scss";
-import { Header, Hero, About, Portfolio } from "components/index";
+import { Header, Hero, About, Portfolio, Cat, Contacts } from "components/index";
 
 function App() {
   return (
@@ -9,6 +9,8 @@ function App() {
         <Hero />
         <Portfolio />
         <About />
+        <Cat/>
+        <Contacts/>
       </div>
     </>
   );

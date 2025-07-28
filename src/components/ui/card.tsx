@@ -2,18 +2,21 @@ import { nanoid } from "nanoid";
 
 export default function Card({ data }: { data: heroModel }) {
   return (
-    <div className="block max-w-sm rounded-lg border border-gray-200 bg-white p-6 shadow-sm hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
-      <p className="font-normal text-gray-700 dark:text-gray-400">
+    <div className="m-4 block h-1/3 w-1/3 rounded-lg border border-gray-200 bg-white p-6 shadow-sm hover:scale-100 dark:border-gray-700 dark:bg-gray-800">
+      <p className="text-xl font-bold text-gray-700 dark:text-gray-400">
         {data.title}
       </p>
 
-      <ul>
-        {data.responsibilities.map((unit) => (
-          <li key={nanoid()}>
-            <p>{unit}</p>
-          </li>
-        ))}
-      </ul>
+      <div className="relative h-1/3 overflow-y-hidden">
+        <ul className="list-disc pl-5">
+          {data.responsibilities.map((unit) => (
+            <li key={nanoid()}>
+              <p>{unit}</p>
+            </li>
+          ))}
+        </ul>
+        <div className="pointer-events-none absolute bottom-0 left-0 h-12 w-full bg-gradient-to-t from-gray-800 to-transparent blur-md filter"></div>
+      </div>
       <hr />
       <ul className="flex">
         {data.technologies.map((unit) => (

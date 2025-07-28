@@ -1,7 +1,7 @@
 const heroData: Array<heroModel> = [
   {
     title:
-      "DevOps Engineer =&gt; System Administrator =&gt; Head of IT Department",
+      "System Administrator => DevOps engineer => Head of IT department",
     period: "2023 - present",
     responsibilities: [
       "Migrated, configured, and maintained on-premises and cloud servers/services: successfully migrated and configured 30+ services across 3 resource pools.",
@@ -26,9 +26,62 @@ const heroData: Array<heroModel> = [
     ],
   },
   {
-    title: "Freelance FE developer",
-    period: "2023 - present",
-    responsibilities: ["made next sites"],
+    title: "Personal website for designer",
+    period: "2024 - present",
+    responsibilities: [
+      "Developed a full-featured application independently, managing all stages from client communication and design approval to deployment and maintenance",
+      "Deployed the application on REG.RU hosting and configured SSL certification",
+      "Set up indexing in Yandex and Google, integrated Yandex.Metrika and Webmaster tools; utilized Google PageSpeed and Google Search Console — achieved over 5,500 visitors",
+      "Optimized the application to improve performance and user experience",
+      "Continuously maintain the application: adding content, updating information, and handling migration to Next.js",
+      "Collect and analyze user feedback on the application’s performance and UX",
+    ],
+    technologies: [
+      "Next.JS",
+      "React",
+      "TS/JS",
+      "SASS",
+      "vite",
+      "webpack",
+      "Redux/RTK",
+      "Jest/Cypress",
+      "YDS",
+    ],
+  },
+  {
+    title: "Personal website for designer",
+    period: "2024 - present",
+    responsibilities: [
+      "Developed a full-featured application independently, managing all stages from client communication and design approval to deployment and maintenance",
+      "Deployed the application on REG.RU hosting and configured SSL certification",
+      "Set up indexing in Yandex and Google, integrated Yandex.Metrika and Webmaster tools; utilized Google PageSpeed and Google Search Console — achieved over 5,500 visitors",
+      "Optimized the application to improve performance and user experience",
+      "Continuously maintain the application: adding content, updating information, and handling migration to Next.js",
+      "Collect and analyze user feedback on the application’s performance and UX",
+    ],
+    technologies: [
+      "Next.JS",
+      "React",
+      "TS/JS",
+      "SASS",
+      "vite",
+      "webpack",
+      "Redux/RTK",
+      "Jest/Cypress",
+      "YDS",
+    ],
+  },
+  {
+    title: "Personal website for designer",
+    period: "2024 - present",
+    responsibilities: [
+      "Developed a full-featured application independently, managing all stages from client communication and design approval to deployment and maintenance",
+      "Deployed the application on REG.RU hosting and configured SSL certification",
+      "Set up indexing in Yandex and Google, integrated Yandex.Metrika and Webmaster tools; utilized Google PageSpeed and Google Search Console — achieved over 5,500 visitors",
+      "Optimized the application to improve performance and user experience",
+      "Continuously maintain the application: adding content, updating information, and handling migration to Next.js",
+      "Collect and analyze user feedback on the application’s performance and UX",
+    ],
     technologies: [
       "Next.JS",
       "React",

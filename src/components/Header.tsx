@@ -12,6 +12,12 @@ export default function Header() {
           <li>
             <a href="#about">About</a>
           </li>
+          <li>
+            <a href="#cat">Cat</a>
+          </li>
+          <li>
+            <a href="#contacts">Contacts</a>
+          </li>
         </ul>
       </nav>
     </div>
