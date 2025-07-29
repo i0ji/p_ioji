@@ -1,0 +1,12 @@
+export default function Contacts() {
+  return (
+    <section
+      id="contacts"
+      className="justify-betwee h-screen w-full snap-start border-l-purple-950 bg-gradient-to-br from-cyan-800 from-5%"
+    >
+      <div className="mx-auto flex h-full max-w-screen-xl flex-wrap items-center justify-around">
+        contacts telephone
+      </div>
+    </section>
+  );
+}
