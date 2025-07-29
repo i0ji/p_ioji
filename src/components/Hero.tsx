@@ -19,19 +19,19 @@ export default function Hero() {
       id="hero"
       className="flex h-screen w-full snap-start items-center justify-center border-l-purple-950 bg-gradient-to-br from-cyan-800 from-5%"
     >
-      <div className="mx-auto flex h-[90%] max-w-screen-xl flex-wrap items-center justify-around">
+      <div className="mx-auto flex h-[90%] w-full flex-wrap items-center justify-around">
         <Swiper
           modules={[Navigation]}
-          
           slidesPerView={2}
           navigation
           pagination={{ type: "progressbar" }}
-          className="relative h-[70] w-full max-w-screen-xl pt-10"
+          className="relative h-[70] w-full max-w-[80vw] pt-10"
         >
           {heroData.map((item: heroModel) => (
-            <SwiperSlide key={nanoid()} 
-            style={{marginRight: '0!impoprtant'}}
-            className="flex mr-0 justify-center">
+            <SwiperSlide
+              key={nanoid()}
+              className="h-ull"
+            >
               <Card data={item} />
             </SwiperSlide>
           ))}

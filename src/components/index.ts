@@ -4,5 +4,6 @@ import About from "./About";
 import Portfolio from "./Portfolio";
 import Cat from "./Cat";
 import Contacts from "./Contacts";
+import NotFound from "./NotFound";
 
-export { Header, Hero, About, Portfolio, Cat, Contacts };
+export { Header, Hero, About, Portfolio, Cat, Contacts, NotFound };
