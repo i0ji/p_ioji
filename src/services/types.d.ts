@@ -4,3 +4,8 @@ interface heroModel {
   responsibilities: Array<string>;
   technologies: Array<string>;
 }
+
+declare module '*.JPG' {
+  const value: string;
+  export default value;
+}
