@@ -3,13 +3,11 @@
 @tailwind utilities;
 @import url("https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
 
-
-
 * {
   padding: 0;
   margin: 0;
   border: none;
-  font-family: 'Ubuntu';
+  font-family: "Ubuntu";
 }
 
 *,
@@ -50,4 +48,3 @@ h6 {
 h1 {
   @apply text-[4rem] font-bold;
 }
-

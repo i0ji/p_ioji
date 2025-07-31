@@ -5,7 +5,7 @@ interface heroModel {
   technologies: Array<string>;
 }
 
-declare module '*.JPG' {
+declare module "*.JPG" {
   const value: string;
   export default value;
 }
