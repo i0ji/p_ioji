@@ -3,14 +3,12 @@ import { nanoid } from "nanoid";
 export default function Card({ data }: { data: heroModel }) {
   return (
     <div
-      className="mx-auto my-8 flex h-[70vh] w-[30vw] transform flex-col rounded-lg bg-gray-800 p-4 text-stone-400 shadow-lg drop-shadow-lg transition-transform duration-200 ease-linear hover:scale-[1.01]"
+      className="mx-auto my-8 flex h-[70vh] w-[20vw] transform flex-col rounded-lg bg-gray-800 p-4 text-stone-400 shadow-lg drop-shadow-lg transition-transform duration-200 ease-linear hover:scale-[1.01]"
       data-carousel-item
     >
-      <h6 className="mb-2 flex h-[15%] bg-green-500 text-xl font-bold">
-        {data.title}
-      </h6>
-      <div className="flex h-auto flex-auto flex-col justify-between bg-yellow-300">
-        <ul className="flex list-disc flex-col justify-between pl-5 text-justify">
+      <h6 className="mb-2 flex h-[15%] text-xl font-bold">{data.title}</h6>
+      <div className="flex h-auto flex-auto flex-col justify-between">
+        <ul className="flex list-disc flex-col justify-between px-5 text-justify">
           {data.responsibilities.map((unit) => (
             <li key={nanoid()}>
               <p>{unit}</p>
@@ -18,13 +16,15 @@ export default function Card({ data }: { data: heroModel }) {
           ))}
         </ul>
       </div>
-      <div className="flex h-[30%] flex-col justify-between bg-red-300">
+      <div className="flex h-[30%] flex-col justify-between">
         <hr className="h-[1px] w-full bg-stone-400 opacity-50" />
         <p className="w-full">Technologies: </p>
         <ul className="flex flex-initial flex-wrap">
           {data.technologies.map((unit) => (
             <li key={nanoid()} className="pr-2">
-              <p>{unit}</p>
+              <pre className="mx-[3px] my-[2px] overflow-x-hidden rounded-lg bg-gray-900 px-[5px] font-bold text-stone-300">
+                <code>{unit}</code>
+              </pre>
             </li>
           ))}
         </ul>
