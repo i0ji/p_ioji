@@ -5,5 +5,6 @@ import Portfolio from "./Portfolio";
 import Cat from "./Cat";
 import Contacts from "./Contacts";
 import NotFound from "./NotFound";
+import HeroModal from "./HeroModal";
 
-export { Header, Hero, About, Portfolio, Cat, Contacts, NotFound };
+export { Header, Hero, About, Portfolio, Cat, Contacts, NotFound, HeroModal };

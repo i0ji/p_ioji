@@ -20,7 +20,7 @@ export default function Header() {
         </li>
         <li>
           <a className="group relative" href="#about">
-            <span className="absolute left-[-20px] hidden opacity-0 transition-opacity duration-300 group-hover:opacity-80 sm:block md:block">
+            <span className="absolute left-[-15px] hidden opacity-0 transition-opacity duration-300 group-hover:opacity-80 sm:block md:block">
               ◈
             </span>
             About
@@ -28,7 +28,7 @@ export default function Header() {
         </li>
         <li>
           <a className="group relative" href="#cat">
-            <span className="absolute left-[-20px] hidden opacity-0 transition-opacity duration-300 group-hover:opacity-80 sm:block md:block">
+            <span className="absolute left-[-15px] hidden opacity-0 transition-opacity duration-300 group-hover:opacity-80 sm:block md:block">
               ★
             </span>
             Cat
