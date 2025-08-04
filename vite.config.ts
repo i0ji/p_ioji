@@ -10,7 +10,7 @@ export default defineConfig({
       components: path.resolve(__dirname, "./src/components"),
       ui: path.resolve(__dirname, "./src/components/ui"),
       data: path.resolve(__dirname, "./src/data"),
-      assets: path.resolve(__dirname, "./src/assets")
+      assets: path.resolve(__dirname, "./src/assets"),
     },
   },
   plugins: [react()],
