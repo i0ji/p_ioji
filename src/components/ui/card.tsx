@@ -3,11 +3,11 @@ import { nanoid } from "nanoid";
 export default function Card({ data }: { data: heroModel }) {
   return (
     <div
-      className="mx-auto my-8 h-[70vh] flex max-md:h-[35vh]  max-md:w-[15vh] max-md:mx-5 w-[25vw] transform flex-col justify-between rounded-lg bg-gray-800 p-4 text-stone-400 shadow-lg drop-shadow-lg transition-transform duration-200 ease-linear hover:scale-[1.01]"
+      className="mx-auto my-4 flex h-[70vh] w-[90vw] 2xl:w-[30vw] transform flex-col justify-between rounded-lg bg-gray-800 p-4 text-stone-400 shadow-lg drop-shadow-lg transition-transform duration-200 ease-linear hover:scale-[1.01]"
       data-carousel-item
     >
       <h6 className="mb-2 flex h-auto text-xl font-bold">{data.title}</h6>
-      <div className="flex h-auto flex-auto flex-col  justify-between">
+      <div className="hidden h-auto flex-auto flex-col xl justify-between 2xl:lg:block">
         <ul className="flex list-disc flex-col justify-between pl-5 text-justify">
           {data.responsibilities.map((unit) => (
             <li key={nanoid()}>
