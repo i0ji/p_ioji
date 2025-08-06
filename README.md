@@ -1,12 +1,14 @@
 I deicided to create my own page using ~~NEXT~~ React!
 
-Current build:<br> 
+Current build:<br>
+
 > d: 31.03.25 v: 0.0.4a Chore/updates;<br>
 > <b>d: 28.07.25 v: 0.1.0 Total refactor using React;</b>
 > full list of renovated technologies:
 > `React 19, vite, pnpm, commitlint/commitizen/husky, TS, SASS, tailwind, prettier, postcss`;<br>
 
-Old build: 
+Old build:
+
 > d: 11.03.25 v: 0.0.1 First commit, add deps, reset style, markup, aliases;<br>
 > d: 12.03.25 v: 0.0.1 Make preliminary style and folder structure; add glitch; set deploy to gh-pages;<br>
 > d: 13.03.25 v: 0.0.2 Set paths, glitch effect + dart sass 3 adaptation;<br>
@@ -16,4 +18,4 @@ Old build:
 > d: 23.03.25 v: 0.0.4 Chore/updates;<br>
 > d: 27.03.25 v: 0.0.4 Chore/updates;<br>
 > d: 28.03.25 v: 0.0.4a Refactor config to fix multiple rerender/next chunks issues while changing tabs; Add react-ripplejs lib to implement button animation; Add nanoid lib to get unique ids;<br>
-Main markup and build environment set up ;
+> Main markup and build environment set up ;

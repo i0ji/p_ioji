@@ -1,7 +1,7 @@
 {
   "name": "p_ioji",
   "private": true,
-  "version": "0.0.0",
+  "version": "0.1.5.2",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -25,20 +25,21 @@
     }
   },
   "dependencies": {
-    "react": "^19.1.0",
-    "react-dom": "^19.1.0"
+    "react": "^19.1.1",
+    "react-dom": "^19.1.1",
+    "react-router": "^7.7.1"
   },
   "devDependencies": {
     "@commitlint/cli": "^19.8.1",
     "@commitlint/config-conventional": "^19.8.1",
     "@commitlint/types": "^19.8.1",
-    "@eslint/js": "^9.30.1",
-    "@types/react": "^19.1.8",
-    "@types/react-dom": "^19.1.6",
-    "@vitejs/plugin-react": "^4.6.0",
+    "@eslint/js": "^9.32.0",
+    "@types/react": "^19.1.9",
+    "@types/react-dom": "^19.1.7",
+    "@vitejs/plugin-react": "^4.7.0",
     "autoprefixer": "^10.4.21",
     "cz-customizable": "^7.4.0",
-    "eslint": "^9.30.1",
+    "eslint": "^9.32.0",
     "eslint-plugin-react-hooks": "^5.2.0",
     "eslint-plugin-react-refresh": "^0.4.20",
     "globals": "^16.3.0",
@@ -47,10 +48,11 @@
     "postcss": "^8.5.6",
     "prettier": "^3.6.2",
     "prettier-plugin-tailwindcss": "^0.6.14",
-    "sass": "^1.89.2",
-    "tailwindcss": "^3.4.17",
-    "typescript": "~5.8.3",
-    "typescript-eslint": "^8.35.1",
-    "vite": "^7.0.4"
+    "sass": "^1.90.0",
+    "swiper": "^11.2.10",
+    "tailwindcss": "3.4.17",
+    "typescript": "~5.9.2",
+    "typescript-eslint": "^8.39.0",
+    "vite": "^7.0.6"
   }
 }

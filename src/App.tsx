@@ -1,16 +1,24 @@
 import "./index.scss";
-import { Header, Hero, About, Portfolio, Cat, Contacts } from "components/index";
+import {
+  Header,
+  Hero,
+  About,
+  Portfolio,
+  Cat,
+  Contacts,
+} from "components/index";
 
 function App() {
   return (
     <>
       <Header />
       <div className="h-screen snap-y snap-mandatory overflow-y-scroll scroll-smooth">
+        <About />
         <Hero />
         <Portfolio />
-        <About />
-        <Cat/>
-        <Contacts/>
+
+        <Cat />
+        <Contacts />
       </div>
     </>
   );

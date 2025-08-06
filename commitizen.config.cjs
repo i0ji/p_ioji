@@ -49,8 +49,7 @@ module.exports = {
     subject: "Short description:\n",
     body: 'Full description. Use "|" for new row:\n',
     breaking: "Breaking changes:\n",
-    footer:
-      "Meta (issues, links):\n",
+    footer: "Meta (version, issues):\n",
     confirmCommit: "Confirm",
   },
 

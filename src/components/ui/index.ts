@@ -1,3 +1,5 @@
-import Card from "./card";
+import HeroCard from "./heroCard";
+import Modal from "./modal";
 
-export { Card };
+export { HeroCard };
+export { Modal };
