@@ -1,6 +1,6 @@
 {
   "name": "p_ioji",
-  "version": "0.0.4",
+  "version": "0.1.5.2",
   "private": true,
   "scripts": {
     "dev": "next dev --turbopack",

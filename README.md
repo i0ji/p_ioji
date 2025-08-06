@@ -34,4 +34,7 @@ Add <b>react-ripplejs lib</b> to implement button animation;
 Add <b>nanoid lib</b> to get unique ids;<br>
 d: 31.03.25
 v: 0.0.4a
-Chore/updates;
+d: 06.08.25
+v: 0.1.5.2
+Make main markup and logic; 
+Chore/updates; complete the initial markup for the page;
