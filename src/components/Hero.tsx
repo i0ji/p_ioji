@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 
-import heroData from "data/data";
+import { heroData } from "data/data";
 
 import { HeroCard } from "ui/index";
 import { nanoid } from "nanoid";
@@ -36,6 +36,7 @@ export default function Hero() {
         className="w-full"
         modules={[Pagination]}
         loop={false}
+        //LATER customize styles
         pagination={{
           type: "progressbar",
           clickable: false,
@@ -47,7 +48,7 @@ export default function Hero() {
             slidesPerGroup: 1,
           },
           768: {
-            slidesPerView: 'auto',
+            slidesPerView: "auto",
             slidesPerGroup: 1,
           },
           1024: {
