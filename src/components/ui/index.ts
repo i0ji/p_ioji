@@ -1,5 +1,5 @@
 import Card from "./card";
 import Modal from "./modal";
 
-export {Card};
-export {Modal}; 
+export { Card };
+export { Modal };

@@ -13,5 +13,5 @@ declare module "*.JPG" {
 interface HeroModalProps {
   isOpen: boolean;
   handleClose: () => void;
-  responsibilities: Array<string>;
+  description: Array<string>;
 }

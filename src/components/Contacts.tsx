@@ -6,8 +6,7 @@ export default function Contacts() {
     >
       <div className="mx-auto flex h-full max-w-screen-xl flex-wrap items-center justify-around">
         <ul className="mx-auto my-4 flex h-[30rem] w-[30rem] transform flex-col justify-between rounded-lg bg-gray-800 p-4 text-stone-400 shadow-lg drop-shadow-lg transition-transform duration-200 ease-linear">
-          <li
-          className="transition duration-300 hover:scale-105 hover:drop-shadow-lg hover:shadow-white/50">
+          <li className="transition duration-300 hover:scale-105 hover:shadow-white/50 hover:drop-shadow-lg">
             <a
               href="https://t.me/Ivan_Vasilevich"
               target="_blank"
@@ -17,7 +16,6 @@ export default function Contacts() {
             </a>
           </li>
           <li>
-    
             <a href="mailto:ioji@inbox.ru">Mail</a>
           </li>
         </ul>

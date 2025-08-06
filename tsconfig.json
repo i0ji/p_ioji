@@ -40,6 +40,6 @@
     "build/types/**/*.ts",
     "commitlint.config.cjs",
     "src/components/Slides/Slides.tsx_copy"
-  ],
+, "src/services/breakpoints"  ],
   "exclude": ["node_modules"]
 }
