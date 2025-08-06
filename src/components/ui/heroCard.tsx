@@ -10,7 +10,7 @@ export default function Card({ data }: { data: heroModel }) {
 
   return (
     <div
-      className="mx-auto my-4 flex h-[80vh] w-[80vw] transform flex-col justify-between rounded-lg bg-gray-800 p-4 text-stone-400 shadow-lg drop-shadow-lg transition-transform duration-200 ease-linear hover:scale-[1.01] 2xl:h-[70vh] 2xl:w-[30vw]"
+      className="mx-auto my-4 flex h-[80vh] w-[80vw] transform flex-col justify-between rounded-lg bg-gray-800 p-4 text-stone-400 shadow-lg drop-shadow-lg transition-transform duration-200 ease-linear hover:scale-[1.01] sm:h-[50vh] md:w-[60vw] lg:h-[80vh] lg:w-[30vw] xl:h-[60vh] 2xl:h-[50vh] 2xl:w-[30vw]"
       data-carousel-item
     >
       <h6 className="mb-2 flex h-auto text-xl font-bold">{data.title}</h6>

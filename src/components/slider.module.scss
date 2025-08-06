@@ -1,0 +1,11 @@
+.swiper-pagination-progressbar {
+  background-color: #eee;
+  height: 5px;
+  border-radius: 5px;
+}
+
+.swiper-pagination-progressbar-fill {
+  background-color: #7c3aed;
+  transition: width 0.25s ease;
+  border-radius: 5px;
+}

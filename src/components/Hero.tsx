@@ -2,8 +2,9 @@ import { useState, useEffect } from "react";
 
 import heroData from "data/data";
 
-import { Card } from "ui/index";
+import { HeroCard } from "ui/index";
 import { nanoid } from "nanoid";
+import "./slider.module.scss";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
@@ -15,7 +16,7 @@ import { Navigation, Pagination } from "swiper/modules";
 
 export default function Hero() {
   SwiperCore.use([Navigation, Pagination]);
-  const [,setIsMobile] = useState(false);
+  const [, setIsMobile] = useState(false);
 
   useEffect(() => {
     function checkScreen() {
@@ -45,7 +46,11 @@ export default function Hero() {
             slidesPerView: 1,
             slidesPerGroup: 1,
           },
-          1536: {
+          768: {
+            slidesPerView: 'auto',
+            slidesPerGroup: 1,
+          },
+          1024: {
             slidesPerView: 3,
             slidesPerGroup: 1,
           },
@@ -55,7 +60,7 @@ export default function Hero() {
       >
         {heroData.map((item: heroModel) => (
           <SwiperSlide key={nanoid()}>
-            <Card data={item} />
+            <HeroCard data={item} />
           </SwiperSlide>
         ))}
       </Swiper>

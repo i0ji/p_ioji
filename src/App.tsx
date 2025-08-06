@@ -13,9 +13,10 @@ function App() {
     <>
       <Header />
       <div className="h-screen snap-y snap-mandatory overflow-y-scroll scroll-smooth">
+        <About />
         <Hero />
         <Portfolio />
-        <About />
+
         <Cat />
         <Contacts />
       </div>
