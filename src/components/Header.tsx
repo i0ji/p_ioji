@@ -7,7 +7,7 @@ export default function Header() {
             <span className="absolute left-[-15px] hidden opacity-0 transition-opacity duration-300 group-hover:opacity-80 sm:block md:block">
               ◈
             </span>
-            About
+            about
           </a>
         </li>
         <li>
@@ -15,7 +15,7 @@ export default function Header() {
             <span className="none absolute left-[-15px] hidden opacity-0 transition-opacity duration-300 group-hover:opacity-80 sm:block">
               #
             </span>
-            Hero
+            hero
           </a>
         </li>
         <li>
@@ -23,7 +23,7 @@ export default function Header() {
             <span className="absolute left-[-25px] hidden opacity-0 transition-opacity duration-300 group-hover:opacity-80 sm:block md:block">
               &#128449;
             </span>
-            Portfolio
+            portfolio
           </a>
         </li>
 
@@ -32,7 +32,7 @@ export default function Header() {
             <span className="absolute left-[-15px] hidden opacity-0 transition-opacity duration-300 group-hover:opacity-80 sm:block md:block">
               ★
             </span>
-            Cat
+            cat
           </a>
         </li>
         <li>
@@ -40,7 +40,7 @@ export default function Header() {
             <span className="absolute left-[-20px] hidden opacity-0 transition-opacity duration-300 group-hover:opacity-80 sm:block md:block">
               ☏
             </span>
-            Contacts
+            contacts
           </a>
         </li>
       </ul>

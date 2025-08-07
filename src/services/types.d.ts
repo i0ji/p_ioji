@@ -7,15 +7,16 @@ interface heroModel {
   title: string;
   period: string;
   responsibilities: Array<string>;
-  technologies: Array<string>;
+  technologies?: Array<string>;
 }
 
 interface aboutModel {
   title: string;
-  description: string;
+  keyWords: string;
+  description: string | Array<string>;
 }
 
-interface HeroModalProps {
+interface heroModalProps {
   isOpen: boolean;
   handleClose: () => void;
   description: Array<string>;

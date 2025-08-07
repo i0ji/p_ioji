@@ -4,13 +4,11 @@ import { heroData } from "data/data";
 
 import { HeroCard } from "ui/index";
 import { nanoid } from "nanoid";
-import "./slider.module.scss";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
-
 import SwiperCore from "swiper";
 import { Navigation, Pagination } from "swiper/modules";
 

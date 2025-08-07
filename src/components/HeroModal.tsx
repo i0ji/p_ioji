@@ -4,7 +4,7 @@ export default function HeroModal({
   isOpen,
   handleClose,
   description,
-}: HeroModalProps) {
+}: heroModalProps) {
   return (
     <Modal isOpen={isOpen} handleClose={handleClose}>
       {description}

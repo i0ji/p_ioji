@@ -66,13 +66,58 @@ const heroData: Array<heroModel> = [
       "vite",
     ],
   },
+  {
+    title: "Buzzzzwords",
+    period: "2023-present",
+    responsibilities: [
+      "NEXT.JS",
+      "React",
+      "Redux",
+      "Router",
+      "TypeScript",
+      "WebSocket",
+      "HTML",
+      "SASS",
+      "BEM",
+      "Webpack",
+      "Jest",
+      "Cypress",
+      "Git",
+      "Git-Flow",
+      "Bootstrap",
+      "Tailwind",
+      "Pixel Perfect",
+      "Linux",
+      "YDS",
+    ],
+  },
 ];
 
 const aboutData: Array<aboutModel> = [
   {
-    title: "Hello!",
+    title: "hello",
+    keyWords: "Key points",
     description:
       "I began my programming journey with the fundamentals of JavaScript, HTML, and CSS, gradually incorporating new technologies and best practices along the way. My learning roadmap includes Webpack, BEM methodology, GitHub, Git-flow, GitVerse, SASS, TypeScript, npm, Yarn, pnpm, Vite, and eventually React and Next.js. I have also worked with Redux Toolkit, WebSocket, Jest, and Cypress for testing. Additionally, I have experience working with Angular.",
+  },
+  {
+    title: "education",
+    keyWords: "Key points",
+    description: [
+      "Graduated from the Moscow Aviation Institute (Technical University) in 2023",
+    ],
+  },
+  {
+    title: "courses/intensives",
+    keyWords: "Key points",
+    description: [
+      "Advanced React Developer at Yandex.Practicum",
+      "Yandex.GTP Week",
+      "ITLogia: Frontend Start",
+      "SkillFactory: Soft-skills, Frontend developer intensive",
+      "HTML Academy: Dive into FE development",
+      "Skillbox: Frontend-developer",
+    ],
   },
 ];
 
