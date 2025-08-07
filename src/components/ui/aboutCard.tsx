@@ -7,10 +7,10 @@ export default function AboutCard({ data }: { data: aboutModel }) {
     <div
       className={clsx(
         "mx-auto flex h-[30vh] w-[90vw] transform flex-col justify-between p-4",
-        "rounded-lg",
-        "border-stone-300 bg-transparent text-stone-300",
+        "rounded-lg border-2 border-stone-300",
+        "bg-transparent text-stone-300",
         "sm:h-[50vh]",
-        "md:w-[60vw] md:border-2 md:border-solid",
+        "md:w-[60vw] md:border-solid",
         "lg:h-[80vh] lg:w-[30vw] xl:h-[60vh] 2xl:h-[30vh] 2xl:w-[30vw]",
         "transition-transform duration-200 ease-linear",
       )}

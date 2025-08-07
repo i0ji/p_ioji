@@ -1,7 +1,7 @@
 {
   "name": "p_ioji",
   "private": true,
-  "version": "0.1.5.2",
+  "version": "0.1.5.4",
   "type": "module",
   "scripts": {
     "dev": "vite",

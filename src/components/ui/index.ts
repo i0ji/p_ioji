@@ -1,7 +1,7 @@
-import HeroCard from "./heroCard";
-import Modal from "./modal";
-import AboutCard from "./aboutCard";
+import HeroCard from "./HeroCard";
+import AboutCard from "./AboutCard";
+import Modal from "./Modal";
 
 export { HeroCard };
-export { Modal };
 export { AboutCard };
+export { Modal };
