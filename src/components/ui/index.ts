@@ -1,6 +1,6 @@
-import HeroCard from "./HeroCard";
-import AboutCard from "./AboutCard";
-import Modal from "./Modal";
+import HeroCard from "ui/HeroCard";
+import AboutCard from "ui/AboutCard";
+import Modal from "ui/Modal";
 
 export { HeroCard };
 export { AboutCard };

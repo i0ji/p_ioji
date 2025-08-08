@@ -1,4 +1,7 @@
-const heroData: Array<heroModel> = [
+import a1 from "assets/about/about.png";
+import a2 from "assets/about/education.png";
+
+const heroData: Array<heroDataModel> = [
   {
     title: "System Administrator => DevOps engineer => Head of IT department",
     period: "2023 - present",
@@ -93,19 +96,23 @@ const heroData: Array<heroModel> = [
   },
 ];
 
-const aboutData: Array<aboutModel> = [
+const aboutData: Array<aboutDataModel> = [
   {
     title: "hello",
+    imgSrc: a1,
     keyWords: "Key points",
     description:
       "I began my programming journey with the fundamentals of JavaScript, HTML, and CSS, gradually incorporating new technologies and best practices along the way. My learning roadmap includes Webpack, BEM methodology, GitHub, Git-flow, GitVerse, SASS, TypeScript, npm, Yarn, pnpm, Vite, and eventually React and Next.js. I have also worked with Redux Toolkit, WebSocket, Jest, and Cypress for testing. Additionally, I have experience working with Angular.",
+    id: "common",
   },
   {
     title: "education",
+    imgSrc: a2,
     keyWords: "Key points",
     description: [
       "Graduated from the Moscow Aviation Institute (Technical University) in 2023",
     ],
+    id: "education",
   },
   {
     title: "courses/intensives",
@@ -118,6 +125,7 @@ const aboutData: Array<aboutModel> = [
       "HTML Academy: Dive into FE development",
       "Skillbox: Frontend-developer",
     ],
+    id: "courses",
   },
 ];
 

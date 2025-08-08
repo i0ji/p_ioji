@@ -3,17 +3,28 @@ declare module "*.JPG" {
   export default value;
 }
 
-interface heroModel {
+interface heroDataModel {
   title: string;
   period: string;
   responsibilities: Array<string>;
   technologies?: Array<string>;
 }
 
-interface aboutModel {
+interface aboutDataModel {
   title: string;
-  keyWords: string;
+  imgSrc?: string;
+  keyWords: string | Array<string>;
   description: string | Array<string>;
+  id: string;
+}
+
+interface aboutCardModel {
+  title: string;
+  to: string;
+  className: string;
+  id: string;
+  data: aboutDataModel;
+  slug?: string;
 }
 
 interface heroModalProps {

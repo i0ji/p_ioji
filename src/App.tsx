@@ -8,7 +8,7 @@ import {
   Contacts,
 } from "components/index";
 
-function App() {
+export default function App() {
   return (
     <>
       <Header />
@@ -16,12 +16,9 @@ function App() {
         <About />
         <Hero />
         <Portfolio />
-
         <Cat />
         <Contacts />
       </div>
     </>
   );
 }
-
-export default App;
