@@ -4,7 +4,7 @@ import { HeroModal } from "components/index";
 
 import clsx from "clsx";
 
-export default function Card({ data }: { data: heroModel }) {
+export default function Card({ data }) {
   const [isOpen, setIsOpen] = useState(false);
 
   const handleOpenModal = () => setIsOpen(true);

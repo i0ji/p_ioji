@@ -1,5 +1,6 @@
 import a1 from "assets/about/about.png";
 import a2 from "assets/about/education.png";
+import a3 from "assets/about/courses.png";
 
 const heroData: Array<heroDataModel> = [
   {
@@ -116,6 +117,7 @@ const aboutData: Array<aboutDataModel> = [
   },
   {
     title: "courses/intensives",
+    imgSrc: a3,
     keyWords: "Key points",
     description: [
       "Advanced React Developer at Yandex.Practicum",

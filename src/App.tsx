@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import "./index.scss";
 import {
   Header,
@@ -10,7 +11,10 @@ import {
 
 export default function App() {
   return (
-    <>
+    <motion.div
+      layoutScroll
+      className="h-screen snap-y snap-mandatory overflow-y-scroll scroll-smooth"
+    >
       <Header />
       <div className="h-screen snap-y snap-mandatory overflow-y-scroll scroll-smooth">
         <About />
@@ -19,6 +23,6 @@ export default function App() {
         <Cat />
         <Contacts />
       </div>
-    </>
+    </motion.div>
   );
 }

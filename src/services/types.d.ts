@@ -26,9 +26,3 @@ interface aboutCardModel {
   data: aboutDataModel;
   slug?: string;
 }
-
-interface heroModalProps {
-  isOpen: boolean;
-  handleClose: () => void;
-  description: Array<string>;
-}

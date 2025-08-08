@@ -1,42 +1,41 @@
-import { Link } from "react-router-dom";
-import { motion } from "framer-motion";
+import { nanoid } from "nanoid";
+
 import clsx from "clsx";
 
-export default function AboutCard({ data, to, className, id }: aboutCardModel) {
+export default function AboutCard({ data }: { data: aboutDataModel }) {
   return (
-    <motion.div
-      layoutId={id}
-      layout
+    <div
       className={clsx(
-        "h-[40vh] w-[full]",
-        "md:h-[30vh] md:w-[60vh]",
-        "cursor-pointer rounded-lg border bg-transparent p-4 text-white",
-        "transition-all duration-300 hover:shadow-lg",
-        className,
+        "relative mx-auto flex h-[30vh] w-[90vw] flex-col justify-between",
+        "transform p-4",
+        "rounded-lg border-2 border-stone-300",
+        "bg-transparent text-stone-300",
+        "sm:h-[50vh]",
+        "md:w-[60vw] md:border-solid",
+        "lg:h-[80vh] lg:w-[30vw] xl:h-[60vh] 2xl:h-[30vh] 2xl:w-[30vw]",
+        "transition-transform duration-200 ease-linear",
       )}
-      transition={{ type: "spring", stiffness: 260, damping: 28 }}
-      whileHover={{ scale: 1.02 }}
-      whileTap={{ scale: 0.98 }}
+      data-carousel-item
     >
-      {data.imgSrc && (
-        <img
-          className="mb-3 h-32 w-full rounded border border-white/30 object-cover"
-          src={data.imgSrc}
-          alt={data.title}
-        />
+      <img
+        className={clsx("absolute z-[-10] h-1/2")}
+        src={data.imgSrc}
+        alt="{data.title}"
+      />
+      <h2>{data.title}</h2>
+      <h6>{data.keyWords}</h6>
+
+      {Array.isArray(data.description) ? (
+        <ul className="flex z-100 list-disc flex-col justify-between pl-5 text-justify">
+          {data.description.map((unit) => (
+            <li key={nanoid()}>
+              <p>{unit}</p>
+            </li>
+          ))}
+        </ul>
+      ) : (
+        <p className="text-justify">{data.description}</p>
       )}
-
-      <h3 className="mb-2 text-lg font-semibold">{data.title}</h3>
-
-      {(data.description || data.description) && (
-        <p className="text-sm leading-relaxed text-white/80">
-          {data.description || data.description}
-        </p>
-      )}
-
-      <Link to={to} className="mt-3 text-xs text-white/60">
-        Нажмите для подробностей →
-      </Link>
-    </motion.div>
+    </div>
   );
 }
