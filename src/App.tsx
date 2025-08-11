@@ -1,5 +1,5 @@
-import { motion } from "framer-motion";
 import "./index.scss";
+
 import {
   Header,
   Hero,
@@ -11,18 +11,18 @@ import {
 
 export default function App() {
   return (
-    <motion.div
-      layoutScroll
-      className="h-screen snap-y snap-mandatory overflow-y-scroll scroll-smooth"
-    >
-      <Header />
-      <div className="h-screen snap-y snap-mandatory overflow-y-scroll scroll-smooth">
+    <div>
+      {/* <div
+        id="scroll-layout"
+        className="no-scrollbar h-screen snap-y snap-mandatory overflow-y-scroll scroll-smooth"
+      > */}
+        <Header />
         <About />
         <Hero />
         <Portfolio />
         <Cat />
         <Contacts />
       </div>
-    </motion.div>
+    // </div>
   );
 }

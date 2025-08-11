@@ -1,6 +1,28 @@
+import clsx from "clsx";
+import { animated, useScroll, useSpring } from "@react-spring/web";
+
 export default function Header() {
+  const { scrollYProgress } = useScroll();
+  const styles = useSpring({
+    to: {
+      width: scrollYProgress.to((p) => `${80 - p * 40}%`),
+
+      opacity: scrollYProgress.to((p) => 1 - p * 1),
+      backdropFilter: scrollYProgress.to((p) => `blur(${2 + p * 6}px)`),
+    },
+    config: { tension: 170, friction: 26 },
+  });
+
   return (
-    <nav className="backdrop-blur-xs fixed top-0 mx-auto flex h-10 w-[100%] items-center justify-between bg-black bg-opacity-30 py-3 text-stone-200">
+    <animated.nav
+      style={styles}
+      className={clsx(
+        "fixed left-1/2 top-0 w-[50%] -translate-x-1/2",
+        "flex items-center justify-between",
+        "mx-auto mt-5 h-10",
+        "z-100 backdrop-blur-xs rounded-3xl bg-black bg-opacity-30 py-3 text-stone-200",
+      )}
+    >
       <ul className="max-lg flex w-full items-center justify-around">
         <li>
           <a className="group relative" href="#about">
@@ -44,6 +66,6 @@ export default function Header() {
           </a>
         </li>
       </ul>
-    </nav>
+    </animated.nav>
   );
 }
