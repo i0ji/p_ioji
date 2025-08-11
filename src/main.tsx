@@ -1,6 +1,7 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
-import { BrowserRouter, Routes, Route } from "react-router";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+
 import { NotFound } from "components/index";
 import "./index.scss";
 import App from "./App";
@@ -8,7 +9,7 @@ import App from "./App";
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
     <BrowserRouter>
-      <Routes>
+      <Routes location={location} key={location.pathname}>
         <Route path="/" element={<App />} />
         <Route path="*" element={<NotFound />} />
       </Routes>

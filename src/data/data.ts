@@ -1,4 +1,8 @@
-const heroData: Array<heroModel> = [
+import a1 from "assets/about/about.png";
+import a2 from "assets/about/education.png";
+import a3 from "assets/about/courses.png";
+
+const heroData: Array<heroDataModel> = [
   {
     title: "System Administrator => DevOps engineer => Head of IT department",
     period: "2023 - present",
@@ -30,7 +34,7 @@ const heroData: Array<heroModel> = [
     responsibilities: [
       "Developed a full-featured application independently, managing all stages from client communication and design approval to deployment and maintenance",
       "Deployed the application on REG.RU hosting and configured SSL certification",
-      "Set up indexing in Yandex and Google, integrated Yandex.Metrika and Webmaster tools; utilized Google PageSpeed and Google Search Console — achieved over 5,500 visitors",
+      "Set up indexing in Yandex and Google, integrated Yandex.Metrika and Webmaster tools; utilized Google PageSpeed and Google Search Console",
       "Optimized the application to improve performance and user experience",
       "Continuously maintain the application: adding content, updating information, and handling migration to Next.js",
       "Collect and analyze user feedback on the application’s performance and UX",
@@ -66,6 +70,65 @@ const heroData: Array<heroModel> = [
       "vite",
     ],
   },
+  {
+    title: "Buzzzzwords",
+    period: "2023-present",
+    responsibilities: [
+      "NEXT.JS",
+      "React",
+      "Redux",
+      "Router",
+      "TypeScript",
+      "WebSocket",
+      "HTML",
+      "SASS",
+      "BEM",
+      "Webpack",
+      "Jest",
+      "Cypress",
+      "Git",
+      "Git-Flow",
+      "Bootstrap",
+      "Tailwind",
+      "Pixel Perfect",
+      "Linux",
+      "YDS",
+    ],
+  },
 ];
 
-export default heroData;
+const aboutData: Array<aboutDataModel> = [
+  {
+    title: "hello",
+    imgSrc: a1,
+    keyWords: "Key points",
+    description:
+      "I began my programming journey with the fundamentals of JavaScript, HTML, and CSS, gradually incorporating new technologies and best practices along the way. My learning roadmap includes Webpack, BEM methodology, GitHub, Git-flow, GitVerse, SASS, TypeScript, npm, Yarn, pnpm, Vite, and eventually React and Next.js. I have also worked with Redux Toolkit, WebSocket, Jest, and Cypress for testing. Additionally, I have experience working with Angular.",
+    id: "common",
+  },
+  {
+    title: "education",
+    imgSrc: a2,
+    keyWords: "Key points",
+    description: [
+      "Graduated from the Moscow Aviation Institute (Technical University) in 2023",
+    ],
+    id: "education",
+  },
+  {
+    title: "courses/intensives",
+    imgSrc: a3,
+    keyWords: "Key points",
+    description: [
+      "Advanced React Developer at Yandex.Practicum",
+      "Yandex.GTP Week",
+      "ITLogia: Frontend Start",
+      "SkillFactory: Soft-skills, Frontend developer intensive",
+      "HTML Academy: Dive into FE development",
+      "Skillbox: Frontend-developer",
+    ],
+    id: "courses",
+  },
+];
+
+export { aboutData, heroData };

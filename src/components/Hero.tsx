@@ -1,16 +1,14 @@
 import { useState, useEffect } from "react";
 
-import heroData from "data/data";
+import { heroData } from "data/data";
 
 import { HeroCard } from "ui/index";
 import { nanoid } from "nanoid";
-import "./slider.module.scss";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
-
 import SwiperCore from "swiper";
 import { Navigation, Pagination } from "swiper/modules";
 
@@ -36,6 +34,7 @@ export default function Hero() {
         className="w-full"
         modules={[Pagination]}
         loop={false}
+        //LATER customize styles
         pagination={{
           type: "progressbar",
           clickable: false,
@@ -47,7 +46,7 @@ export default function Hero() {
             slidesPerGroup: 1,
           },
           768: {
-            slidesPerView: 'auto',
+            slidesPerView: 3,
             slidesPerGroup: 1,
           },
           1024: {
@@ -58,7 +57,7 @@ export default function Hero() {
         slidesPerView={"auto"}
         slidesPerGroup={1}
       >
-        {heroData.map((item: heroModel) => (
+        {heroData.map((item: heroDataModel) => (
           <SwiperSlide key={nanoid()}>
             <HeroCard data={item} />
           </SwiperSlide>
