@@ -1,11 +1,26 @@
-import { animated } from "@react-spring/web";
+import { useRef } from "react";
 import clsx from "clsx";
+import { motion, useScroll, useTransform } from "framer-motion";
 
 export default function Header() {
+  const ref = useRef(null);
+
+  const { scrollY } = useScroll();
+
+  const navScale = useTransform(
+    scrollY,
+    [0, 1400], // вход: пиксели скролла
+    ["90vw", "40vw"], // выход: высота nav
+  );
+
   return (
-    <animated.nav
+    <motion.nav
+      ref={ref}
+      style={{
+        width: navScale
+      }}
       className={clsx(
-        "fixed left-1/2 w-[60%] p-4 top-0 -translate-x-1/2",
+        "fixed left-1/2 top-0 w-[60%] -translate-x-1/2 p-4",
         "z-50 mx-auto mt-5 rounded-3xl bg-black/30 text-stone-200 backdrop-blur-md",
         "flex items-center justify-between px-4",
         "will-change-[transform,opacity,filter]",
@@ -13,19 +28,19 @@ export default function Header() {
     >
       <ul className="max-lg flex w-full items-center justify-around">
         <li>
-          <a className="group relative" href="#about">
-            <span className="absolute left-[-15px] hidden opacity-0 transition-opacity duration-300 group-hover:opacity-80 sm:block md:block">
-              ◈
-            </span>
-            about
-          </a>
-        </li>
-        <li>
           <a className="group relative" href="#hero">
             <span className="none absolute left-[-15px] hidden opacity-0 transition-opacity duration-300 group-hover:opacity-80 sm:block">
               #
             </span>
             hero
+          </a>
+        </li>
+        <li>
+          <a className="group relative" href="#experience">
+            <span className="absolute left-[-15px] hidden opacity-0 transition-opacity duration-300 group-hover:opacity-80 sm:block md:block">
+              ◈
+            </span>
+            experience
           </a>
         </li>
         <li>
@@ -36,7 +51,6 @@ export default function Header() {
             portfolio
           </a>
         </li>
-
         <li>
           <a className="group relative" href="#cat">
             <span className="absolute left-[-15px] hidden opacity-0 transition-opacity duration-300 group-hover:opacity-80 sm:block md:block">
@@ -45,6 +59,7 @@ export default function Header() {
             cat
           </a>
         </li>
+
         <li>
           <a className="group relative" href="#contacts">
             <span className="absolute left-[-20px] hidden opacity-0 transition-opacity duration-300 group-hover:opacity-80 sm:block md:block">
@@ -54,6 +69,6 @@ export default function Header() {
           </a>
         </li>
       </ul>
-    </animated.nav>
+    </motion.nav>
   );
 }

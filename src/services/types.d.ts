@@ -3,7 +3,7 @@ declare module "*.JPG" {
   export default value;
 }
 
-interface heroDataModel {
+interface experienceDataModel {
   title: string;
   period: string;
   responsibilities: Array<string>;

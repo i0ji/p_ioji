@@ -1,68 +1,44 @@
-import { useState, useEffect } from "react";
-
-import { heroData } from "data/data";
-
-import { HeroCard } from "ui/index";
-import { nanoid } from "nanoid";
-
-import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/css";
-import "swiper/css/pagination";
-import "swiper/css/navigation";
-import SwiperCore from "swiper";
-import { Navigation, Pagination } from "swiper/modules";
+import { motion, useScroll, useTransform } from "framer-motion";
+import { useRef } from "react";
+import clsx from "clsx";
 
 export default function Hero() {
-  SwiperCore.use([Navigation, Pagination]);
-  const [, setIsMobile] = useState(false);
+  const ref = useRef(null);
 
-  useEffect(() => {
-    function checkScreen() {
-      setIsMobile(window.innerWidth < 768);
-    }
-    checkScreen();
-    window.addEventListener("resize", checkScreen);
-    return () => window.removeEventListener("resize", checkScreen);
-  }, []);
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ["start start", "end end"], // 0 когда верх секции у верхнего края, 1 когда низ у нижнего
+  });
+
+  const scale = useTransform(scrollYProgress, [0, 1], [1, 5]);
+  // Немного смягчим прозрачность для приятности
+  const opacity = useTransform(scrollYProgress, [0, 0.1, 1], [0.5, 1, 1]);
 
   return (
     <section
-      id="hero"
-      className="flex h-screen w-full snap-start flex-col items-center justify-center border-l-purple-950 bg-gradient-to-br from-cyan-800 from-5% pt-10 2xl:flex-row"
+    id="hero"
+      ref={ref}
+      className={clsx(
+        "relative min-h-[200vh] bg-gradient-to-t from-slate-700 to-slate-400",
+      )}
     >
-      <Swiper
-        className="w-full"
-        modules={[Pagination]}
-        loop={false}
-        //LATER customize styles
-        pagination={{
-          type: "progressbar",
-          clickable: false,
-        }}
-        spaceBetween={5}
-        breakpoints={{
-          0: {
-            slidesPerView: 1,
-            slidesPerGroup: 1,
-          },
-          768: {
-            slidesPerView: 3,
-            slidesPerGroup: 1,
-          },
-          1024: {
-            slidesPerView: 3,
-            slidesPerGroup: 1,
-          },
-        }}
-        slidesPerView={"auto"}
-        slidesPerGroup={1}
+      <div
+        className={clsx(
+          "top-0 flex h-screen items-center justify-center",
+          "border-2 border-solid border-red-500",
+          "overflow-hidden first-line:sticky",
+        )}
       >
-        {heroData.map((item: heroDataModel) => (
-          <SwiperSlide key={nanoid()}>
-            <HeroCard data={item} />
-          </SwiperSlide>
-        ))}
-      </Swiper>
+        <motion.div
+          style={{ scale, opacity, willChange: "transform,opacity" }}
+          className={clsx(
+            "h-[20rem] w-[30rem]",
+            "flex items-center justify-center",
+            "rounded-2xl",
+            "bg-gradient-to-t from-slate-700 to-transparent",
+          )}
+        />
+      </div>
     </section>
   );
 }

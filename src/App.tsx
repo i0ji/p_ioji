@@ -2,8 +2,8 @@ import "./index.scss";
 
 import {
   Header,
+  Experience,
   Hero,
-  About,
   Portfolio,
   Cat,
   Contacts,
@@ -13,15 +13,10 @@ export default function App() {
   return (
     <>
       <Header />
-
-      <About />
-
       <Hero />
-
+      <Experience />
       <Portfolio />
-
       <Cat />
-
       <Contacts />
     </>
   );

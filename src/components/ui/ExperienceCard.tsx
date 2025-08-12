@@ -1,15 +1,8 @@
 import { nanoid } from "nanoid";
-import { useState } from "react";
-import { HeroModal } from "components/index";
 
 import clsx from "clsx";
 
-export default function HeroCard({ data }) {
-  const [isOpen, setIsOpen] = useState(false);
-
-  const handleOpenModal = () => setIsOpen(true);
-  const handleCloseModal = () => setIsOpen(false);
-
+export default function Experience({ data }) {
   return (
     <div
       className={clsx(
@@ -49,28 +42,6 @@ export default function HeroCard({ data }) {
             ))}
         </ul>
       </div>
-
-      <button
-        onClick={handleOpenModal}
-        className={clsx(
-          "group relative me-2 mt-2 hidden w-1/3 items-center self-end overflow-hidden",
-          "bg-gradient-to-br from-purple-600 to-blue-500 p-0.5 text-gray-900 group-hover:from-purple-600 group-hover:to-blue-500 dark:focus:ring-blue-800",
-          "rounded-lg focus:outline-none focus:ring-4 focus:ring-blue-300",
-          "text-sm font-medium hover:text-white 2xl:hidden dark:text-white",
-        )}
-      >
-        <span className="relative w-full rounded-md bg-white px-5 py-2.5 transition-all duration-75 ease-in group-hover:bg-transparent dark:bg-gray-900 group-hover:dark:bg-transparent">
-          Read more
-        </span>
-      </button>
-
-      {isOpen && (
-        <HeroModal
-          isOpen={isOpen}
-          handleClose={handleCloseModal}
-          description={data.responsibilities}
-        />
-      )}
     </div>
   );
 }

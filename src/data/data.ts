@@ -2,7 +2,7 @@ import a1 from "assets/about/about.png";
 import a2 from "assets/about/education.png";
 import a3 from "assets/about/courses.png";
 
-const heroData: Array<heroDataModel> = [
+const experienceData: Array<experienceDataModel> = [
   {
     title: "System Administrator => DevOps engineer => Head of IT department",
     period: "2023 - present",
@@ -131,4 +131,4 @@ const aboutData: Array<aboutDataModel> = [
   },
 ];
 
-export { aboutData, heroData };
+export { aboutData, experienceData };
