@@ -1,43 +1,12 @@
-import { animated, useSpring } from "@react-spring/web";
+import { animated } from "@react-spring/web";
 import clsx from "clsx";
-import { useMemo } from "react";
-import { useSectionProgress } from "services/hooks";
 
 export default function Header() {
-  const { progress, passedTop } = useSectionProgress("about", { endK: 1 });
-
-  const eff = useMemo(() => Math.min(1, Math.max(0, progress)), [progress]);
-
-  const styles = useSpring({
-    width: `${80 - eff * 40}%`, // 80% → 40%
-    // height: `${56 - eff * 12}px`, // 56px → 44px
-    // paddingTop: `${12 - eff * 4}px`,
-    // paddingBottom: `${12 - eff * 4}px`,
-    opacity: 0.9 + eff * 0.1,
-    backdropFilter: `blur(${2 + eff * 6}px)`,
-    config: { tension: 220, friction: 28 },
-  });
-
-  // Если вышли за About — держим финальные значения (без «дрожи»)
-  const frozen = passedTop && eff >= 1;
-
   return (
     <animated.nav
-      style={
-        frozen
-          ? {
-              width: "40%",
-              height: "56px",
-              paddingTop: "8px",
-              paddingBottom: "8px",
-              opacity: 1,
-              backdropFilter: "blur(8px)",
-            }
-          : styles
-      }
       className={clsx(
-        "fixed left-1/2 top-0 -translate-x-1/2",
-        "z-50 mx-auto mt-5 rounded-3xl bg-black/30 text-stone-200",
+        "fixed left-1/2 w-[60%] p-4 top-0 -translate-x-1/2",
+        "z-50 mx-auto mt-5 rounded-3xl bg-black/30 text-stone-200 backdrop-blur-md",
         "flex items-center justify-between px-4",
         "will-change-[transform,opacity,filter]",
       )}

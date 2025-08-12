@@ -1,28 +1,27 @@
-// components/Scene.tsx
 import { animated, useSpring } from "@react-spring/web";
 import clsx from "clsx";
 import { usePinnedSceneProgress } from "services/hooks";
 import { slice, mapRange } from "services/scroll";
 
-export function About() {
+export default function About() {
   const { ref, progress: p } = usePinnedSceneProgress();
 
-  // Фаза A (0..0.33): заголовок выезжает и проявляется
+  // TITLE
   const a = slice(p, 0.0, 0.33);
   const titleSpring = useSpring({
     opacity: a, // 0 → 1
-    transform: `translateY(${mapRange(a, 0, 1, 30, 0)}px)`, // 30px вниз → 0
+    transform: `translateX(-50%) translateY(${mapRange(a, 0, 1, 600, 0)}px)`,
     config: { tension: 220, friction: 26 },
   });
 
-  // Фаза B (0.33..0.66): изображение масштабируется, текст — параллакс
+  // CENTER BLOCK
   const b = slice(p, 0.33, 0.66);
   const imageSpring = useSpring({
-    transform: `scale(${mapRange(b, 0, 1, 1, 1.15)})`,
+    transform: `translateX(-50%) scale(${mapRange(b, 0, 1, 1, 10)})`,
     config: { tension: 220, friction: 26 },
   });
   const textSpring = useSpring({
-    transform: `translateY(${mapRange(b, 0, 1, 0, -50)}px)`,
+    transform: `translateX(-50%) translateY(${mapRange(b, 0, 1, 0, -50)}px)`,
     opacity: mapRange(b, 0, 1, 1, 0.9),
     config: { tension: 220, friction: 26 },
   });
@@ -37,10 +36,12 @@ export function About() {
 
   return (
     <section
+      id="about"
       ref={ref}
       className={clsx(
-        "relative min-h-[300vh]", // длина сцены — прокрутки
-        "bg-neutral-900",
+        "relative min-h-[500vh]", // длина сцены — прокрутки
+        "bg-[radial-gradient(ellipse_at_bottom_left,_var(--tw-gradient-stops))]",
+        "from-[#1e293b] via-[#6366f1] to-[#71717a]",
       )}
     >
       <div className="sticky top-0 h-screen overflow-hidden">
@@ -54,9 +55,9 @@ export function About() {
         <div className="relative h-full w-full">
           <animated.h2
             style={titleSpring}
-            className="absolute left-1/2 top-20 -translate-x-1/2 text-5xl font-bold text-white will-change-[transform,opacity]"
+            className="absolute top-[7rem] text-5xl left-1/2 font-bold text-white will-change-[transform,opacity]"
           >
-            Заголовок сцены
+           Hello
           </animated.h2>
 
           <animated.div
