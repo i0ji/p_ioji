@@ -1,34 +1,21 @@
-import { useEffect, useState } from "react";
+// hooks/usePinnedSceneProgress.ts
+import { useEffect, useRef, useState } from "react";
 
-type ProgressOptions = {
-  // как считать «окно» прогресса: top 0→-vh*k
-  endK?: number; // 1 = высота вьюпорта, 1.2/0.8 — ускорить/замедлить
-  clamp?: boolean;
-};
-
-export function useSectionProgress(sectionId: string, opts: ProgressOptions = {}) {
-  const { endK = 1, clamp = true } = opts;
+export function usePinnedSceneProgress() {
+  const ref = useRef<HTMLElement | null>(null);
   const [progress, setProgress] = useState(0); // 0..1
-  const [inView, setInView] = useState(false); // видна ли секция хоть частично
-  const [passedTop, setPassedTop] = useState(false); // верх прошёл верх вьюпорта
 
   useEffect(() => {
-    const el = document.getElementById(sectionId);
-    if (!el) return;
+    if (!ref.current) return;
 
     let ticking = false;
 
     const measure = () => {
-      const rect = el.getBoundingClientRect();
-      const vh = window.innerHeight;
-      const start = 0;          // rect.top = 0 — начало
-      const end = -vh * endK;   // rect.top = -vh*endK — конец
-      const t = (rect.top - start) / (end - start);
-      const p = clamp ? Math.min(1, Math.max(0, t)) : t;
-
-      setProgress(p);
-      setInView(rect.bottom > 0 && rect.top < vh);
-      setPassedTop(rect.top <= 0);
+      if (!ref.current) return;
+      const rect = ref.current.getBoundingClientRect();
+      const total = rect.height - window.innerHeight; // прокручиваемая часть внутри сцены
+      const y = Math.min(Math.max(-rect.top, 0), Math.max(total, 1));
+      setProgress(total > 0 ? y / total : 0);
       ticking = false;
     };
 
@@ -46,7 +33,7 @@ export function useSectionProgress(sectionId: string, opts: ProgressOptions = {}
       window.removeEventListener("scroll", onScroll);
       window.removeEventListener("resize", measure);
     };
-  }, [sectionId, endK, clamp]);
+  }, []);
 
-  return { progress, inView, passedTop };
+  return { ref, progress };
 }
