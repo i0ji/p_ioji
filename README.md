@@ -7,6 +7,7 @@ Current build:<br>
 > <b>d: 31.03.25 v: 0.1.5.4a Chore/updates;</b><br>
 > <b>d: 28.07.25 v: 0.1.0 Total refactor using React;</b>
 > <b>d: 07.08.24 v: 0.1.5.4 Set up few slides, make main markup;</b>
+> <b>d: 12.08.24 v: 0.1.5.5 Framer/Spring animation attempts;</b>
 > full list of renovated technologies:
 > `React 19, vite, pnpm, commitlint/commitizen/husky, TS, SASS, tailwind, prettier, postcss, swiper, clsx`;<br>
 
