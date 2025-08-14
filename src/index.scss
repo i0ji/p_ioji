@@ -69,9 +69,6 @@ h1 {
 }
 
 .mouse-bounce {
-  position: absolute; /* поставь в нужное место */
-  left: 50%;
-  bottom: 24px;
   transform: translateX(-50%);
   display: inline-block;
   animation: bounce 1.6s ease-in-out infinite;
@@ -83,9 +80,8 @@ h1 {
   height: 42px;
   border: 2px solid currentColor;
   border-radius: 16px;
-  color: #fff; /* подстраивай под фон */
+  color: #fff;
   display: inline-block;
-  position: relative;
   opacity: 0.9;
 }
 
@@ -101,7 +97,6 @@ h1 {
   opacity: 0.9;
 }
 
-/* Лёгкое подпрыгивание */
 @keyframes bounce {
   0%,
   100% {
@@ -112,7 +107,6 @@ h1 {
   }
 }
 
-/* Уважение prefers-reduced-motion */
 @media (prefers-reduced-motion: reduce) {
   .mouse-bounce {
     animation: none !important;
