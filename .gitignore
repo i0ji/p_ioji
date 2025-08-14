@@ -25,3 +25,6 @@ dist-ssr
 
 # Misc
 src/services/breakpoints
+
+# Build 
+src
