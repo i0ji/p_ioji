@@ -7,7 +7,7 @@ export default function Hero() {
 
   const { scrollYProgress } = useScroll({
     target: ref,
-    offset: ["start start", "end end"], // 0 когда верх секции у верхнего края, 1 когда низ у нижнего
+    offset: ["start start", "end end"],
   });
 
   const width = useTransform(scrollYProgress, [0, 1], ["30rem", "100vw"]);
@@ -21,13 +21,12 @@ export default function Hero() {
       id="hero"
       ref={ref}
       className={clsx(
-        "relative min-h-[200vh] bg-gradient-to-t from-slate-700 to-slate-400",
+        "relative min-h-[250vh] bg-gradient-to-t from-slate-700 to-slate-400",
       )}
     >
       <div
         className={clsx(
           "top-0 flex h-screen items-center justify-center",
-          // "2xl rounded-2xl border-2 border-solid",
           "overflow-hidden first-line:sticky",
         )}
       >
@@ -50,14 +49,15 @@ export default function Hero() {
         <motion.div
           style={{
             opacity: mouseOpacity,
-            pointerEvents: "none", // не мешает кликам и ховерам
+            pointerEvents: "none",
             willChange: "opacity",
           }}
-          className="mouse-bounce fixed bottom-0 left-1"
+          className="mouse-bounce fixed bottom-0 left-0"
           aria-hidden="true"
         >
-          <span className="mouse">
+          <span className="mouse relative">
             <span className="wheel"></span>
+            <span className="absolute bottom-[-3rem] translate-x-[-25%]">scroll down</span>
           </span>
         </motion.div>
       </div>
