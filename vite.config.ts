@@ -14,5 +14,5 @@ export default defineConfig({
     },
   },
   plugins: [react()],
-  base: '/'
+  base: '/p_ioji'
 });

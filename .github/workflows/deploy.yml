@@ -46,6 +46,15 @@ jobs:
         with:
           path: ./dist
 
+      - name: Debug dist contents
+        run: |
+          echo "Contents of dist directory:"
+          ls -la dist/
+          echo "index.html exists:"
+          test -f dist/index.html && echo "YES" || echo "NO"
+          echo "File size:"
+          du -h dist/index.html
+
   deploy:
     needs: build
     runs-on: ubuntu-latest
