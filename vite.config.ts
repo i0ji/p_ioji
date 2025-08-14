@@ -15,4 +15,5 @@ export default defineConfig({
     },
   },
   plugins: [react()],
+  base: '/p_ioji'
 });
