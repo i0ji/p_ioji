@@ -28,3 +28,18 @@ src/services/breakpoints
 
 # Build 
 src
+vite.config.ts
+tsconfig.tsbuildinfo
+tsconfig.json
+TODO.md
+tailwind.config.ts
+postcss.config.js
+pnpm-lock.yaml
+package.json
+eslint.config.js
+commitlint.config.cjs
+commitizen.config.cjs
+.prettierrc
+.prettierignore
+.ncurc.json
+.husky
