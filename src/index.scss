@@ -13,6 +13,10 @@
   }
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -46,10 +50,6 @@ body {
     rgba(125, 93, 207, 1) 50%,
     rgba(87, 39, 156, 1) 100%
   );
-
-  .header {
-    scroll-snap-type: y mandatory;
-  }
 }
 
 h6 {
@@ -66,4 +66,48 @@ h2 {
 
 h1 {
   @apply text-[4rem] font-bold;
+}
+
+.mouse-bounce {
+  position: absolute;           /* поставь в нужное место */
+  left: 50%;
+  bottom: 24px;
+  transform: translateX(-50%);
+  display: inline-block;
+  animation: bounce 1.6s ease-in-out infinite;
+  will-change: transform;
+}
+
+.mouse {
+  width: 26px;
+  height: 42px;
+  border: 2px solid currentColor;
+  border-radius: 16px;
+  color: #fff;                  /* подстраивай под фон */
+  display: inline-block;
+  position: relative;
+  opacity: 0.9;
+}
+
+.wheel {
+  position: absolute;
+  top: 8px;
+  left: 50%;
+  width: 4px;
+  height: 8px;
+  background: currentColor;
+  border-radius: 2px;
+  transform: translateX(-50%);
+  opacity: 0.9;
+}
+
+/* Лёгкое подпрыгивание */
+@keyframes bounce {
+  0%, 100%   { transform: translate(-50%, 0); }
+  50%        { transform: translate(-50%, -6px); }
+}
+
+/* Уважение prefers-reduced-motion */
+@media (prefers-reduced-motion: reduce) {
+  .mouse-bounce { animation: none !important; }
 }

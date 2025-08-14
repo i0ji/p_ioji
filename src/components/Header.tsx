@@ -17,7 +17,7 @@ export default function Header() {
     <motion.nav
       ref={ref}
       style={{
-        width: navScale
+        width: navScale,
       }}
       className={clsx(
         "fixed left-1/2 top-0 w-[60%] -translate-x-1/2 p-4",

@@ -7,7 +7,7 @@ export default function Experience() {
     <section
       id="experience"
       className={clsx(
-        "relative min-h-[200vh] w-full bg-gradient-to-t from-stone-700 from-[0%] to-[#7d5e4d] to-[100%]",
+        "relative min-h-[200vh] w-full bg-gradient-to-t to-[#344256] from-[0%] from-cyan-100 to-[100%]",
         "snap-start",
       )}
     >
