@@ -10,8 +10,7 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "prepare": "husky",
-    "format": "prettier . --write",
-    "deploy": "gh-pages -d dist"
+    "format": "prettier . --write"
   },
   "husky": {
     "hooks": {
