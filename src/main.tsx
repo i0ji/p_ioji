@@ -8,7 +8,7 @@ import App from "./App";
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
-    <BrowserRouter basename="/p_ioji">
+    <BrowserRouter basename="/p_ioji/">
       <Routes>
         <Route path="/" element={<App />} />
         <Route path="*" element={<NotFound />} />
