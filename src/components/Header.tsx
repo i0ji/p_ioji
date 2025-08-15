@@ -7,11 +7,7 @@ export default function Header() {
 
   const { scrollY } = useScroll();
 
-  const navScale = useTransform(
-    scrollY,
-    [0, 1400], // вход: пиксели скролла
-    ["90vw", "40vw"], // выход: высота nav
-  );
+  const navScale = useTransform(scrollY, [0, 1400], ["90vw", "40vw"]);
 
   return (
     <motion.nav

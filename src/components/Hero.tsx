@@ -1,8 +1,10 @@
 import { motion, useScroll, useTransform } from "framer-motion";
-import { useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import clsx from "clsx";
+import { nanoid } from "nanoid";
 
 export default function Hero() {
+  const [isScrollVisible, setIsScrollVisible] = useState(false);
   const ref = useRef(null);
 
   const { scrollYProgress } = useScroll({
@@ -10,16 +12,17 @@ export default function Hero() {
     offset: ["start start", "end end"],
   });
 
-  const width = useTransform(scrollYProgress, [0, 1], ["30rem", "100vw"]);
-  const height = useTransform(scrollYProgress, [0, 1], ["15rem", "100vh"]);
+  useEffect(() => {
+    const timeout = setTimeout(() => setIsScrollVisible(true), 5000);
+    return () => clearTimeout(timeout);
+  }, []);
+
+  const scale = useTransform(scrollYProgress, [0, 1], [1, 8]);
+  const textScale = useTransform(scale, (s) => 1 / s);
   const borderRadius = useTransform(scrollYProgress, [0, 1], ["1rem", "0rem"]);
-  const opacity = useTransform(
-    scrollYProgress,
-    [0, 0.1, 0.7, 1],
-    [0, 1, 1, 0.6],
-  );
+  const opacity = useTransform(scrollYProgress, [0, 0.1, 0.7, 1], [0, 1, 1, 0]);
   const titleOpacity = useTransform(scrollYProgress, [0, 0.15], [1, 0]);
-  const mouseOpacity = useTransform(
+  const scrollOpacity = useTransform(
     scrollYProgress,
     [0, 0.25, 0.5],
     [1, 0.5, 0],
@@ -30,51 +33,72 @@ export default function Hero() {
       id="hero"
       ref={ref}
       className={clsx(
-        "relative min-h-[250vh] bg-gradient-to-t from-slate-700 to-slate-400 text-slate-300",
+        "relative",
+        "min-h-[250vh]",
+        "bg-gradient-to-t from-slate-700 to-slate-400 text-slate-300",
       )}
     >
       <div
         className={clsx(
-          "relative top-0 flex h-screen items-center justify-center",
-          "overflow-hidden first-line:sticky",
+          "sticky top-0",
+          "flex h-screen items-center justify-center",
+          "overflow-hidden",
         )}
       >
         <motion.div
           style={{
-            width,
-            height,
+            scale,
             borderRadius,
             opacity,
-            position: "fixed", // чтобы реально занимал весь экран при росте
-            top: 0,
-            left: "50%",
-            x: "-50%", // центрируем по горизонтали
-            willChange: "width,height,border-radius,opacity",
-            maxHeight: "100vh",
+            willChange: "transform,border-radius,opacity",
           }}
-          className="flex items-center justify-center bg-gradient-to-t from-slate-700 to-transparent"
+          className={clsx(
+            "flex h-[15rem] w-[30rem] items-center justify-center",
+            "bg-gradient-to-t from-slate-700 to-transparent",
+          )}
         >
-          <p>Hello, my name is Ivan I`m FE developer from Moscow</p>
+          <motion.p
+            style={{
+              scale: textScale,
+              willChange: "transform",
+            }}
+          >
+            Hello, my name is Ivan I'm FE developer from Moscow
+          </motion.p>
         </motion.div>
-        <motion.h1 style={{ opacity: titleOpacity }}>
+
+        <motion.h1 style={{ opacity: titleOpacity }} className="absolute">
           No ideas here were judged and eliminated
         </motion.h1>
-        <motion.div
-          style={{
-            opacity: mouseOpacity,
-            pointerEvents: "none",
-            willChange: "opacity",
-          }}
-          className="mouse-bounce fixed bottom-[5rem] left-[5rem]"
-          aria-hidden="true"
-        >
-          <span className="mouse relative">
-            <span className="wheel"></span>
-            <span className="absolute bottom-[-3rem] translate-x-[-25%] text-justify">
-              scroll down
+
+        {isScrollVisible && (
+          <motion.div
+            key={nanoid()}
+            initial={{ opacity: 0, y: 20, scale: 0.8 }}
+            animate={{ opacity: 1, y: 0, scale: 1 }}
+            exit={{ opacity: 0, y: -10, scale: 0.9 }}
+            transition={{
+              duration: 1.5,
+              ease: "easeOut",
+              type: "spring",
+              stiffness: 100,
+            }}
+            style={{
+              opacity: scrollOpacity,
+              pointerEvents: "none",
+              willChange: "opacity",
+            }}
+            className="mouse-bounce fixed bottom-[5rem] left-[5rem]"
+            aria-hidden="true"
+          >
+            <span className="mouse relative">
+              <span className="wheel"></span>
+              <span className="absolute bottom-[-3rem] translate-x-[-25%] text-justify">
+                scroll down
+              </span>
             </span>
-          </span>
-        </motion.div>
+          </motion.div>
+        )}
       </div>
     </section>
   );
