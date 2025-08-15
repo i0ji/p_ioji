@@ -1,7 +1,6 @@
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
 
-import { Typewriter } from "components/index";
 import clsx from "clsx";
 
 export default function Hero() {
@@ -117,7 +116,7 @@ export default function Hero() {
               pointerEvents: "none",
               willChange: "opacity",
             }}
-            className="mouse-bounce fixed bottom-[5rem] left-[5rem]"
+            className="mouse-bounce fixed bottom-[5rem] left-[2rem] lg:bottom-[5rem] lg:left-[5rem]"
             aria-hidden="true"
           >
             <span className="mouse relative">
