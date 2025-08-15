@@ -33,3 +33,11 @@ interface TypewriterProps {
   startDelay?: number;
   onComplete?: () => void;
 }
+
+interface ViewStateModel {
+  isMobile: boolean;
+  isTablet: boolean;
+  isDesktop: boolean;
+  screenWidth: number;
+  screenHeight: number;
+}

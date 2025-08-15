@@ -4,8 +4,7 @@ import { useEffect, useRef, useState } from "react";
 import clsx from "clsx";
 
 export default function Hero() {
-  const [isMobile, setIsMobile] = useState(false);
-  const [isScrollVisible, setIsScrollVisible] = useState(false);
+    const [isScrollVisible, setIsScrollVisible] = useState(false);
   const [displayedText, setDisplayedText] = useState("");
   const ref = useRef(null);
 

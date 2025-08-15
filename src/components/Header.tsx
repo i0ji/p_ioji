@@ -1,24 +1,22 @@
-import { useRef } from "react";
 import clsx from "clsx";
 import { motion, useScroll, useTransform } from "framer-motion";
+import { useIsMobile } from "services/useViewport";
 
 export default function Header() {
-  const ref = useRef(null);
-
+  const isMobile = useIsMobile();
   const { scrollY } = useScroll();
 
   const navScale = useTransform(scrollY, [0, 1400], ["90vw", "40vw"]);
 
   return (
     <motion.nav
-      ref={ref}
       style={{
-        width: navScale,
+        width: isMobile ? "100vw" : navScale,
       }}
       className={clsx(
-        "fixed left-1/2 top-0 w-[60%] -translate-x-1/2 p-4",
-        "w-full",
-        // "z-50 mx-auto mt-5 rounded-3xl bg-black/30 text-stone-200 backdrop-blur-md",
+        "fixed left-1/2 z-50 -translate-x-1/2",
+        "h-14",
+        "bg-black/30 text-lg text-stone-200 backdrop-blur-md md:mx-auto md:mt-5 md:rounded-3xl",
         "flex items-center justify-between px-4",
         "will-change-[transform,opacity,filter]",
       )}

@@ -11,6 +11,7 @@ export default defineConfig({
       data: path.resolve(__dirname, "./src/data"),
       assets: path.resolve(__dirname, "./src/assets"),
       services: path.resolve(__dirname, "./src/services"),
+      store: path.resolve(__dirname, "./src/store"),
     },
   },
   plugins: [react()],
