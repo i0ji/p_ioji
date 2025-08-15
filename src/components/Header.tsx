@@ -17,7 +17,8 @@ export default function Header() {
       }}
       className={clsx(
         "fixed left-1/2 top-0 w-[60%] -translate-x-1/2 p-4",
-        "z-50 mx-auto mt-5 rounded-3xl bg-black/30 text-stone-200 backdrop-blur-md",
+        "w-full",
+        // "z-50 mx-auto mt-5 rounded-3xl bg-black/30 text-stone-200 backdrop-blur-md",
         "flex items-center justify-between px-4",
         "will-change-[transform,opacity,filter]",
       )}
