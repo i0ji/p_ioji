@@ -26,3 +26,10 @@ interface aboutCardModel {
   data: aboutDataModel;
   slug?: string;
 }
+
+interface TypewriterProps {
+  text: string;
+  speed?: number;
+  startDelay?: number;
+  onComplete?: () => void;
+}

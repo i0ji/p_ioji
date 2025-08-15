@@ -5,8 +5,8 @@ import Portfolio from "./Portfolio";
 import Cat from "./Cat";
 import Contacts from "./Contacts";
 import NotFound from "./NotFound";
-import ExperienceCard from "@/components/ui/ExperienceCard";
-
+import ExperienceCard from "ui/ExperienceCard";
+import Typewriter from "ui/Typewriter";
 
 export {
   Header,
@@ -17,4 +17,5 @@ export {
   Contacts,
   NotFound,
   ExperienceCard,
+  Typewriter,
 };
