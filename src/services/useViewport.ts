@@ -1,54 +1,21 @@
 import { useEffect } from "react";
-import { useAppDispatch, useAppSelector } from "../store/hooks";
-import { setScreenDimensions } from "../store/viewSlice";
+import { useDispatch } from "react-redux";
+import { setScreenType, getScreenType } from "store/viewSlice";
 
 export const useViewport = () => {
-  const dispatch = useAppDispatch();
-
-  const viewState = useAppSelector((state) => state.view);
+  const dispatch = useDispatch();
 
   useEffect(() => {
-    const handleResize = () => {
-      dispatch(
-        setScreenDimensions({
-          width: window.innerWidth,
-          height: window.innerHeight,
-        }),
-      );
+    const updateScreenType = () => {
+      const width = window.innerWidth;
+      const screenType = getScreenType(width);
+      dispatch(setScreenType({ screenType, width }));
     };
 
-    if (typeof window !== "undefined") {
-      handleResize();
-    }
+    updateScreenType();
 
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
+    window.addEventListener("resize", updateScreenType);
+
+    return () => window.removeEventListener("resize", updateScreenType);
   }, [dispatch]);
-
-  return viewState;
-};
-
-export const useIsMobile = () => {
-  const dispatch = useAppDispatch();
-  const isMobile = useAppSelector((state) => state.view.isMobile);
-
-  useEffect(() => {
-    const handleResize = () => {
-      dispatch(
-        setScreenDimensions({
-          width: window.innerWidth,
-          height: window.innerHeight,
-        }),
-      );
-    };
-
-    if (typeof window !== "undefined") {
-      handleResize();
-    }
-
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
-  }, [dispatch]);
-
-  return isMobile;
 };

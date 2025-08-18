@@ -1,34 +1,27 @@
-import { createSlice, PayloadAction } from "@reduxjs/toolkit";
+import { createSlice } from "@reduxjs/toolkit";
 
-const initialState: ViewStateModel = {
-  isMobile: false,
-  isTablet: false,
-  isDesktop: true,
-  screenWidth: 1920,
-  screenHeight: 1080,
+const initialState = {
+  screenType: "desktop",
+  width: typeof window !== "undefined" ? window.innerWidth : 1200,
 };
 
 const viewSlice = createSlice({
-  name: "view",
+  name: "screen",
   initialState,
   reducers: {
-    setIsMobile: (state, action: PayloadAction<boolean>) => {
-      state.isMobile = action.payload;
-    },
-    setScreenDimensions: (
-      state,
-      action: PayloadAction<{ width: number; height: number }>,
-    ) => {
-      const { width, height } = action.payload;
-      state.screenWidth = width;
-      state.screenHeight = height;
-
-      state.isMobile = width < 768;
-      state.isTablet = width >= 768 && width < 1024;
-      state.isDesktop = width >= 1024;
+    setScreenType: (state, action) => {
+      state.screenType = action.payload.screenType;
+      state.width = action.payload.width;
     },
   },
 });
 
-export const { setIsMobile, setScreenDimensions } = viewSlice.actions;
+export const { setScreenType } = viewSlice.actions;
 export default viewSlice.reducer;
+
+export const getScreenType = (width: number) => {
+  if (width < 536) return "mobile";
+  if (width < 768) return "tablet";
+  if (width < 1400) return "medium";
+  return "desktop";
+};

@@ -6,10 +6,10 @@ export default function Experience({ data }) {
   return (
     <div
       className={clsx(
-        "mx-auto my-4 flex h-[90vh] w-[100vw]",
+        "mx-auto my-4 flex h-[90vh] w-[90vw]",
         "transform flex-col justify-between",
         "rounded-lg p-4 text-stone-300 transition-transform",
-        "duration-200 ease-linear hover:scale-[1.01] sm:h-[50vh] md:h-[70vh] md:w-[60vw]",
+        "duration-200 ease-linear hover:scale-[1.01] sm:h-[50vh] md:h-[70vh] md:w-[40vw]",
         "md:bg-gray-800 md:shadow-lg md:drop-shadow-lg lg:h-[80vh] lg:w-[30vw]",
         "2xl:h-х75vh] xl:h-[75vh] 2xl:w-[30vw]",
       )}

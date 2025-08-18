@@ -1,17 +1,34 @@
 import clsx from "clsx";
 import { motion, useScroll, useTransform } from "framer-motion";
-import { useIsMobile } from "services/useViewport";
+import { useSelector } from "react-redux";
+import { RootState } from "store/store";
 
 export default function Header() {
-  const isMobile = useIsMobile();
+  const screenType = useSelector((state: RootState) => state.view.screenType);
   const { scrollY } = useScroll();
 
   const navScale = useTransform(scrollY, [0, 1400], ["90vw", "40vw"]);
 
+  const navWidths = {
+    mobile: "100vw",
+    tablet: "95vw",
+    medium: "90vw",
+    desktop: navScale,
+  };
+
+  console.log(navWidths[screenType]);
+
   return (
     <motion.nav
       style={{
-        width: isMobile ? "100vw" : navScale,
+        // width: screenType[screenType] ? "90vw" : navScale,
+        width: navWidths[screenType] || navScale,
+        // height:
+        //   screenType === "medium" ||
+        //   screenType === "tablet" ||
+        //   screenType === "mobile"
+        //     ? "10vh"
+        //     : "10vh",
       }}
       className={clsx(
         "fixed left-1/2 z-50 -translate-x-1/2",

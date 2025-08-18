@@ -4,7 +4,7 @@ import { useEffect, useRef, useState } from "react";
 import clsx from "clsx";
 
 export default function Hero() {
-    const [isScrollVisible, setIsScrollVisible] = useState(false);
+  const [isScrollVisible, setIsScrollVisible] = useState(false);
   const [displayedText, setDisplayedText] = useState("");
   const ref = useRef(null);
 
@@ -31,11 +31,11 @@ export default function Hero() {
     [1, 0.5, 0],
   );
 
-  //CURRENT
   const text = `Lorem ipsum dolor sit amet consectetur adipisicing elit. 
     Inventore cumque minus quidem in praesentium.
      Facilis eius porro placeat debitis amet pariatur quibusdam suscipit eligendi.
      Nostrum amet quam molestias dolorum perferendis?`;
+
   useEffect(() => {
     const unsubscribe = scrollYProgress.on("change", (progress) => {
       if (progress >= 0.1 && progress <= 0.6) {
