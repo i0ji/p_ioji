@@ -1,7 +1,7 @@
 {
   "name": "p_ioji",
   "private": true,
-  "version": "0.1.5.6/1",
+  "version": "0.1.5.6/3/1",
   "type": "module",
   "homepage": "https://i0ji.github.io/p_ioji",
   "scripts": {
@@ -28,8 +28,8 @@
   "dependencies": {
     "react": "^19.1.1",
     "react-dom": "^19.1.1",
-    "react-router": "^7.8.0",
-    "react-router-dom": "^7.8.0"
+    "react-router": "^7.8.1",
+    "react-router-dom": "^7.8.1"
   },
   "devDependencies": {
     "@commitlint/cli": "^19.8.1",
@@ -42,7 +42,7 @@
     "@vitejs/plugin-react": "^5.0.0",
     "autoprefixer": "^10.4.21",
     "clsx": "^2.1.1",
-    "cz-customizable": "^7.4.0",
+    "cz-customizable": "^7.5.0",
     "eslint": "^9.33.0",
     "eslint-plugin-react-hooks": "^5.2.0",
     "eslint-plugin-react-refresh": "^0.4.20",
