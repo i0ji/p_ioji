@@ -23,7 +23,11 @@ export default function Hero() {
   const scale = useTransform(scrollYProgress, [0, 1], [1, 8]);
   const textScale = useTransform(scale, (s) => 1 / s);
   const borderRadius = useTransform(scrollYProgress, [0, 1], ["1rem", "0rem"]);
-  const opacity = useTransform(scrollYProgress, [0, 0.1, 0.7, 1], [0, 1, 1, 0]);
+  const opacity = useTransform(
+    scrollYProgress,
+    [0, 0.1, 0.7, 0.8, 0.9, 1],
+    [0, .5, 1, 1, 1, 1],
+  );
   const titleOpacity = useTransform(scrollYProgress, [0, 0.15], [1, 0]);
   const scrollOpacity = useTransform(
     scrollYProgress,
@@ -39,7 +43,7 @@ export default function Hero() {
   useEffect(() => {
     const unsubscribe = scrollYProgress.on("change", (progress) => {
       if (progress >= 0.1 && progress <= 0.6) {
-        const relativeProgress = (progress - 0.1) / 0.5; // 0 to 1
+        const relativeProgress = (progress - 0.1) / 0.5;
         const charsToShow = Math.floor(relativeProgress * text.length);
         setDisplayedText(text.slice(0, charsToShow));
       }
@@ -54,7 +58,7 @@ export default function Hero() {
       ref={ref}
       className={clsx(
         "relative",
-        "min-h-[500vh] md:min-h-[300vh]",
+        "min-h-[400vh] md:min-h-[300vh]",
         "bg-gradient-to-t from-slate-700 to-slate-400 text-slate-300",
       )}
     >
@@ -98,7 +102,10 @@ export default function Hero() {
           </motion.div>
         </motion.div>
 
-        <motion.h1 style={{ opacity: titleOpacity }} className="fixed text-center mx-4">
+        <motion.h1
+          style={{ opacity: titleOpacity }}
+          className="fixed mx-4 text-center"
+        >
           No ideas here were judged and eliminated
         </motion.h1>
 

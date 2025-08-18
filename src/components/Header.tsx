@@ -28,7 +28,7 @@ export default function Header() {
       className={clsx(
         "fixed left-1/2 z-50 -translate-x-1/2",
         "h-14",
-        "rounded-none bg-black/30 text-lg text-stone-200 backdrop-blur-md md:mx-auto xl:mt-5 xl:rounded-3xl",
+        "rounded-none bg-black/30 text-lg backdrop-blur-md md:mx-auto xl:mt-5 xl:rounded-3xl",
         "flex items-center justify-between px-4",
         "will-change-[transform,opacity,filter]",
       )}

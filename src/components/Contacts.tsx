@@ -5,7 +5,7 @@ export default function Contacts() {
       className="justify-betwee h-screen w-full snap-start border-l-purple-950 bg-gradient-to-br from-cyan-800 from-5%"
     >
       <div className="mx-auto flex h-full max-w-screen-xl flex-wrap items-center justify-around">
-        <ul className="mx-auto my-4 flex h-[30rem] w-[30rem] transform flex-col justify-between rounded-lg bg-gray-800 p-4 text-stone-400 shadow-lg drop-shadow-lg transition-transform duration-200 ease-linear">
+        <ul className="mx-auto my-4 flex h-[30rem] w-[30rem] transform flex-col justify-between rounded-lg bg-gray-800 p-4 shadow-lg drop-shadow-lg transition-transform duration-200 ease-linear">
           <li className="transition duration-300 hover:scale-105 hover:shadow-white/50 hover:drop-shadow-lg">
             <a
               href="https://t.me/Ivan_Vasilevich"
