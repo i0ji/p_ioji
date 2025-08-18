@@ -54,7 +54,7 @@ export default function Hero() {
       ref={ref}
       className={clsx(
         "relative",
-        "min-h-[300vh]",
+        "min-h-[500vh] md:min-h-[300vh]",
         "bg-gradient-to-t from-slate-700 to-slate-400 text-slate-300",
       )}
     >
@@ -98,7 +98,7 @@ export default function Hero() {
           </motion.div>
         </motion.div>
 
-        <motion.h1 style={{ opacity: titleOpacity }} className="absolute">
+        <motion.h1 style={{ opacity: titleOpacity }} className="fixed text-center mx-4">
           No ideas here were judged and eliminated
         </motion.h1>
 
