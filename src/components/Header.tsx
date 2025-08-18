@@ -1,39 +1,34 @@
 import clsx from "clsx";
+import { useState, useEffect } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
-import { useSelector } from "react-redux";
-import { RootState } from "store/store";
 
 export default function Header() {
-  const screenType = useSelector((state: RootState) => state.view.screenType);
+  const [isDesktop, setIsDesktop] = useState(false);
   const { scrollY } = useScroll();
 
-  const navScale = useTransform(scrollY, [0, 1400], ["90vw", "40vw"]);
+  useEffect(() => {
+    const checkSize = () => setIsDesktop(window.innerWidth > 1280);
+    setIsDesktop(true);
+    checkSize();
+    window.addEventListener("resize", checkSize);
+    return () => window.removeEventListener("resize", checkSize);
+  }, []);
 
-  const navWidths = {
-    mobile: "100vw",
-    tablet: "95vw",
-    medium: "90vw",
-    desktop: navScale,
-  };
-
-  console.log(navWidths[screenType]);
+  const animatedWidth = useTransform(
+    scrollY,
+    [0, 1400],
+    [isDesktop ? "90vw" : "100vw", "40vw"],
+  );
 
   return (
     <motion.nav
       style={{
-        // width: screenType[screenType] ? "90vw" : navScale,
-        width: navWidths[screenType] || navScale,
-        // height:
-        //   screenType === "medium" ||
-        //   screenType === "tablet" ||
-        //   screenType === "mobile"
-        //     ? "10vh"
-        //     : "10vh",
+        width: isDesktop ? animatedWidth : "100vw",
       }}
       className={clsx(
         "fixed left-1/2 z-50 -translate-x-1/2",
         "h-14",
-        "bg-black/30 text-lg text-stone-200 backdrop-blur-md md:mx-auto md:mt-5 md:rounded-3xl",
+        "rounded-none bg-black/30 text-lg text-stone-200 backdrop-blur-md md:mx-auto xl:mt-5 xl:rounded-3xl",
         "flex items-center justify-between px-4",
         "will-change-[transform,opacity,filter]",
       )}
