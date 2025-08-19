@@ -6,6 +6,7 @@ import Cat from "./Cat";
 import Contacts from "./Contacts";
 import NotFound from "./NotFound";
 import ExperienceCard from "ui/ExperienceCard";
+import Slogan from "ui/Slogan";
 
 export {
   Header,
@@ -16,4 +17,5 @@ export {
   Contacts,
   NotFound,
   ExperienceCard,
+  Slogan
 };

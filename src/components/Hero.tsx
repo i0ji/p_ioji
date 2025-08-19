@@ -1,6 +1,8 @@
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
 
+import { Slogan } from "components/index";
+
 import clsx from "clsx";
 
 export default function Hero() {
@@ -76,7 +78,7 @@ export default function Hero() {
           }}
           className={clsx(
             "flex h-[15rem] w-[30rem] p-4",
-            "items-center justify-center text-justify",
+            "items-center justify-center",
             "bg-gradient-to-t from-slate-700 to-transparent",
           )}
         >
@@ -101,11 +103,10 @@ export default function Hero() {
           </motion.div>
         </motion.div>
 
-        <motion.h1
-          style={{ opacity: titleOpacity }}
-          className="fixed mx-4 text-center"
-        >
-          No ideas here were judged and eliminated
+        {/* CURRENT */}
+
+        <motion.h1 style={{ opacity: titleOpacity }} className="fixed w-[20vw]">
+          <Slogan />
         </motion.h1>
 
         {isScrollVisible && (

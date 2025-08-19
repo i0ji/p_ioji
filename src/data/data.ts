@@ -61,6 +61,8 @@ const experienceData: Array<experienceDataModel> = [
     title: "Stellar Burger Project",
     period: "2024",
     responsibilities: [
+      "Full-featured application",
+      "Implemented user account control panel",
       "Implemented user authentication and authorization: developed a secure login and authentication system using JWT tokens, including password recovery and token refresh functionality",
       "Created a shopping cart for order processing with Drag and Drop functionality and component reordering",
       "Integrated a real-time orders feed using WebSocket, supporting both a public feed and personalized feed for authenticated users",
