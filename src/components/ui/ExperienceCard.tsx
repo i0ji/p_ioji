@@ -1,10 +1,18 @@
 import { nanoid } from "nanoid";
 
+import { motion } from "framer-motion";
+
 import clsx from "clsx";
 
-export default function Experience({ data }) {
+export default function Experience({
+  data,
+  index,
+}: {
+  data: experienceDataModel;
+  index: number;
+}) {
   return (
-    <div
+    <motion.div
       className={
         clsx("mb-10 p-4", "rounded-2xl border-2 border-solid border-slate-900")
         // "mx-auto my-4 flex h-[90vh] w-[90vw]",
@@ -15,7 +23,18 @@ export default function Experience({ data }) {
         // "2xl:h-[75vh] xl:h-[75vh] 2xl:w-[30vw]",
       }
       // className="panel"
-      data-carousel-item
+      initial={{
+        opacity: 0,
+        x: index % 2 === 0 ? 50 : -50,
+      }}
+      whileInView={{
+        opacity: 1,
+        x: 0,
+        transition: {
+          duration: 1,
+        },
+      }}
+      viewport={{ once: true }}
     >
       {data.img && (
         <div className="relative">
@@ -87,6 +106,6 @@ export default function Experience({ data }) {
             ))}
         </ul>
       </div>
-    </div>
+    </motion.div>
   );
 }

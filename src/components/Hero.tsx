@@ -1,14 +1,14 @@
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
 
+import { Slogan } from "components/index";
+
 import clsx from "clsx";
 
 export default function Hero() {
   const [isScrollVisible, setIsScrollVisible] = useState(false);
   const [displayedText, setDisplayedText] = useState("");
   const ref = useRef(null);
-
-  // const innerWidth = document.
 
   const { scrollYProgress } = useScroll({
     target: ref,
@@ -26,7 +26,7 @@ export default function Hero() {
   const opacity = useTransform(
     scrollYProgress,
     [0, 0.1, 0.7, 0.8, 0.9, 1],
-    [0, .5, 1, 1, 1, 1],
+    [0, 0.5, 1, 1, 1, 1],
   );
   const titleOpacity = useTransform(scrollYProgress, [0, 0.15], [1, 0]);
   const scrollOpacity = useTransform(
@@ -77,7 +77,8 @@ export default function Hero() {
             willChange: "transform,border-radius,opacity",
           }}
           className={clsx(
-            "flex h-[15rem] w-[30rem] items-center justify-center",
+            "flex h-[15rem] w-[30rem] p-4",
+            "items-center justify-center",
             "bg-gradient-to-t from-slate-700 to-transparent",
           )}
         >
@@ -102,11 +103,10 @@ export default function Hero() {
           </motion.div>
         </motion.div>
 
-        <motion.h1
-          style={{ opacity: titleOpacity }}
-          className="fixed mx-4 text-center"
-        >
-          No ideas here were judged and eliminated
+        {/* CURRENT */}
+
+        <motion.h1 style={{ opacity: titleOpacity }} className="fixed w-[20vw]">
+          <Slogan />
         </motion.h1>
 
         {isScrollVisible && (
