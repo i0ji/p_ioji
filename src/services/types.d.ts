@@ -4,6 +4,7 @@ declare module "*.JPG" {
 }
 
 interface experienceDataModel {
+  img?: string;
   title: string;
   period: string;
   responsibilities: Array<string>;

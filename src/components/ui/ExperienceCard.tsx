@@ -17,6 +17,22 @@ export default function Experience({ data }) {
       // className="panel"
       data-carousel-item
     >
+      {data.img && (
+        <div className="relative">
+          <img
+            src={data.img}
+            alt={data.title}
+            className="h-auto w-full rounded-t-2xl"
+            style={{
+              maskImage:
+                "linear-gradient(to bottom, black 80%, transparent 100%)",
+              WebkitMaskImage:
+                "linear-gradient(to bottom, black 80%, transparent 100%)",
+            }}
+          />
+        </div>
+      )}
+
       <h6 className="mb-2 flex h-auto text-center text-xl font-bold">
         {data.title}
       </h6>

@@ -2,8 +2,13 @@ import a1 from "assets/about/about.png";
 import a2 from "assets/about/education.png";
 import a3 from "assets/about/courses.png";
 
+import rta_img from "assets/experience/rta.png";
+import kate_img from "assets/experience/kate.png";
+import burger_img from "assets/experience/burger.png";
+
 const experienceData: Array<experienceDataModel> = [
   {
+    img: rta_img,
     title: "System Administrator => DevOps engineer => Head of IT department",
     period: "2023 - present",
     responsibilities: [
@@ -11,11 +16,11 @@ const experienceData: Array<experienceDataModel> = [
       "Implemented and managed corporate Yandex Tracker for ticket/request tracking",
       "Administered hybrid infrastructure (on-premises and cloud environments)",
       "Maintained corporate website operations",
-      "Contributed to the development of an internal web portal for employees",
+      "Contributed to the development of an internal web portaImgl for employees",
     ],
     technologies: [
       "Zabbix",
-      "Portainer/Docker",
+      "PortaImginer/Docker",
       "1S",
       "Hyper-V",
       "VMware",
@@ -29,6 +34,7 @@ const experienceData: Array<experienceDataModel> = [
     ],
   },
   {
+    img: kate_img,
     title: "Personal website for designer",
     period: "2024 - present",
     responsibilities: [
@@ -51,6 +57,7 @@ const experienceData: Array<experienceDataModel> = [
     ],
   },
   {
+    img: burger_img,
     title: "Stellar Burger Project",
     period: "2024",
     responsibilities: [
@@ -66,7 +73,8 @@ const experienceData: Array<experienceDataModel> = [
       "DnD",
       "SASS",
       "WebScoket",
-      "Jest/Cypress",
+      "Jest",
+      "Cypress",
       "vite",
     ],
   },
