@@ -8,8 +8,6 @@ export default function Hero() {
   const [displayedText, setDisplayedText] = useState("");
   const ref = useRef(null);
 
-  // const innerWidth = document.
-
   const { scrollYProgress } = useScroll({
     target: ref,
     offset: ["start start", "end end"],
@@ -26,7 +24,7 @@ export default function Hero() {
   const opacity = useTransform(
     scrollYProgress,
     [0, 0.1, 0.7, 0.8, 0.9, 1],
-    [0, .5, 1, 1, 1, 1],
+    [0, 0.5, 1, 1, 1, 1],
   );
   const titleOpacity = useTransform(scrollYProgress, [0, 0.15], [1, 0]);
   const scrollOpacity = useTransform(
@@ -77,7 +75,8 @@ export default function Hero() {
             willChange: "transform,border-radius,opacity",
           }}
           className={clsx(
-            "flex h-[15rem] w-[30rem] items-center justify-center",
+            "flex h-[15rem] w-[30rem] p-4",
+            "items-center justify-center text-justify",
             "bg-gradient-to-t from-slate-700 to-transparent",
           )}
         >
