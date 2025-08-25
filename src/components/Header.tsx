@@ -42,34 +42,28 @@ export default function Header() {
             hero
           </a>
         </li>
+
         <li>
           <a className="group relative" href="#experience">
-            <span className="absolute left-[-15px] hidden opacity-0 transition-opacity duration-300 group-hover:opacity-80 sm:block md:block">
+            <span className="absolute left-[-20px] hidden opacity-0 transition-opacity duration-300 group-hover:opacity-80 sm:block md:block">
               ◈
             </span>
             experience
           </a>
         </li>
+
         <li>
           <a className="group relative" href="#portfolio">
-            <span className="absolute left-[-25px] hidden opacity-0 transition-opacity duration-300 group-hover:opacity-80 sm:block md:block">
+            <span className="absolute left-[-30px] hidden opacity-0 transition-opacity duration-300 group-hover:opacity-80 sm:block md:block">
               &#128449;
             </span>
             portfolio
           </a>
         </li>
-        <li>
-          <a className="group relative" href="#cat">
-            <span className="absolute left-[-15px] hidden opacity-0 transition-opacity duration-300 group-hover:opacity-80 sm:block md:block">
-              ★
-            </span>
-            cat
-          </a>
-        </li>
 
         <li>
           <a className="group relative" href="#contacts">
-            <span className="absolute left-[-20px] hidden opacity-0 transition-opacity duration-300 group-hover:opacity-80 sm:block md:block">
+            <span className="absolute left-[-25px] hidden opacity-0 transition-opacity duration-300 group-hover:opacity-80 sm:block md:block">
               ☏
             </span>
             contacts

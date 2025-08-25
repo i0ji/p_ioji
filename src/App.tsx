@@ -5,7 +5,6 @@ import {
   Experience,
   Hero,
   Portfolio,
-  Cat,
   Contacts,
 } from "components/index";
 
@@ -17,7 +16,6 @@ export default function App() {
       <Hero />
       <Experience />
       <Portfolio />
-      <Cat />
       <Contacts />
     </>
   );
