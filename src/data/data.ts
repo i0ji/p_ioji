@@ -1,6 +1,6 @@
 import a1 from "assets/about/about.png";
-import a2 from "assets/about/education.png";
-import a3 from "assets/about/courses.png";
+// import a2 from "assets/about/education.png";
+// import a3 from "assets/about/courses.png";
 
 import rta_img from "assets/experience/rta.png";
 import kate_img from "assets/experience/kate.png";
@@ -32,6 +32,8 @@ const experienceData: Array<experienceDataModel> = [
       "Yandex 360",
       "Alta-Soft",
     ],
+    linkTitle: 'RTA',
+    linkTo: "https://rtaru.com",
   },
   {
     img: kate_img,
@@ -55,6 +57,8 @@ const experienceData: Array<experienceDataModel> = [
       "Jest/Cypress",
       "YDS",
     ],
+    linkTitle: 'Katerina Semenova', 
+    linkTo: "https://katerinasemenova.ru",
   },
   {
     img: burger_img,
@@ -79,6 +83,8 @@ const experienceData: Array<experienceDataModel> = [
       "Cypress",
       "vite",
     ],
+    linkTitle: 'Stellar-Burger',
+    linkTo: "https://i0ji.github.io/p_stellar_burger/",
   },
   {
     title: "Buzzzzwords",

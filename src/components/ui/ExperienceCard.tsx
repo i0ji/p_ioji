@@ -105,6 +105,8 @@ export default function Experience({
               </li>
             ))}
         </ul>
+        <hr className="my-4 h-[1px] w-full bg-stone-400 opacity-50" />
+        <a target="_blank" href={data.linkTo}>{data.linkTitle}</a>
       </div>
     </motion.div>
   );
