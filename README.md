@@ -2,11 +2,12 @@ I deicided to create my own page using ~~NEXT~~ React!
 
 Current build:<br>
 
-> <b>d: 12.08.24 v: 0.1.5.5 Framer/Spring animation attempts;</b>
+> <b>d: 26.08.25 v: 0.1.5.6/5 deps update; remove one section;</b>
+> <b>d: 12.08.25 v: 0.1.5.5 Framer/Spring animation attempts;</b>
 > full list of renovated technologies:
 > <b>d: 11.08.25 v: 0.1.5.5 Refactor attempt using Spring animation</b><br>
 > <b>d: 28.07.25 v: 0.1.0 Total refactor using React;</b>
-> <b>d: 07.08.24 v: 0.1.5.4 Set up few slides, make main markup;</b>
+> <b>d: 07.08.25 v: 0.1.5.4 Set up few slides, make main markup;</b>
 > <b>d: 31.03.25 v: 0.1.5.4b Chore/updates;</b><br>
 > <b>d: 31.03.25 v: 0.1.5.4a Chore/updates;</b><br>
 
