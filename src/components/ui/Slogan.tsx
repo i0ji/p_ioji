@@ -22,7 +22,7 @@ function SplitWord({ text }: { text: string }) {
   return (
     <span
       className={clsx(
-        "inline-block w-full lg:flex",
+        "inline-block lg:flex",
         //LATER
         // "border-2 border-solid border-yellow-500",
         "w-[190px]",
@@ -67,11 +67,13 @@ export default function FancyReplace() {
   return (
     <span
       className={clsx(
-        "flex w-[50%] flex-col items-center justify-center",
-        "lg:w-[40%] lg:justify-center",
+        "flex flex-col w-[100%] items-center justify-center",
+        // "lg:w-[45%] lg:justify-center",
         //LATER
         // "border-2 border-solid border-red-500",
         "sm:flex-row",
+        // "gap-4",
+        "text-center",
       )}
       style={{ fontSize: 28 }}
     >
