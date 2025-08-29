@@ -23,12 +23,8 @@ export default function Header() {
   return (
     <motion.nav
       style={{
-<<<<<<< HEAD
-        width: isDesktop ? animatedWidth : "100vw",
-=======
         width: isDesktop ? animatedWidth : "100%",
         maxWidth: "100vw",
->>>>>>> feature/experience_slide
       }}
       className={clsx(
         "fixed left-1/2 z-50 -translate-x-1/2",
