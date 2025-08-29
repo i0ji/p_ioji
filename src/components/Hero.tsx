@@ -103,8 +103,6 @@ export default function Hero() {
           </motion.div>
         </motion.div>
 
-        {/* CURRENT */}
-
         <motion.h1 style={{ opacity: titleOpacity }} className="fixed w-[20vw]">
           <Slogan />
         </motion.h1>

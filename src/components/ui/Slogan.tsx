@@ -28,7 +28,7 @@ function SplitWord({ text }: { text: string }) {
               initial="hidden"
               animate="show"
               exit="exit"
-              className="text-red-600"
+              className=" text-red-500 text-center"
               variants={variants}
               style={{ display: "inline-block", whiteSpace: "pre" }}
             >
@@ -55,9 +55,12 @@ export default function FancyReplace() {
     return () => clearInterval(id);
   }, []);
   return (
-    <h2 style={{ fontSize: 28 }}>
+    <span
+      className="flex flex-col justify-center text-center"
+      style={{ fontSize: 28 }}
+    >
       from IDEA to&nbsp;
       <SplitWord text={variantsList[i]} />
-    </h2>
+    </span>
   );
 }

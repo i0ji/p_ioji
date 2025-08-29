@@ -58,7 +58,10 @@ export default function Experience({
       <div className="xl h-auto flex-auto flex-col justify-between">
         <ul className="flex list-disc flex-col justify-between pl-1 text-justify">
           {data.responsibilities.map((unit) => (
-            <li className="text-body-color dark:text-dark-6 flex text-base">
+            <li
+              key={nanoid()}
+              className="text-body-color dark:text-dark-6 flex text-base"
+            >
               <span className="text-primary mr-2.5 mt-0.5">
                 <svg
                   width={20}
@@ -106,7 +109,9 @@ export default function Experience({
             ))}
         </ul>
         <hr className="my-4 h-[1px] w-full bg-stone-400 opacity-50" />
-        <a target="_blank" href={data.linkTo}>{data.linkTitle}</a>
+        <a target="_blank" href={data.linkTo}>
+          {data.linkTitle}
+        </a>
       </div>
     </motion.div>
   );
