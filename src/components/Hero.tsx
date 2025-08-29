@@ -55,7 +55,7 @@ export default function Hero() {
       className={clsx(
         "relative",
         "min-h-[400vh] md:min-h-[300vh]",
-        "bg-gradient-to-t from-slate-700 to-slate-400 text-slate-300",
+        // "bg-gradient-to-t from-slate-700 to-slate-400 text-slate-300",
       )}
     >
       <div
@@ -75,7 +75,7 @@ export default function Hero() {
           className={clsx(
             "flex h-[15rem] w-[30rem] p-4",
             "items-center justify-center",
-            "bg-gradient-to-t from-slate-700 to-transparent",
+            // "bg-gradient-to-t from-slate-700 to-transparent",
           )}
         >
           <motion.div
@@ -112,25 +112,30 @@ export default function Hero() {
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: -10, scale: 0.9 }}
             transition={{
-              duration: 2.5,
+              duration: 3.5,
               ease: "easeOut",
               type: "spring",
               stiffness: 100,
             }}
             style={{
-              opacity: scrollOpacity,
+              // opacity: scrollOpacity,
               pointerEvents: "none",
               willChange: "opacity",
             }}
-            className="mouse-bounce fixed bottom-[5rem] lg:bottom-[5rem] translate-x-[-50%] left-[50%]"
+            className="mouse-bounce fixed bottom-[5rem] left-[50%] translate-x-[-50%] lg:bottom-[5rem]"
             aria-hidden="true"
           >
-            <span className="mouse relative">
+            <motion.span
+              style={{
+                opacity: scrollOpacity,
+              }}
+              className="mouse relative"
+            >
               <span className="wheel"></span>
               <span className="absolute bottom-[-3rem] translate-x-[-25%] text-center">
                 scroll down
               </span>
-            </span>
+            </motion.span>
           </motion.div>
         )}
       </div>

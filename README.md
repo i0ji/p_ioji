@@ -2,6 +2,7 @@ I deicided to create my own page using ~~NEXT~~ React!
 
 Current build:<br>
 
+> <b>d: 29.08.25 v: 0.1.5.7 deps update; style and animation touches;</b>
 > <b>d: 26.08.25 v: 0.1.5.6/5 deps update; remove one section;</b>
 > <b>d: 12.08.25 v: 0.1.5.5 Framer/Spring animation attempts;</b>
 > full list of renovated technologies:

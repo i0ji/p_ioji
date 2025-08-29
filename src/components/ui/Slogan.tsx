@@ -20,8 +20,13 @@ const variants = {
 function SplitWord({ text }: { text: string }) {
   const chars = useMemo(() => text.split(""), [text]);
   return (
-    <span 
-      className="inline-block min-w-[200px] text-center"
+    <span
+      className={clsx(
+        "inline-block w-full lg:flex",
+        //LATER
+        // "border-2 border-solid border-yellow-500",
+        "w-[190px]",
+      )}
       style={{ position: "relative" }}
     >
       <AnimatePresence mode="wait">
@@ -33,8 +38,7 @@ function SplitWord({ text }: { text: string }) {
               initial="hidden"
               animate="show"
               exit="exit"
-              //LATER
-              // className="border-2 border-solid border-red-400 text-red-500"
+              className="text-red-500"
               variants={variants}
               style={{ display: "inline-block", whiteSpace: "pre" }}
             >
@@ -48,7 +52,6 @@ function SplitWord({ text }: { text: string }) {
     </span>
   );
 }
-
 
 const variantsList = ["IDE", "impact", "performance"];
 
@@ -64,9 +67,11 @@ export default function FancyReplace() {
   return (
     <span
       className={clsx(
-        "flex flex-col"," items-center justify-center sm:flex-row",
-        "gap-4",
-        "text-center",
+        "flex w-[50%] flex-col items-center justify-center",
+        "lg:w-[40%] lg:justify-center",
+        //LATER
+        // "border-2 border-solid border-red-500",
+        "sm:flex-row",
       )}
       style={{ fontSize: 28 }}
     >

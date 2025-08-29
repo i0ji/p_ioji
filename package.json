@@ -1,7 +1,7 @@
 {
   "name": "p_ioji",
   "private": true,
-  "version": "0.1.5.7",
+  "version": "0.1.5.8",
   "type": "module",
   "homepage": "https://i0ji.github.io/p_ioji",
   "scripts": {
@@ -37,9 +37,9 @@
     "@commitlint/types": "^19.8.1",
     "@eslint/js": "^9.34.0",
     "@reduxjs/toolkit": "^2.8.2",
-    "@types/react": "^19.1.11",
-    "@types/react-dom": "^19.1.8",
-    "@vitejs/plugin-react": "^5.0.1",
+    "@types/react": "^19.1.12",
+    "@types/react-dom": "^19.1.9",
+    "@vitejs/plugin-react": "^5.0.2",
     "autoprefixer": "^10.4.21",
     "clsx": "^2.1.1",
     "cz-customizable": "^7.5.1",
