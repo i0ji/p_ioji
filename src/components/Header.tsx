@@ -23,7 +23,7 @@ export default function Header() {
   return (
     <motion.nav
       style={{
-        width: isDesktop ? animatedWidth : "100%",
+        width: isDesktop ? animatedWidth : "100vw",
       }}
       className={clsx(
         "fixed left-1/2 z-50 -translate-x-1/2",
