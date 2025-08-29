@@ -15,6 +15,7 @@ export default function Experience({
     <motion.div
       className={
         clsx("mb-10 p-4", "rounded-2xl border-2 border-solid border-slate-900")
+        //LATER
         // "mx-auto my-4 flex h-[90vh] w-[90vw]",
         // "transform flex-col justify-between",
         // "rounded-lg p-4 text-stone-300 transition-transform",

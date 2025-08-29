@@ -15,7 +15,9 @@ export default function Experience() {
     <section
       id="experience"
       className={clsx(
-        "relative min-h-[400vh] w-full bg-gradient-to-t from-sky-700 from-[0%] via-amber-700 to-[#344256] to-[100%] backdrop-blur-lg",
+        "relative",
+        "min-h-[400vh] w-full",
+        // " bg-gradient-to-t from-sky-700 from-[0%] via-amber-700 to-[#344256] to-[100%] backdrop-blur-lg",
         "snap-start",
       )}
     >

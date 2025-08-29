@@ -2,7 +2,7 @@ import "./index.scss";
 
 import {
   Header,
-  Experience,
+  // Experience,
   Hero,
   Portfolio,
   Contacts,
@@ -13,7 +13,7 @@ export default function App() {
     <>
       <Header />
       <Hero />
-      <Experience />
+      {/* <Experience /> */}
       <Portfolio />
       <Contacts />
     </>
