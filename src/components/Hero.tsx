@@ -29,11 +29,7 @@ export default function Hero() {
     [0, 0.5, 1, 1, 1, 1],
   );
   const titleOpacity = useTransform(scrollYProgress, [0, 0.15], [1, 0]);
-  const scrollOpacity = useTransform(
-    scrollYProgress,
-    [0, 0.25, 0.5],
-    [1, 0.5, 0],
-  );
+  const scrollOpacity = useTransform(scrollYProgress, [0, 0.2], [1, 0]);
 
   const text = `Lorem ipsum dolor sit amet consectetur adipisicing elit. 
     Inventore cumque minus quidem in praesentium.
@@ -65,7 +61,7 @@ export default function Hero() {
       <div
         className={clsx(
           "sticky top-0",
-          "flex h-screen items-center justify-center",
+          "flex h-screen items-center justify-center text-justify",
           "overflow-hidden",
         )}
       >
@@ -103,7 +99,10 @@ export default function Hero() {
           </motion.div>
         </motion.div>
 
-        <motion.h1 style={{ opacity: titleOpacity }} className="fixed w-[20vw]">
+        <motion.h1
+          style={{ opacity: titleOpacity }}
+          className="fixed flex w-[100%] items-center justify-center"
+        >
           <Slogan />
         </motion.h1>
 
@@ -123,12 +122,12 @@ export default function Hero() {
               pointerEvents: "none",
               willChange: "opacity",
             }}
-            className="mouse-bounce fixed bottom-[5rem] left-[2rem] lg:bottom-[5rem] lg:left-[5rem]"
+            className="mouse-bounce fixed bottom-[5rem] lg:bottom-[5rem] translate-x-[-50%] left-[50%]"
             aria-hidden="true"
           >
             <span className="mouse relative">
               <span className="wheel"></span>
-              <span className="absolute bottom-[-3rem] translate-x-[-25%] text-justify">
+              <span className="absolute bottom-[-3rem] translate-x-[-25%] text-center">
                 scroll down
               </span>
             </span>

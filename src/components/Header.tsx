@@ -24,12 +24,13 @@ export default function Header() {
     <motion.nav
       style={{
         width: isDesktop ? animatedWidth : "100%",
+        maxWidth: "100vw",
       }}
       className={clsx(
         "fixed left-1/2 z-50 -translate-x-1/2",
         "h-14",
-        "rounded-none bg-black/30 text-lg backdrop-blur-md md:mx-auto xl:mt-5 xl:rounded-3xl",
-        "flex items-center justify-between px-4",
+        "rounded-none border-2 border-solid border-gray-500 bg-black/30 text-lg backdrop-blur-md md:mx-auto xl:mt-5 xl:rounded-3xl",
+        "flex items-center justify-between",
         "will-change-[transform,opacity,filter]",
       )}
     >
