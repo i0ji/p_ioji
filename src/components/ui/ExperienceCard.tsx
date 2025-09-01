@@ -12,7 +12,7 @@ export default function Experience({
   index: number;
 }) {
   return (
-    <motion.div
+    <div
       className={
         clsx("mb-10 p-4", "rounded-2xl border-2 border-solid border-slate-900")
         //LATER
@@ -24,18 +24,18 @@ export default function Experience({
         // "2xl:h-[75vh] xl:h-[75vh] 2xl:w-[30vw]",
       }
       // className="panel"
-      initial={{
-        opacity: 0,
-        x: index % 2 === 0 ? 50 : -50,
-      }}
-      whileInView={{
-        opacity: 1,
-        x: 0,
-        transition: {
-          duration: 1,
-        },
-      }}
-      viewport={{ once: true }}
+      // initial={{
+      //   opacity: 0,
+      //   x: index % 2 === 0 ? 50 : -50,
+      // }}
+      // whileInView={{
+      //   opacity: 1,
+      //   x: 0,
+      //   transition: {
+      //     duration: 1,
+      //   },
+      // }}
+      // viewport={{ once: true }}
     >
       {data.img && (
         <div className="relative">
@@ -114,6 +114,6 @@ export default function Experience({
           {data.linkTitle}
         </a>
       </div>
-    </motion.div>
+    </div>
   );
 }
