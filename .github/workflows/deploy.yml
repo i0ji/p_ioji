@@ -12,8 +12,10 @@ permissions:
 
 concurrency:
   group: pages
-  cancel-in-progress: false  # avoid cancelling an in-progress Pages deploy
+  cancel-in-progress: true
 
+
+  
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -24,8 +26,6 @@ jobs:
       - name: Setup pnpm
         uses: pnpm/action-setup@v4
         with:
-          # Option A: follow package.json "packageManager" field automatically (omit version)
-          # Option B: pin a version explicitly (uncomment to use a specific major)
           version: 9
 
       - name: Setup Node
