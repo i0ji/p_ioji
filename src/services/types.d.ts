@@ -9,6 +9,8 @@ interface experienceDataModel {
   period: string;
   responsibilities: Array<string>;
   technologies?: Array<string>;
+  linkTitle?: string;
+  linkTo?: string;
 }
 
 interface aboutDataModel {

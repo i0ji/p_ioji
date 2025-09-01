@@ -15,5 +15,5 @@ export {
   Contacts,
   NotFound,
   ExperienceCard,
-  Slogan
+  Slogan,
 };

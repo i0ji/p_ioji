@@ -1,3 +1,5 @@
+import clsx from "clsx";
+
 import { useMemo, useState, useEffect } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 
@@ -18,9 +20,17 @@ const variants = {
 function SplitWord({ text }: { text: string }) {
   const chars = useMemo(() => text.split(""), [text]);
   return (
-    <span style={{ position: "relative", display: "inline-block" }}>
+    <span
+      className={clsx(
+        "inline-block lg:flex",
+        //LATER
+        // "border-2 border-solid border-yellow-500",
+        "w-[190px]",
+      )}
+      style={{ position: "relative" }}
+    >
       <AnimatePresence mode="wait">
-        <span key={text} className="absolute w-[200px] text-left">
+        <span key={text} className="flex justify-center">
           {chars.map((c, i) => (
             <motion.span
               key={`${text}-${i}-${c}`}
@@ -28,7 +38,7 @@ function SplitWord({ text }: { text: string }) {
               initial="hidden"
               animate="show"
               exit="exit"
-              className="text-red-600"
+              className="text-red-500"
               variants={variants}
               style={{ display: "inline-block", whiteSpace: "pre" }}
             >
@@ -55,9 +65,20 @@ export default function FancyReplace() {
     return () => clearInterval(id);
   }, []);
   return (
-    <h2 style={{ fontSize: 28 }}>
+    <span
+      className={clsx(
+        "flex flex-col w-[100%] items-center justify-center",
+        // "lg:w-[45%] lg:justify-center",
+        //LATER
+        // "border-2 border-solid border-red-500",
+        "sm:flex-row",
+        // "gap-4",
+        "text-center",
+      )}
+      style={{ fontSize: 28 }}
+    >
       from IDEA to&nbsp;
       <SplitWord text={variantsList[i]} />
-    </h2>
+    </span>
   );
 }

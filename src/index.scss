@@ -30,22 +30,27 @@ html {
   box-sizing: border-box;
 }
 
-a,
-a:link,
-a:visited {
-  text-decoration: none;
-}
+// a,
+// a:link,
+// a:visited {
+//   text-decoration: none;
+// }
 
-a:hover {
-  text-decoration: none;
-}
+// a:hover {
+//   text-decoration: none;
+// }
 
 body {
   @apply text-stone-300;
 
   width: 100%;
   margin: 0 auto;
-  background: #4f3f5c;
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(6, 117, 125, 1) 50%,
+    rgb(102, 0, 0) 100%
+  );
 }
 
 h6 {
@@ -107,4 +112,81 @@ h1 {
   .mouse-bounce {
     animation: none !important;
   }
+}
+
+html,
+body {
+  min-height: 100%;
+}
+body {
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+.parallax-pattern {
+  background-image: url("data:image/svg+xml;utf8,\
+<svg xmlns='http://www.w3.org/2000/svg' width='64' height='64' viewBox='0 0 64 64'>\
+  <g stroke='rgba(255,255,255,0.06)' stroke-width='1' stroke-linecap='round'>\
+    <path d='M32 24 v16'/>\
+    <path d='M24 32 h16'/>\
+  </g>\
+</svg>");
+  background-size: 25% 25%;
+  background-position: 0 0;
+  will-change: background-position;
+
+  animation-name: patternDrift;
+  animation-timing-function: linear;
+  animation-timeline: scroll(root block);
+}
+
+@keyframes patternDrift {
+  from {
+    background-position-y: 0;
+  }
+  to {
+    background-position-y: -50vh;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .parallax-pattern {
+    animation: none !important;
+  }
+}
+
+a {
+  position: relative;
+  display: inline-block;
+
+  @apply text-slate-300;
+  font-weight: normal;
+
+  cursor: pointer;
+  text-decoration: none;
+}
+
+a:visited {
+  @apply text-slate-300;
+}
+
+a:after {
+  position: absolute;
+  display: block;
+  height: 2px;
+  width: 0;
+  left: 0%;
+
+  @apply bg-stone-300;
+
+  -webkit-transition: width 0.3s ease-in-out;
+  transition: width 0.3s ease-in-out;
+  transform: translateX(0%);
+
+  content: "";
+}
+
+a:hover:after,
+a:focus:after {
+  width: 100%;
 }

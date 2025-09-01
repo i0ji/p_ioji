@@ -1,41 +1,14 @@
 import { nanoid } from "nanoid";
-
-import { motion } from "framer-motion";
-
-import clsx from "clsx";
+import { StickyCard } from "./StickyCard";
 
 export default function Experience({
   data,
-  index,
 }: {
   data: experienceDataModel;
   index: number;
 }) {
   return (
-    <motion.div
-      className={
-        clsx("mb-10 p-4", "rounded-2xl border-2 border-solid border-slate-900")
-        // "mx-auto my-4 flex h-[90vh] w-[90vw]",
-        // "transform flex-col justify-between",
-        // "rounded-lg p-4 text-stone-300 transition-transform",
-        // "duration-200 ease-linear hover:scale-[1.01] sm:h-[50vh] md:h-[70vh] md:w-[40vw]",
-        // "md:bg-gray-800 md:shadow-lg md:drop-shadow-lg lg:h-[80vh] lg:w-[30vw]",
-        // "2xl:h-[75vh] xl:h-[75vh] 2xl:w-[30vw]",
-      }
-      // className="panel"
-      initial={{
-        opacity: 0,
-        x: index % 2 === 0 ? 50 : -50,
-      }}
-      whileInView={{
-        opacity: 1,
-        x: 0,
-        transition: {
-          duration: 1,
-        },
-      }}
-      viewport={{ once: true }}
-    >
+    <StickyCard>
       {data.img && (
         <div className="relative">
           <img
@@ -58,7 +31,10 @@ export default function Experience({
       <div className="xl h-auto flex-auto flex-col justify-between">
         <ul className="flex list-disc flex-col justify-between pl-1 text-justify">
           {data.responsibilities.map((unit) => (
-            <li className="text-body-color dark:text-dark-6 flex text-base">
+            <li
+              key={nanoid()}
+              className="text-body-color dark:text-dark-6 flex text-base"
+            >
               <span className="text-primary mr-2.5 mt-0.5">
                 <svg
                   width={20}
@@ -90,22 +66,28 @@ export default function Experience({
         </ul>
       </div>
       {data.technologies && (
-        <hr className="my-4 h-[1px] w-full bg-stone-400 opacity-50" />
+        <hr className="my-2 h-[1px] w-full bg-stone-400 opacity-50" />
       )}
 
-      <div className="flex h-auto flex-col justify-between">
-        {data.technologies && <p className="my-2 w-full">Technologies: </p>}
-        <ul className="flex flex-initial flex-wrap">
-          {data.technologies &&
-            data.technologies.map((unit) => (
-              <li key={nanoid()} className="pr-2">
-                <pre className="mx-[3px] my-[2px] overflow-x-hidden rounded-lg bg-gray-900 px-[5px] font-bold text-stone-300">
-                  <code>{unit}</code>
-                </pre>
-              </li>
-            ))}
-        </ul>
+      <div className="flex h-auto max-w-[100%] flex-wrap items-center justify-start">
+        {data.technologies && <p className="my-2">Technologies:&nbsp;</p>}
+        {data.technologies &&
+          data.technologies.map((unit) => (
+            <span
+              key={nanoid()}
+              className="mx-[3px] my-[2px] overflow-x-hidden rounded-lg bg-gray-900 px-[5px] pr-2 font-bold text-stone-300"
+            >
+              <code>{unit}</code>
+            </span>
+          ))}
       </div>
-    </motion.div>
+      <hr className="my-2 h-[1px] w-full bg-stone-400 opacity-50" />
+      <p>
+        Link:{" "}
+        <a target="_blank" href={data.linkTo}>
+          {data.linkTitle}
+        </a>
+      </p>
+    </StickyCard>
   );
 }
