@@ -1,7 +1,6 @@
 import clsx from "clsx";
-
-import { useMemo, useState, useEffect } from "react";
 import { AnimatePresence, motion } from "framer-motion";
+import { useEffect,useMemo, useState } from "react";
 
 const variants = {
   hidden: { y: 10, opacity: 0 },
@@ -21,12 +20,7 @@ function SplitWord({ text }: { text: string }) {
   const chars = useMemo(() => text.split(""), [text]);
   return (
     <span
-      className={clsx(
-        "inline-block lg:flex",
-        //LATER
-        // "border-2 border-solid border-yellow-500",
-        "w-[190px]",
-      )}
+      className={clsx("inline-block lg:flex", "w-[190px]")}
       style={{ position: "relative" }}
     >
       <AnimatePresence mode="wait">
@@ -67,12 +61,8 @@ export default function FancyReplace() {
   return (
     <span
       className={clsx(
-        "flex flex-col w-[100%] items-center justify-center",
-        // "lg:w-[45%] lg:justify-center",
-        //LATER
-        // "border-2 border-solid border-red-500",
+        "flex w-[100%] flex-col items-center justify-center",
         "sm:flex-row",
-        // "gap-4",
         "text-center",
       )}
       style={{ fontSize: 28 }}

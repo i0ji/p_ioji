@@ -1,6 +1,6 @@
 import clsx from "clsx";
-import { useState, useEffect } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
+import { useEffect,useState } from "react";
 
 export default function Header() {
   const [isDesktop, setIsDesktop] = useState(false);

@@ -6,7 +6,6 @@ export default function Portfolio() {
       id="portfolio"
       className={clsx(
         "h-screen snap-start",
-        // "bg-gradient-to-r from-cyan-600 via-teal-700 to-blue-700 placeholder:h-screen",
       )}
     >
       github/i0ji

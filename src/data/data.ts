@@ -1,10 +1,9 @@
 import a1 from "assets/about/about.png";
+import burger_img from "assets/experience/burger.png";
+import kate_img from "assets/experience/kate.png";
 // import a2 from "assets/about/education.png";
 // import a3 from "assets/about/courses.png";
-
 import rta_img from "assets/experience/rta.png";
-import kate_img from "assets/experience/kate.png";
-import burger_img from "assets/experience/burger.png";
 
 const experienceData: Array<experienceDataModel> = [
   {
@@ -32,7 +31,7 @@ const experienceData: Array<experienceDataModel> = [
       "Yandex 360",
       "Alta-Soft",
     ],
-    linkTitle: 'RTA',
+    linkTitle: "RTA",
     linkTo: "https://rtaru.com",
   },
   {
@@ -57,7 +56,7 @@ const experienceData: Array<experienceDataModel> = [
       "Jest/Cypress",
       "YDS",
     ],
-    linkTitle: 'Katerina Semenova', 
+    linkTitle: "Katerina Semenova",
     linkTo: "https://katerinasemenova.ru",
   },
   {
@@ -83,7 +82,7 @@ const experienceData: Array<experienceDataModel> = [
       "Cypress",
       "vite",
     ],
-    linkTitle: 'Stellar-Burger',
+    linkTitle: "Stellar-Burger",
     linkTo: "https://i0ji.github.io/p_stellar_burger/",
   },
   // {

@@ -1,9 +1,8 @@
-import { motion, useScroll, useTransform } from "framer-motion";
-import { useEffect, useRef, useState } from "react";
-
 import { Slogan } from "components/index";
 
 import clsx from "clsx";
+import { motion, useScroll, useTransform } from "framer-motion";
+import { useEffect, useRef, useState } from "react";
 
 export default function Hero() {
   const [isScrollVisible, setIsScrollVisible] = useState(false);
@@ -20,15 +19,16 @@ export default function Hero() {
     return () => clearTimeout(timeout);
   }, []);
 
-  const scale = useTransform(scrollYProgress, [0, 1], [1, 8]);
-  const textScale = useTransform(scale, (s) => 1 / s);
-  const borderRadius = useTransform(scrollYProgress, [0, 1], ["1rem", "0rem"]);
+  //FIXME
+  // const scale = useTransform(scrollYProgress, [0, 1], [1, 0]);
+  // const textScale = useTransform(scale, (s) => 1.5 / s);
+  // const borderRadius = useTransform(scrollYProgress, [0, 1], ["1rem", "0rem"]);
   const opacity = useTransform(
     scrollYProgress,
-    [0, 0.1, 0.7, 0.8, 0.9, 1],
+    [0.1, 0.5, 0.7, 0.8, 0.9, 1],
     [0, 0.5, 1, 1, 1, 1],
   );
-  const titleOpacity = useTransform(scrollYProgress, [0, 0.15], [1, 0]);
+  const titleOpacity = useTransform(scrollYProgress, [0, 0.1], [1, 0]);
   const scrollOpacity = useTransform(scrollYProgress, [0, 0.2], [1, 0]);
 
   const text = `Lorem ipsum dolor sit amet consectetur adipisicing elit. 
@@ -54,8 +54,9 @@ export default function Hero() {
       ref={ref}
       className={clsx(
         "relative",
-        "min-h-[400vh] md:min-h-[300vh]",
-        // "bg-gradient-to-t from-slate-700 to-slate-400 text-slate-300",
+        //LATER
+        // "min-h-[500vh] md:min-h-[350vh]",
+        "h-[300vh]",
       )}
     >
       <div
@@ -67,26 +68,26 @@ export default function Hero() {
       >
         <motion.div
           style={{
-            scale,
-            borderRadius,
+            // scale,
+            // borderRadius,
             opacity,
             willChange: "transform,border-radius,opacity",
           }}
           className={clsx(
             "flex h-[15rem] w-[30rem] p-4",
             "items-center justify-center",
-            // "bg-gradient-to-t from-slate-700 to-transparent",
           )}
         >
-          <motion.div
+          {/* FIXME */}
+          {/* <motion.div
             style={{
-              scale: textScale,
-              willChange: "transform",
+              // scale: textScale,
+              // willChange: "transform",
             }}
-          >
-            <span className="font-mono">
-              {displayedText}
-              <motion.span
+          > */}
+          <span className="font-mono">
+            {displayedText}
+            {/* <motion.span
                 animate={{ opacity: [1, 0] }}
                 transition={{
                   duration: 0.8,
@@ -94,10 +95,10 @@ export default function Hero() {
                   repeatType: "reverse",
                 }}
                 className="ml-1 inline-block h-5 w-0.5 bg-white"
-              />
-            </span>
-          </motion.div>
+              /> */}
+          </span>
         </motion.div>
+        {/* </motion.div> */}
 
         <motion.h1
           style={{ opacity: titleOpacity }}
@@ -118,7 +119,6 @@ export default function Hero() {
               stiffness: 100,
             }}
             style={{
-              // opacity: scrollOpacity,
               pointerEvents: "none",
               willChange: "opacity",
             }}

@@ -1,11 +1,11 @@
 import "./index.scss";
 
 import {
-  Header,
+  Contacts,
   Experience,
+  Header,
   Hero,
   Portfolio,
-  Contacts,
 } from "components/index";
 
 export default function App() {

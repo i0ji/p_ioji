@@ -1,19 +1,20 @@
-import Header from "./Header";
-import Experience from "./Experience";
-import Hero from "./Hero";
-import Portfolio from "./Portfolio";
 import Contacts from "./Contacts";
+import Experience from "./Experience";
+import Header from "./Header";
+import Hero from "./Hero";
 import NotFound from "./NotFound";
+import Portfolio from "./Portfolio";
+
 import ExperienceCard from "ui/ExperienceCard";
 import Slogan from "ui/Slogan";
 
 export {
-  Header,
-  Experience,
-  Hero,
-  Portfolio,
   Contacts,
-  NotFound,
+  Experience,
   ExperienceCard,
+  Header,
+  Hero,
+  NotFound,
+  Portfolio,
   Slogan,
 };
