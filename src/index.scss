@@ -30,15 +30,15 @@ html {
   box-sizing: border-box;
 }
 
-// a,
-// a:link,
-// a:visited {
-//   text-decoration: none;
-// }
+a,
+a:link,
+a:visited {
+  text-decoration: none;
+}
 
-// a:hover {
-//   text-decoration: none;
-// }
+a:hover {
+  text-decoration: none;
+}
 
 body {
   @apply text-stone-300;
@@ -153,40 +153,4 @@ body {
   .parallax-pattern {
     animation: none !important;
   }
-}
-
-a {
-  position: relative;
-  display: inline-block;
-
-  @apply text-slate-300;
-  font-weight: normal;
-
-  cursor: pointer;
-  text-decoration: none;
-}
-
-a:visited {
-  @apply text-slate-300;
-}
-
-a:after {
-  position: absolute;
-  display: block;
-  height: 2px;
-  width: 0;
-  left: 0%;
-
-  @apply bg-stone-300;
-
-  -webkit-transition: width 0.3s ease-in-out;
-  transition: width 0.3s ease-in-out;
-  transform: translateX(0%);
-
-  content: "";
-}
-
-a:hover:after,
-a:focus:after {
-  width: 100%;
 }

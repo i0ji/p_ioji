@@ -24,8 +24,8 @@ export default function Experience({
       className={clsx(
         "sticky top-0",
         "max-h-[95vh]",
-        "my-4 p-4",
-        "rounded-2xl border-2 border-solid border-black",
+        "my-4 px-4 py-1",
+        "border-none md:rounded-2xl border-[1px] md:border-solid border-stone-300",
       )}
     >
       <motion.div style={{ y, opacity }}>

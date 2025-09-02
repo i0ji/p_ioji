@@ -6,6 +6,7 @@ import NotFound from "./NotFound";
 import Portfolio from "./Portfolio";
 
 import ExperienceCard from "ui/ExperienceCard";
+import Section from "ui/Section";
 import Slogan from "ui/Slogan";
 
 export {
@@ -16,5 +17,6 @@ export {
   Hero,
   NotFound,
   Portfolio,
+  Section,
   Slogan,
 };
