@@ -2,6 +2,8 @@ I deicided to create my own page using ~~NEXT~~ React!
 
 Current build:<br>
 
+> <b>d: 02.09.25 v: 0.1.6 deps update; parallax set, header, exp.card animations refacotr; add header section highlight;</b>
+> <b>d: 01.09.25 v: 0.1.5.7 deps update; parallax bg in progress;</b>
 > <b>d: 29.08.25 v: 0.1.5.7 deps update; style and animation touches;</b>
 > <b>d: 26.08.25 v: 0.1.5.6/5 deps update; remove one section;</b>
 > <b>d: 12.08.25 v: 0.1.5.5 Framer/Spring animation attempts;</b>
@@ -12,7 +14,7 @@ Current build:<br>
 > <b>d: 31.03.25 v: 0.1.5.4b Chore/updates;</b><br>
 > <b>d: 31.03.25 v: 0.1.5.4a Chore/updates;</b><br>
 
-> `React 19, vite, pnpm, commitlint/commitizen/husky, TS, SASS, tailwind, prettier, postcss, swiper, clsx`;<br>
+> `React 19, RTK, vite, framer-motion, pnpm,  commitlint/commitizen/husky, TS, SASS, tailwind, linter/prettier, postcss, swiper, clsx`;<br>
 
 Old build:
 
