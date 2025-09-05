@@ -27,17 +27,15 @@ export default function Header() {
 
   const headerRef = useRef<HTMLDivElement | null>(null);
 
-  // Анимация ширины до порога — от скролла
   const { scrollY } = useScroll();
   const animatedWidth = useTransform(
     scrollY,
     [0, 1400],
-    [isDesktop ? "90vw" : "100vw", "40vw"]
+    [isDesktop ? "90vw" : "100vw", "40vw"],
   );
 
-  // Плавный горизонтальный сдвиг (вправо при схлопывании)
-  const xRaw = useSpring(0, { stiffness: 260, damping: 26 }); // пружина
-  const xWithCenter = useMotionTemplate`calc(-50% + ${xRaw}px)`; // совмещаем -50% и px-смещение
+  const xRaw = useSpring(0, { stiffness: 260, damping: 26 });
+  const xWithCenter = useMotionTemplate`calc(-50% + ${xRaw}px)`;
 
   useEffect(() => {
     const checkSize = () => setIsDesktop(window.innerWidth > 1280);
@@ -46,13 +44,12 @@ export default function Header() {
     return () => window.removeEventListener("resize", checkSize);
   }, []);
 
-  // Порог схлопывания: когда верх секции #experience достигает верха вьюпорта (с небольшим буфером)
   useEffect(() => {
     const experienceEl = document.getElementById("experience");
     if (!experienceEl) return;
 
     const headerPx = headerRef.current?.offsetHeight ?? 56; // h-14 ≈ 56px
-    const buffer = 16; // небольшой запас
+    const buffer = 16;
 
     const computeThreshold = () => {
       const rect = experienceEl.getBoundingClientRect();
@@ -79,14 +76,11 @@ export default function Header() {
     };
   }, []);
 
-  // Обновление целевого сдвига x при смене состояния/resize
   useEffect(() => {
-    const rightPad = 24;       // соответствует right-6
-    const collapsedWidth = 48; // ширина круглой кнопки в схлопнутом состоянии
+    const rightPad = 24;
+    const collapsedWidth = 48;
 
     const updateX = () => {
-      // якорь остаётся по центру (left: 50% + translateX(-50%)),
-      // поэтому целевой сдвиг вправо = половина вьюпорта - отступ - половина кнопки
       const target = isCollapsed
         ? window.innerWidth / 2 - rightPad - collapsedWidth / 2
         : 0;
@@ -101,10 +95,13 @@ export default function Header() {
   return (
     <motion.nav
       ref={headerRef}
-      // ВНИМАНИЕ: x комбинируется с -50% через useMotionTemplate, чтобы не конфликтовать с Tailwind
       style={{
         x: xWithCenter,
-        width: isCollapsed ? 48 : isDesktop ? (animatedWidth as MotionValue<string>) : "100%",
+        width: isCollapsed
+          ? 48
+          : isDesktop
+            ? (animatedWidth as MotionValue<string>)
+            : "100%",
         height: isCollapsed ? 48 : 56,
         maxWidth: "100vw",
         borderRadius: isCollapsed ? 9999 : 16,
@@ -112,14 +109,14 @@ export default function Header() {
       transition={{ type: "spring", stiffness: 260, damping: 26 }}
       className={clsx(
         "fixed z-50",
-        // Всегда якорь в центре — дальше смещение делаем style.x
+
         "left-1/2 -translate-x-1/2",
-        // Можно анимировать и y отдельно, но тут фиксируем верх
+
         isCollapsed ? "top-6" : "top-0 xl:mt-5",
         "border-[1px] border-solid border-gray-500 bg-black/30 backdrop-blur-md",
         "flex items-center justify-between",
         "will-change-[transform,opacity,filter]",
-        isCollapsed ? "p-0" : "rounded-b-2xl xl:rounded-3xl"
+        isCollapsed ? "p-0" : "rounded-b-2xl xl:rounded-3xl",
       )}
       aria-label="Main navigation"
     >
@@ -134,8 +131,19 @@ export default function Header() {
             className="grid h-12 w-12 place-items-center text-gray-200"
           >
             <span className="sr-only">Open menu</span>
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-              <path d="M4 6h16M4 12h16M4 18h16" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
+            <svg
+              width="22"
+              height="22"
+              viewBox="0 0 24 24"
+              fill="none"
+              aria-hidden="true"
+            >
+              <path
+                d="M4 6h16M4 12h16M4 18h16"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+              />
             </svg>
           </button>
 
@@ -161,7 +169,9 @@ export default function Header() {
                           onClick={() => setMenuOpen(false)}
                           className={clsx(
                             "block px-4 py-2.5 transition-colors",
-                            active ? "text-white bg-white/10" : "text-gray-300 hover:text-white hover:bg-white/10"
+                            active
+                              ? "bg-white/10 text-white"
+                              : "text-gray-300 hover:bg-white/10 hover:text-white",
                           )}
                           aria-current={active ? "true" : undefined}
                         >
@@ -186,7 +196,7 @@ export default function Header() {
                   aria-current={active ? "true" : undefined}
                   className={clsx(
                     "relative z-10 px-3 py-1 transition-colors",
-                    active ? "text-white" : "text-gray-400 hover:text-gray-200"
+                    active ? "text-white" : "text-gray-400 hover:text-gray-200",
                   )}
                 >
                   {link.label}
