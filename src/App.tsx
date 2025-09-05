@@ -6,7 +6,7 @@ import {
   Header,
   Hero,
   Portfolio,
-  Section
+  Section,
 } from "components/index";
 
 import { Provider } from "react-redux";

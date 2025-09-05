@@ -49,16 +49,7 @@ export default function Hero() {
   }, [scrollYProgress, text]);
 
   return (
-    <section
-      id="hero"
-      ref={ref}
-      className={clsx(
-        "relative",
-        //LATER
-        // "min-h-[500vh] md:min-h-[350vh]",
-        "h-[300vh]",
-      )}
-    >
+    <div id="hero" ref={ref} className={clsx("relative", "h-[300vh]")}>
       <div
         className={clsx(
           "sticky top-0",
@@ -98,7 +89,6 @@ export default function Hero() {
               /> */}
           </span>
         </motion.div>
-        {/* </motion.div> */}
 
         <motion.h1
           style={{ opacity: titleOpacity }}
@@ -139,6 +129,6 @@ export default function Hero() {
           </motion.div>
         )}
       </div>
-    </section>
+    </div>
   );
 }

@@ -6,7 +6,7 @@ import { nanoid } from "nanoid";
 
 export default function Experience() {
   return (
-    <section
+    <div
       id="experience"
       className={clsx("relative", "min-h-[400vh] w-full", "snap-start")}
     >
@@ -26,6 +26,6 @@ export default function Experience() {
           </div>
         ))}
       </div>
-    </section>
+    </div>
   );
 }

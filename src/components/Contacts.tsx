@@ -2,12 +2,9 @@ import clsx from "clsx";
 
 export default function Contacts() {
   return (
-    <section
+    <div
       id="contacts"
-      className={clsx(
-        "justify-between",
-        "h-screen w-full snap-start",
-      )}
+      className={clsx("justify-between", "h-screen w-full snap-start")}
     >
       <div className="mx-auto flex h-full max-w-screen-xl flex-wrap items-center justify-around">
         <ul className="mx-auto my-4 flex h-[30rem] w-[30rem] transform flex-col justify-between rounded-lg bg-gray-800 p-4 shadow-lg drop-shadow-lg transition-transform duration-200 ease-linear">
@@ -25,6 +22,6 @@ export default function Contacts() {
           </li>
         </ul>
       </div>
-    </section>
+    </div>
   );
 }
