@@ -109,15 +109,17 @@ export default function Header() {
             : "100%",
         height: isCollapsed ? 48 : 56,
         maxWidth: "100vw",
-        borderRadius: 16,
+        // borderRadius: isCollapsed ? "rounded-b-2xl" : 16,
       }}
       transition={{ type: "spring", stiffness: 260, damping: 26 }}
       className={clsx(
-        "fixed z-50",
-        "left-1/2 -translate-x-1/2",
-        isCollapsed ? "top-6" : "top-0 xl:mt-5",
-        "border-[1px] border-solid border-gray-500 bg-black/30 backdrop-blur-md",
+        "fixed left-1/2 z-50 -translate-x-1/2",
         "flex items-center justify-between",
+        isCollapsed ? "top-6" : "top-0 xl:mt-5",
+        isCollapsed ? "rounded-2xl" : "rounded-b-2xl",
+        "border-[1px] border-solid",
+        "border-[1px] border-solid border-stone-500 bg-black/70 backdrop-blur-md",
+        "xl: border border-gray-600/60",
         "will-change-[transform,opacity,filter]",
       )}
       aria-label="Main navigation"
@@ -158,15 +160,14 @@ export default function Header() {
                 animate={{ opacity: 1, y: 0, scale: 1 }}
                 exit={{ opacity: 0, y: -8, scale: 0.98 }}
                 transition={{ type: "spring", stiffness: 300, damping: 24 }}
-                className="absolute right-0 mt-2 w-56 overflow-hidden rounded-xl border border-gray-600/60 bg-black/70 backdrop-blur-md"
+                className={clsx(
+                  "absolute right-0 overflow-hidden",
+                  "w-50 mt-4",
+                  isCollapsed ? "bg-black" : "bg-black/70 backdrop-blur-md",
+                  "rounded-2xl border border-gray-600/60 xl:rounded-2xl",
+                )}
               >
-                <ul
-                  className={clsx(
-                    "py-2",
-                    isCollapsed ? "p-4" : "p-none",
-                    // isCollapsed ? "bg-red-500" : "bg-transparent",
-                  )}
-                >
+                <ul className={clsx("py-2", isCollapsed ? "p-4" : "p-none")}>
                   {LINKS.map((link) => {
                     const active = activeSection === link.id;
                     return (
@@ -177,8 +178,8 @@ export default function Header() {
                           onClick={() => setMenuOpen(false)}
                           className={clsx(
                             "block",
-                            "px-4 py-2 my-2",
-                            "transition-colors rounded-lg",
+                            "my-2 px-4 py-2",
+                            "rounded-lg transition-colors",
                             active
                               ? "bg-white/10 text-white"
                               : "text-gray-300 hover:bg-white/10 hover:text-white",
