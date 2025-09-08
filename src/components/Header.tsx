@@ -46,24 +46,28 @@ export default function Header() {
 
   useEffect(() => {
     const experienceEl = document.getElementById("experience");
+    const portfolioEl = document.getElementById("portfolio");
     if (!experienceEl) return;
 
-    const headerPx = headerRef.current?.offsetHeight ?? 56; // h-14 ≈ 56px
+    const headerPx = headerRef.current?.offsetHeight ?? 56;
     const buffer = 16;
 
-    const computeThreshold = () => {
-      const rect = experienceEl.getBoundingClientRect();
+    const computeTop = (el: HTMLElement) => {
+      const rect = el.getBoundingClientRect();
       return rect.top + window.scrollY - headerPx - buffer;
     };
 
-    let threshold = computeThreshold();
+    let expTop = computeTop(experienceEl);
+    let portTop = portfolioEl ? computeTop(portfolioEl) : Infinity;
 
     const onScroll = () => {
-      setIsCollapsed(window.scrollY >= threshold);
+      const y = window.scrollY;
+      setIsCollapsed(y >= expTop && y < portTop);
     };
 
     const onResize = () => {
-      threshold = computeThreshold();
+      expTop = computeTop(experienceEl);
+      portTop = portfolioEl ? computeTop(portfolioEl) : Infinity;
       onScroll();
     };
 
@@ -94,6 +98,7 @@ export default function Header() {
 
   return (
     <motion.nav
+      whileTap={isCollapsed ? { scale: 0.9 } : undefined}
       ref={headerRef}
       style={{
         x: xWithCenter,
@@ -104,19 +109,16 @@ export default function Header() {
             : "100%",
         height: isCollapsed ? 48 : 56,
         maxWidth: "100vw",
-        borderRadius: isCollapsed ? 9999 : 16,
+        borderRadius: 16,
       }}
       transition={{ type: "spring", stiffness: 260, damping: 26 }}
       className={clsx(
         "fixed z-50",
-
         "left-1/2 -translate-x-1/2",
-
         isCollapsed ? "top-6" : "top-0 xl:mt-5",
         "border-[1px] border-solid border-gray-500 bg-black/30 backdrop-blur-md",
         "flex items-center justify-between",
         "will-change-[transform,opacity,filter]",
-        isCollapsed ? "p-0" : "rounded-b-2xl xl:rounded-3xl",
       )}
       aria-label="Main navigation"
     >
@@ -128,12 +130,12 @@ export default function Header() {
             aria-expanded={menuOpen}
             aria-controls="header-dropdown"
             onClick={() => setMenuOpen((s) => !s)}
-            className="grid h-12 w-12 place-items-center text-gray-200"
+            className="flex h-10 w-10 items-center justify-center pl-1"
           >
             <span className="sr-only">Open menu</span>
             <svg
-              width="22"
-              height="22"
+              width="25"
+              height="25"
               viewBox="0 0 24 24"
               fill="none"
               aria-hidden="true"
@@ -158,7 +160,13 @@ export default function Header() {
                 transition={{ type: "spring", stiffness: 300, damping: 24 }}
                 className="absolute right-0 mt-2 w-56 overflow-hidden rounded-xl border border-gray-600/60 bg-black/70 backdrop-blur-md"
               >
-                <ul className="py-2">
+                <ul
+                  className={clsx(
+                    "py-2",
+                    isCollapsed ? "p-4" : "p-none",
+                    // isCollapsed ? "bg-red-500" : "bg-transparent",
+                  )}
+                >
                   {LINKS.map((link) => {
                     const active = activeSection === link.id;
                     return (
@@ -168,7 +176,9 @@ export default function Header() {
                           href={`#${link.id}`}
                           onClick={() => setMenuOpen(false)}
                           className={clsx(
-                            "block px-4 py-2.5 transition-colors",
+                            "block",
+                            "px-4 py-2 my-2",
+                            "transition-colors rounded-lg",
                             active
                               ? "bg-white/10 text-white"
                               : "text-gray-300 hover:bg-white/10 hover:text-white",
