@@ -109,17 +109,14 @@ export default function Header() {
             : "100%",
         height: isCollapsed ? 48 : 56,
         maxWidth: "100vw",
-        // borderRadius: isCollapsed ? "rounded-b-2xl" : 16,
       }}
       transition={{ type: "spring", stiffness: 260, damping: 26 }}
       className={clsx(
         "fixed left-1/2 z-50 -translate-x-1/2",
         "flex items-center justify-between",
         isCollapsed ? "top-6" : "top-0 xl:mt-5",
-        isCollapsed ? "rounded-2xl" : "rounded-b-2xl",
-        "border-[1px] border-solid",
+        isCollapsed ? "rounded-2xl " : "rounded-b-2xl xl:rounded-2xl",
         "border-[1px] border-solid border-stone-500 bg-black/70 backdrop-blur-md",
-        "xl: border border-gray-600/60",
         "will-change-[transform,opacity,filter]",
       )}
       aria-label="Main navigation"
@@ -164,7 +161,7 @@ export default function Header() {
                   "absolute right-0 overflow-hidden",
                   "w-50 mt-4",
                   isCollapsed ? "bg-black" : "bg-black/70 backdrop-blur-md",
-                  "rounded-2xl border border-gray-600/60 xl:rounded-2xl",
+                  "rounded-2xl border border-gray-600/60",
                 )}
               >
                 <ul className={clsx("py-2", isCollapsed ? "p-4" : "p-none")}>
