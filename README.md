@@ -2,6 +2,7 @@ I deicided to create my own page using ~~NEXT~~ React!
 
 Current build:<br>
 
+> <b>d: 12.10.25 v: 0.1.6 deps update;</b>
 > <b>d: 08.09.25 v: 0.1.6 deps update; header animation set;</b>
 > <b>d: 04.09.25 v: 0.1.6 add header collaps animation to dropdown menu;</b>
 > <b>d: 02.09.25 v: 0.1.6 deps update; parallax set, header, exp.card animations refacotr; add header section highlight;</b>
