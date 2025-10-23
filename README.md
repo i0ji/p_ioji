@@ -17,7 +17,6 @@ Current build:<br>
 > <b>d: 31.03.25 v: 0.1.5.4b Chore/updates;</b><br>
 > <b>d: 31.03.25 v: 0.1.5.4a Chore/updates;</b><br>
 
-
 > `React 19, RTK, vite, framer-motion, pnpm,  commitlint/commitizen/husky, TS, SASS, tailwind, linter/prettier, postcss, swiper, clsx`;<br>
 
 Old build:

@@ -2,6 +2,6 @@ ignoredBuiltDependencies:
   - esbuild
 
 packages:
-  - 'apps/*'
-  - 'packages/*'
-  - 'components/**'
+  - "apps/*"
+  - "packages/*"
+  - "components/**"

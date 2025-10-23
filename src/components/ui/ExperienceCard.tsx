@@ -25,7 +25,7 @@ export default function Experience({
         "sticky top-0",
         "max-h-[95vh]",
         "my-4 px-4 py-1",
-        "border-none md:rounded-lg border-[1px] md:border-solid border-stone-300",
+        "border-[1px] border-none border-stone-300 md:rounded-lg md:border-solid",
       )}
     >
       <motion.div style={{ y, opacity }}>

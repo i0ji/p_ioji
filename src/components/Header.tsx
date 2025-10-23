@@ -1,6 +1,7 @@
 import clsx from "clsx";
+import { LayoutGroup, motion } from "framer-motion";
+import { useEffect, useMemo, useState } from "react";
 import { useAppSelector } from "store/hooks";
-import { useState, useEffect, useMemo } from "react";
 
 const LINKS = [
   { id: "hero", label: "hero" },
@@ -11,9 +12,7 @@ const LINKS = [
 
 export default function Header() {
   const activeSection = useAppSelector((s) => s.nav.activeSection);
-
   const [isDesktop, setIsDesktop] = useState(false);
-
   const links = useMemo(() => LINKS, []);
 
   useEffect(() => {
@@ -22,40 +21,49 @@ export default function Header() {
     console.log(isDesktop);
     window.addEventListener("resize", checkSize);
     return () => window.removeEventListener("resize", checkSize);
-  }, []);
+  }, [isDesktop]);
 
   return (
     <nav
       aria-label="Main navigation"
       className={clsx(
-        "fixed w-[60%] top-[2rem] z-50",
+        "fixed top-[2rem] z-50 w-[60%]",
         "left-1/2 -translate-x-1/2",
         "border border-gray-500 bg-black/30 backdrop-blur-md",
         "rounded-lg",
       )}
     >
-      <ul className="flex justify-around p-2">
-        {links.map((link) => {
-          const active = activeSection === link.id;
-          return (
-            <li key={link.id} className="relative">
-              <a
-                href={`#${link.id}`}
-                aria-current={active ? "true" : undefined}
-                className={clsx(
-                  "relative z-10 rounded-lg px-3 py-1 transition-colors",
-                  active ? "text-white" : "text-gray-400 hover:text-gray-200",
+      <LayoutGroup id="navbar">
+        <ul className="flex justify-around p-2">
+          {links.map((link) => {
+            const active = activeSection === link.id;
+
+            return (
+              <li key={link.id} className="relative">
+                <a
+                  href={`#${link.id}`}
+                  aria-current={active ? "true" : undefined}
+                  className={clsx(
+                    "relative z-10 rounded-lg px-3 py-1 transition-colors",
+                    active ? "text-white" : "text-gray-400 hover:text-gray-200",
+                  )}
+                >
+                  {link.label}
+                </a>
+                {active && (
+                  <motion.span
+                    layoutId="active-pill" // общий id для shared‑layout
+                    initial={false} // без входной анимации на маунте
+                    layout // анимировать размер/позицию
+                    transition={{ type: "spring", stiffness: 380, damping: 30 }} // мягкая пружина
+                    className="pointer-events-none absolute inset-0 rounded-md bg-white/10"
+                  />
                 )}
-              >
-                {link.label}
-              </a>
-              {active && (
-                <span className="pointer-events-none absolute inset-0 rounded-md bg-white/10" />
-              )}
-            </li>
-          );
-        })}
-      </ul>
+              </li>
+            );
+          })}
+        </ul>
+      </LayoutGroup>
     </nav>
   );
 }
