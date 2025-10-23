@@ -48,7 +48,7 @@ export default function Header() {
     const experienceEl = document.getElementById("experience");
     if (!experienceEl) return;
 
-    const headerPx = headerRef.current?.offsetHeight ?? 56; // h-14 ≈ 56px
+    const headerPx = headerRef.current?.offsetHeight ?? 56;
     const buffer = 16;
 
     const computeThreshold = () => {
