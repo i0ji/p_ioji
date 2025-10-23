@@ -1,4 +1,3 @@
-// components/Section.tsx
 import { useInView } from "framer-motion";
 import { useEffect, useRef } from "react";
 import { useAppDispatch } from "store/hooks";
