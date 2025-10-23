@@ -25,7 +25,7 @@ export default function Experience({
         "sticky top-0",
         "max-h-[95vh]",
         "my-4 px-4 py-1",
-        "border-none md:rounded-2xl border-[1px] md:border-solid border-stone-300",
+        "border-none md:rounded-lg border-[1px] md:border-solid border-stone-300",
       )}
     >
       <motion.div style={{ y, opacity }}>
@@ -34,7 +34,7 @@ export default function Experience({
             <img
               src={data.img}
               alt={data.title}
-              className="h-auto w-full rounded-t-2xl"
+              className="h-auto w-full rounded-t-lg"
               style={{
                 maskImage:
                   "linear-gradient(to bottom, black 80%, transparent 100%)",

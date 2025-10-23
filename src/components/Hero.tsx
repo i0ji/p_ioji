@@ -19,10 +19,6 @@ export default function Hero() {
     return () => clearTimeout(timeout);
   }, []);
 
-  //FIXME
-  // const scale = useTransform(scrollYProgress, [0, 1], [1, 0]);
-  // const textScale = useTransform(scale, (s) => 1.5 / s);
-  // const borderRadius = useTransform(scrollYProgress, [0, 1], ["1rem", "0rem"]);
   const opacity = useTransform(
     scrollYProgress,
     [0.1, 0.5, 0.7, 0.8, 0.9, 1],
@@ -59,8 +55,6 @@ export default function Hero() {
       >
         <motion.div
           style={{
-            // scale,
-            // borderRadius,
             opacity,
             willChange: "transform,border-radius,opacity",
           }}
@@ -69,25 +63,7 @@ export default function Hero() {
             "items-center justify-center",
           )}
         >
-          {/* FIXME */}
-          {/* <motion.div
-            style={{
-              // scale: textScale,
-              // willChange: "transform",
-            }}
-          > */}
-          <span className="font-mono">
-            {displayedText}
-            {/* <motion.span
-                animate={{ opacity: [1, 0] }}
-                transition={{
-                  duration: 0.8,
-                  repeat: Infinity,
-                  repeatType: "reverse",
-                }}
-                className="ml-1 inline-block h-5 w-0.5 bg-white"
-              /> */}
-          </span>
+          <span className="font-mono">{displayedText}</span>
         </motion.div>
 
         <motion.h1
