@@ -41,7 +41,6 @@ function SplitWord({ text }: { text: string }) {
           ))}
         </span>
       </AnimatePresence>
-
       <span style={{ visibility: "hidden" }}>{text}</span>
     </span>
   );

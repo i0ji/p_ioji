@@ -23,7 +23,7 @@ export default function Experience({
       ref={ref}
       className={clsx(
         "sticky top-0",
-        "max-h-[95vh]",
+        "max-h-[75vh]",
         "my-4 px-4 py-1",
         "border-[1px] border-none border-stone-300 md:rounded-lg md:border-solid",
       )}
@@ -55,7 +55,7 @@ export default function Experience({
                 key={nanoid()}
                 className="text-body-color dark:text-dark-6 flex text-base"
               >
-                <span className="text-primary mr-2.5 mt-0.5">
+                {/* <span className="text-primary mr-2.5 mt-0.5">
                   <svg
                     width={20}
                     height={20}
@@ -79,7 +79,7 @@ export default function Experience({
                       </clipPath>
                     </defs>
                   </svg>
-                </span>
+                </span> */}
                 <p>{unit}</p>
               </li>
             ))}

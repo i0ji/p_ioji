@@ -17,7 +17,7 @@ export default function Experience() {
               className={clsx(
                 "sticky top-0",
                 "min-h-screen",
-                "flex items-stretch",
+                "flex items-center",
               )}
               style={{ zIndex: i + 1 }}
             >
