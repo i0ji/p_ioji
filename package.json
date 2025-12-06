@@ -1,7 +1,7 @@
 {
   "name": "p_ioji",
   "private": true,
-  "version": "0.1.6.3t",
+  "version": "0.2.1",
   "type": "module",
   "homepage": "https://i0ji.github.io/p_ioji",
   "scripts": {
