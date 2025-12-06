@@ -2,8 +2,7 @@ I deicided to create my own page using ~~NEXT~~ React!
 
 Current build:<br>
 
-
-> <b>d: 23.10.25 v: 0.1.7 multiple deps & logic updates; header animation refactor;</b>
+> <b>d: 06.12.25 v: 0.2.0 critical update: next/react/tailwind configs;</b>
 > <b>d: 12.10.25 v: 0.1.6 deps update;</b>
 > <b>d: 08.09.25 v: 0.1.6 deps update; header animation set;</b>
 > <b>d: 04.09.25 v: 0.1.6 add header collaps animation to dropdown menu;</b>

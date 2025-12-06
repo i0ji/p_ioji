@@ -12,6 +12,11 @@ import {
 import { Provider } from "react-redux";
 import { store } from "store/store";
 
+//CONSOLE
+console.log(`v: 0.2.1;
+  d: 07.12.25
+  `);
+
 export default function App() {
   return (
     <Provider store={store}>
