@@ -58,17 +58,14 @@ export default function Hero() {
             opacity,
             willChange: "transform,border-radius,opacity",
           }}
-          className={clsx(
-            "flex h-[15rem] w-[30rem] p-4",
-            "items-center justify-center",
-          )}
+          className={clsx("flex h-60 w-120 p-4", "items-center justify-center")}
         >
           <span className="font-mono">{displayedText}</span>
         </motion.div>
 
         <motion.h1
           style={{ opacity: titleOpacity }}
-          className="fixed flex w-[100%] items-center justify-center"
+          className="fixed flex w-full items-center justify-center"
         >
           <Slogan />
         </motion.h1>
@@ -88,7 +85,7 @@ export default function Hero() {
               pointerEvents: "none",
               willChange: "opacity",
             }}
-            className="mouse-bounce fixed bottom-[5rem] left-[50%] translate-x-[-50%] lg:bottom-[5rem]"
+            className="mouse-bounce fixed bottom-20 left-[50%] translate-x-[-50%] lg:bottom-20"
             aria-hidden="true"
           >
             <motion.span
@@ -98,7 +95,7 @@ export default function Hero() {
               className="mouse relative"
             >
               <span className="wheel"></span>
-              <span className="absolute bottom-[-3rem] translate-x-[-25%] text-center">
+              <span className="absolute -bottom-12 translate-x-[-25%] text-center">
                 scroll down
               </span>
             </motion.span>
