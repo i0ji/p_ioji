@@ -25,7 +25,7 @@ export default function Experience({
         "sticky top-0",
         "max-h-[95vh]",
         "my-4 px-4 py-1",
-        "border-[1px] border-none border-stone-300 md:rounded-lg md:border-solid",
+        "border border-none border-stone-300 md:rounded-2xl md:border-solid",
       )}
     >
       <motion.div style={{ y, opacity }}>
@@ -55,7 +55,7 @@ export default function Experience({
                 key={nanoid()}
                 className="text-body-color dark:text-dark-6 flex text-base"
               >
-                <span className="text-primary mr-2.5 mt-0.5">
+                <span className="text-primary mt-0.5 mr-2.5">
                   <svg
                     width={20}
                     height={20}
@@ -86,10 +86,10 @@ export default function Experience({
           </ul>
         </div>
         {data.technologies && (
-          <hr className="my-2 h-[1px] w-full bg-stone-400 opacity-50" />
+          <hr className="my-2 h-px w-full bg-stone-400 opacity-50" />
         )}
 
-        <div className="flex h-auto max-w-[100%] flex-wrap items-center justify-start">
+        <div className="flex h-auto max-w-full flex-wrap items-center justify-start">
           {data.technologies && <p className="my-2">Technologies:&nbsp;</p>}
           {data.technologies &&
             data.technologies.map((unit) => (
@@ -101,7 +101,7 @@ export default function Experience({
               </span>
             ))}
         </div>
-        <hr className="my-2 h-[1px] w-full bg-stone-400 opacity-50" />
+        <hr className="my-2 h-px w-full bg-stone-400 opacity-50" />
         <p>
           Link:{" "}
           <a target="_blank" href={data.linkTo}>

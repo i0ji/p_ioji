@@ -61,7 +61,7 @@ export default function FancyReplace() {
   return (
     <span
       className={clsx(
-        "flex w-[100%] flex-col items-center justify-center",
+        "flex w-full flex-col items-center justify-center",
         "sm:flex-row",
         "text-center",
       )}
