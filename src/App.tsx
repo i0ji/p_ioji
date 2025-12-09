@@ -1,5 +1,3 @@
-import "./index.scss";
-
 import {
   Contacts,
   Experience,

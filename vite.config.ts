@@ -1,3 +1,4 @@
+import tailwindcss from "@tailwindcss/vite";
 import react from "@vitejs/plugin-react";
 import path from "path";
 import { defineConfig } from "vite";
@@ -14,6 +15,6 @@ export default defineConfig({
       store: path.resolve(__dirname, "./src/store"),
     },
   },
-  plugins: [react()],
-  base: '/p_ioji/'
+  plugins: [react(), tailwindcss()],
+  base: "/p_ioji/",
 });

@@ -112,11 +112,11 @@ export default function Header() {
       }}
       transition={{ type: "spring", stiffness: 260, damping: 26 }}
       className={clsx(
-        "fixed left-1/2 z-50 -translate-x-1/2",
+        "fixed left-1/2 z-50",
         "flex items-center justify-between",
         isCollapsed ? "top-6" : "top-0 xl:mt-5",
-        isCollapsed ? "rounded-2xl " : "rounded-b-2xl xl:rounded-2xl",
-        "border-[1px] border-solid border-stone-500 bg-black/70 backdrop-blur-md",
+        isCollapsed ? "rounded-2xl" : "rounded-b-2xl xl:rounded-2xl",
+        "border border-solid border-stone-500 bg-black/70 backdrop-blur-md",
         "will-change-[transform,opacity,filter]",
       )}
       aria-label="Main navigation"
@@ -159,7 +159,7 @@ export default function Header() {
                 transition={{ type: "spring", stiffness: 300, damping: 24 }}
                 className={clsx(
                   "absolute right-0 overflow-hidden",
-                  "w-50 mt-4",
+                  "mt-4 w-50",
                   isCollapsed ? "bg-black" : "bg-black/70 backdrop-blur-md",
                   "rounded-2xl border border-gray-600/60",
                 )}

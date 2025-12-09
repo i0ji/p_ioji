@@ -1,0 +1,61 @@
+/* src/styles/index.scss */
+@forward "font"; /* Если вы оставили импорт шрифта тут */
+
+/* УДАЛИТЕ весь блок * { margin: 0 ... }, Tailwind Preflight делает это сам */
+/* УДАЛИТЕ html, body настройки, перенесите их в CSS */
+
+/* Оставьте только уникальную CSS/SCSS логику */
+
+.mouse-bounce {
+  transform: translateX(-50%);
+  display: inline-block;
+  animation: bounce 1.6s ease-in-out infinite;
+  will-change: transform;
+}
+
+.mouse {
+  width: 26px;
+  height: 42px;
+  border: 2px solid currentColor;
+  border-radius: 16px;
+  color: #fff;
+  display: inline-block;
+  opacity: 0.9;
+}
+
+.wheel {
+  position: absolute;
+  top: 8px;
+  left: 50%;
+  width: 4px;
+  height: 8px;
+  background: currentColor;
+  border-radius: 2px;
+  transform: translateX(-50%);
+  opacity: 0.9;
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translate(-50%, 0); }
+  50% { transform: translate(-50%, -6px); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .mouse-bounce { animation: none !important; }
+}
+
+/* Ваш исправленный SVG без переносов строк */
+.parallax-pattern {
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='64' height='64' viewBox='0 0 64 64'><g stroke='rgba(255,255,255,0.06)' stroke-width='1' stroke-linecap='round'><path d='M32 24 v16'/><path d='M24 32 h16'/></g></svg>");
+  background-size: 25% 25%;
+  background-position: 0 0;
+  will-change: background-position;
+  animation-name: patternDrift;
+  animation-timing-function: linear;
+  animation-timeline: scroll(root block);
+}
+
+@keyframes patternDrift {
+  from { background-position-y: 0; }
+  to { background-position-y: -50vh; }
+}

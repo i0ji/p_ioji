@@ -2,6 +2,7 @@ I deicided to create my own page using ~~NEXT~~ React!
 
 Current build:<br>
 
+> <b>d: 09.12.25 v: 0.2.2 multiple style reworks to migrate to tailwind v4;</b>
 > <b>d: 06.12.25 v: 0.2.0 critical update: next/react/tailwind configs;</b>
 > <b>d: 12.10.25 v: 0.1.6 deps update;</b>
 > <b>d: 08.09.25 v: 0.1.6 deps update; header animation set;</b>
