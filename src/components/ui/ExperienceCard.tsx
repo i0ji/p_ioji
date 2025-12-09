@@ -55,7 +55,7 @@ export default function Experience({
                 key={nanoid()}
                 className="text-body-color dark:text-dark-6 flex text-base"
               >
-                <span className="text-primary mr-2.5 mt-0.5">
+                <span className="text-primary mt-0.5 mr-2.5">
                   <svg
                     width={20}
                     height={20}
