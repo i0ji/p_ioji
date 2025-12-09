@@ -2,16 +2,15 @@ I deicided to create my own page using ~~NEXT~~ React!
 
 Current build:<br>
 
-> d: 01.12.25 v: 0.1.7 deps update;<br>
-> d: 23.10.25 v: 0.1.7 multiple deps & logic updates; header animation refactor;<br>
-> d: 12.10.25 v: 0.1.6 deps update;<br>
-> d: 08.09.25 v: 0.1.6 deps update; header animation set;<br>
-> d: 04.09.25 v: 0.1.6 add header collaps animation to dropdown menu;<br>
-> d: 02.09.25 v: 0.1.6 deps update; parallax set, header, exp.card animations refacotr; add header section highlight;<br>
-> d: 01.09.25 v: 0.1.5.7 deps update; parallax bg in progress;<br>
-> d: 29.08.25 v: 0.1.5.7 deps update; style and animation touches;<br>
-> d: 26.08.25 v: 0.1.5.6/5 deps update; remove one section;<br>
-> d: 12.08.25 v: 0.1.5.5 Framer/Spring animation attempts;<br>
+> <b>d: 06.12.25 v: 0.2.0 critical update: next/react/tailwind configs;</b>
+> <b>d: 12.10.25 v: 0.1.6 deps update;</b>
+> <b>d: 08.09.25 v: 0.1.6 deps update; header animation set;</b>
+> <b>d: 04.09.25 v: 0.1.6 add header collaps animation to dropdown menu;</b>
+> <b>d: 02.09.25 v: 0.1.6 deps update; parallax set, header, exp.card animations refacotr; add header section highlight;</b>
+> <b>d: 01.09.25 v: 0.1.5.7 deps update; parallax bg in progress;</b>
+> <b>d: 29.08.25 v: 0.1.5.7 deps update; style and animation touches;</b>
+> <b>d: 26.08.25 v: 0.1.5.6/5 deps update; remove one section;</b>
+> <b>d: 12.08.25 v: 0.1.5.5 Framer/Spring animation attempts;</b>
 > full list of renovated technologies:
 > d: 11.08.25 v: 0.1.5.5 Refactor attempt using Spring animation<br><br>
 > d: 28.07.25 v: 0.1.0 Total refactor using React;<br>
