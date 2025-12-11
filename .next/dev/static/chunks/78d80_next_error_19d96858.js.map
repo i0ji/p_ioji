@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 3, "column": 0}, "map": {"version":3,"sources":["file:///C:/Users/adm.ivan.udodenko/Documents/scripts/01.PERSONAL/p_ioji/node_modules/.pnpm/next%4016.0.8_%40babel%2Bcore%407.2_833aca2250f18cf60a3430d985355047/node_modules/next/error.js"],"sourcesContent":["module.exports = require('./dist/pages/_error')\n"],"names":[],"mappings":"AAAA,OAAO,OAAO","ignoreList":[0]}}]
+}

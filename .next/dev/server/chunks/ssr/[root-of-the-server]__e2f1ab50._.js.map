@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 13, "column": 0}, "map": {"version":3,"sources":["turbopack:///[project]/src/app/page.module.scss [app-rsc] (css module)"],"sourcesContent":["__turbopack_context__.v({\n});\n"],"names":[],"mappings":"AAAA;AACA"}},
+    {"offset": {"line": 19, "column": 0}, "map": {"version":3,"sources":["file:///C:/Users/adm.ivan.udodenko/Documents/scripts/01.PERSONAL/p_ioji/src/app/page.tsx"],"sourcesContent":["import Link from 'next/link';\n\nimport s from './page.module.scss';\n\nexport default function Home() {\n  console.log('v: 0.0.4');\n\n  return (\n    <main className={s.main}>\n      <Link href=\"/main\">\n        <h1 className=\"fontBold\">ioji</h1>\n      </Link>\n    </main>\n  );\n}\n"],"names":[],"mappings":";;;;;AAAA;AAEA;;;;AAEe,SAAS;IACtB,QAAQ,GAAG,CAAC;IAEZ,qBACE,6VAAC;QAAK,WAAW,0IAAC,CAAC,IAAI;kBACrB,cAAA,6VAAC,ySAAI;YAAC,MAAK;sBACT,cAAA,6VAAC;gBAAG,WAAU;0BAAW;;;;;;;;;;;;;;;;AAIjC"}}]
+}

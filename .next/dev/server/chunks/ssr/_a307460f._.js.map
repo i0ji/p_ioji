@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 4, "column": 0}, "map": {"version":3,"sources":["file:///C:/Users/adm.ivan.udodenko/Documents/scripts/01.PERSONAL/p_ioji/src/app/layout.tsx"],"sourcesContent":["import \"./globals.scss\";\n\nexport default function RootLayout({\n  children,\n}: Readonly<{\n  children: React.ReactNode;\n}>) {\n  return (\n    <html lang=\"en\">\n      <body>\n        {children}\n      </body>\n    </html>\n  );\n}\n"],"names":[],"mappings":";;;;;;;AAEe,SAAS,WAAW,EACjC,QAAQ,EAGR;IACA,qBACE,6VAAC;QAAK,MAAK;kBACT,cAAA,6VAAC;sBACE;;;;;;;;;;;AAIT"}},
+    {"offset": {"line": 31, "column": 0}, "map": {"version":3,"sources":["file:///C:/Users/adm.ivan.udodenko/Documents/scripts/01.PERSONAL/p_ioji/node_modules/.pnpm/next%4016.0.8_%40babel%2Bcore%407.2_833aca2250f18cf60a3430d985355047/node_modules/next/src/server/route-modules/app-page/vendored/rsc/react-jsx-dev-runtime.ts"],"sourcesContent":["module.exports = (\n  require('../../module.compiled') as typeof import('../../module.compiled')\n).vendored['react-rsc']!.ReactJsxDevRuntime\n"],"names":["module","exports","require","vendored","ReactJsxDevRuntime"],"mappings":"AAAAA,OAAOC,OAAO,GACZC,QAAQ,4MACRC,QAAQ,CAAC,YAAY,CAAEC,kBAAkB","ignoreList":[0]}}]
+}
