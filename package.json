@@ -4,6 +4,7 @@
   "version": "0.2.3",
   "type": "module",
   "homepage": "https://i0ji.github.io/p_ioji",
+  "packageManager": "pnpm@10.25.0",
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
