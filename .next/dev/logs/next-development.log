@@ -1,0 +1,74 @@
+[00:00:17.101] Server  LOG     
+[00:00:17.101] Server  LOG        We detected TypeScript in your project and reconfigured your tsconfig.json file for you.
+[00:00:17.102] Server  LOG        The following suggested values were added to your tsconfig.json. These values can be changed to fit your project's needs:
+
+[00:00:17.102] Server  LOG        	- include was updated to add '.next/dev/types/**/*.ts'
+[00:00:17.102] Server  LOG     
+[00:00:17.103] Server  LOG        The following mandatory changes were made to your tsconfig.json:
+
+[00:00:17.103] Server  LOG        	- jsx was set to react-jsx (next.js uses the React automatic runtime)
+[00:00:17.103] Server  LOG     
+[00:00:19.822] Server  LOG      ✓ Ready in 13s
+[00:00:22.846] Server  LOG      ○ Compiling / ...
+[00:00:26.939] Server  ERROR    ⨯ ./src/app/globals.scss
+Error evaluating Node.js code
+Error: Can't find stylesheet to import.
+  ╷
+1 │ @forward 'reset';
+  │ ^^^^^^^^^^^^^^^^
+  ╵
+  src\styles\_index.scss 1:1  @use
+  src\app\globals.scss 1:1    root stylesheet
+Caused by: Error: Can't find stylesheet to import.
+  ╷
+1 │ @forward 'reset';
+  │ ^^^^^^^^^^^^^^^^
+  ╵
+  src\styles\_index.scss 1:1  @use
+  src\app\globals.scss 1:1    root stylesheet
+    [at Object.wrapException (C:\Users\adm.ivan.udodenko\Documents\scripts\01.PERSONAL\p_ioji\node_modules\.pnpm\sass@1.96.0\node_modules\sass\sass.dart.js:2337:47)]
+    [at C:\Users\adm.ivan.udodenko\Documents\scripts\01.PERSONAL\p_ioji\node_modules\.pnpm\sass@1.96.0\node_modules\sass\sass.dart.js:89252:25]
+    [at _wrapJsFunctionForAsync_closure.$protected (C:\Users\adm.ivan.udodenko\Documents\scripts\01.PERSONAL\p_ioji\node_modules\.pnpm\sass@1.96.0\node_modules\sass\sass.dart.js:5005:15)]
+    [at _wrapJsFunctionForAsync_closure.call$2 (C:\Users\adm.ivan.udodenko\Documents\scripts\01.PERSONAL\p_ioji\node_modules\.pnpm\sass@1.96.0\node_modules\sass\sass.dart.js:38489:12)]
+    [at _awaitOnObject_closure.call$1 (C:\Users\adm.ivan.udodenko\Documents\scripts\01.PERSONAL\p_ioji\node_modules\.pnpm\sass@1.96.0\node_modules\sass\sass.dart.js:38477:32)]
+    [at Object._rootRunUnary (C:\Users\adm.ivan.udodenko\Documents\scripts\01.PERSONAL\p_ioji\node_modules\.pnpm\sass@1.96.0\node_modules\sass\sass.dart.js:5423:18)]
+    [at StaticClosure.<anonymous> (C:\Users\adm.ivan.udodenko\Documents\scripts\01.PERSONAL\p_ioji\node_modules\.pnpm\sass@1.96.0\node_modules\sass\sass.dart.js:128327:16)]
+    [at _CustomZone.runUnary$2$2 (C:\Users\adm.ivan.udodenko\Documents\scripts\01.PERSONAL\p_ioji\node_modules\.pnpm\sass@1.96.0\node_modules\sass\sass.dart.js:39920:39)]
+    [at _Future__propagateToListeners_handleValueCallback.call$0 (C:\Users\adm.ivan.udodenko\Documents\scripts\01.PERSONAL\p_ioji\node_modules\.pnpm\sass@1.96.0\node_modules\sass\sass.dart.js:38978:51)]
+    [at Object._Future__propagateToListeners (C:\Users\adm.ivan.udodenko\Documents\scripts\01.PERSONAL\p_ioji\node_modules\.pnpm\sass@1.96.0\node_modules\sass\sass.dart.js:5215:93)]
+
+
+
+./src/app/page.module.scss
+Error evaluating Node.js code
+Error: Can't find stylesheet to import.
+  ╷
+1 │ @forward 'reset';
+  │ ^^^^^^^^^^^^^^^^
+  ╵
+  src\styles\_index.scss 1:1    @use
+  src\app\page.module.scss 1:1  root stylesheet
+Caused by: Error: Can't find stylesheet to import.
+  ╷
+1 │ @forward 'reset';
+  │ ^^^^^^^^^^^^^^^^
+  ╵
+  src\styles\_index.scss 1:1    @use
+  src\app\page.module.scss 1:1  root stylesheet
+    [at Object.wrapException (C:\Users\adm.ivan.udodenko\Documents\scripts\01.PERSONAL\p_ioji\node_modules\.pnpm\sass@1.96.0\node_modules\sass\sass.dart.js:2337:47)]
+    [at C:\Users\adm.ivan.udodenko\Documents\scripts\01.PERSONAL\p_ioji\node_modules\.pnpm\sass@1.96.0\node_modules\sass\sass.dart.js:89252:25]
+    [at _wrapJsFunctionForAsync_closure.$protected (C:\Users\adm.ivan.udodenko\Documents\scripts\01.PERSONAL\p_ioji\node_modules\.pnpm\sass@1.96.0\node_modules\sass\sass.dart.js:5005:15)]
+    [at _wrapJsFunctionForAsync_closure.call$2 (C:\Users\adm.ivan.udodenko\Documents\scripts\01.PERSONAL\p_ioji\node_modules\.pnpm\sass@1.96.0\node_modules\sass\sass.dart.js:38489:12)]
+    [at _awaitOnObject_closure.call$1 (C:\Users\adm.ivan.udodenko\Documents\scripts\01.PERSONAL\p_ioji\node_modules\.pnpm\sass@1.96.0\node_modules\sass\sass.dart.js:38477:32)]
+    [at Object._rootRunUnary (C:\Users\adm.ivan.udodenko\Documents\scripts\01.PERSONAL\p_ioji\node_modules\.pnpm\sass@1.96.0\node_modules\sass\sass.dart.js:5423:18)]
+    [at StaticClosure.<anonymous> (C:\Users\adm.ivan.udodenko\Documents\scripts\01.PERSONAL\p_ioji\node_modules\.pnpm\sass@1.96.0\node_modules\sass\sass.dart.js:128327:16)]
+    [at _CustomZone.runUnary$2$2 (C:\Users\adm.ivan.udodenko\Documents\scripts\01.PERSONAL\p_ioji\node_modules\.pnpm\sass@1.96.0\node_modules\sass\sass.dart.js:39920:39)]
+    [at _Future__propagateToListeners_handleValueCallback.call$0 (C:\Users\adm.ivan.udodenko\Documents\scripts\01.PERSONAL\p_ioji\node_modules\.pnpm\sass@1.96.0\node_modules\sass\sass.dart.js:38978:51)]
+    [at Object._Future__propagateToListeners (C:\Users\adm.ivan.udodenko\Documents\scripts\01.PERSONAL\p_ioji\node_modules\.pnpm\sass@1.96.0\node_modules\sass\sass.dart.js:5215:93)]
+
+Import trace:
+  Server Component:
+    ./src/app/page.module.scss
+    ./src/app/page.tsx
+
+
