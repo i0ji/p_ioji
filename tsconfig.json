@@ -24,13 +24,13 @@
       "@/*": ["src/*"],
       "public/*": ["public/"],
       "components/*": ["src/components/*"],
-      "services/*": ["src/services/*"],
+      "services/*": ["depricated/services/*"],
       "ui/*": ["src/components/ui/*"],
-      "data/*": ["src/data/*"],
+      "data/*": ["depricated/data/*"],
       "assets/*": ["src/assets/*"],
       "store/*": ["src/store/*"]
     },
-    "typeRoots": ["./src/services"]
+    "typeRoots": ["depricated/services"]
   },
   "include": [
     "**/*.ts",
@@ -41,7 +41,7 @@
     "build/types/**/*.ts",
     "commitlint.config.cjs",
     "src/components/Slides/Slides.tsx_copy",
-    "src/services/breakpoints"
+    "depricated/services/breakpoints"
   ],
   "exclude": ["node_modules"]
 }
