@@ -1,10 +1,13 @@
 I deicided to create my own page using ~~NEXT~~ React!
 
-0.3.0 ~~psykisk~~ test build:
+Tech stack: ```React 19, RTK, vite, framer-motion, pnpm,  commitlint/commitizen/husky, TS, SASS, tailwind, linter/prettier, postcss, swiper, clsx```;
 
-> <b>d: 13.01.26 v: 0.3.1 main markup set; simple pages and fullfilment; simple animations</b><br>
+<h2>Current version: 0.3.1 ~~psykisk~~ test build</h2>
+
+> <b>d: 13.01.26 v: 0.3.1 main markup set; simple pages and fullfilment; simple animations; set state, store, actions to implement themes changes - `now in progress`</b> <br>
 > <b>d: 12.01.26 v: 0.3.0 deps update; new `--orphan` branch; set up env</b><br>
 
+<hr>
 0.2.3 build:<br>
 
 > <b>d: 11.12.25 v: 0.2.3 deps update; deploy older version of interface with tailwind and css/scss updates</b><br>
@@ -25,7 +28,7 @@ I deicided to create my own page using ~~NEXT~~ React!
 > d: 31.03.25 v: 0.1.5.4b Chore/updates;<br>
 > d: 31.03.25 v: 0.1.5.4a Chore/updates;<br>
 
-> `React 19, RTK, vite, framer-motion, pnpm,  commitlint/commitizen/husky, TS, SASS, tailwind, linter/prettier, postcss, swiper, clsx`;<br>
+<hr>  
 
 <0.1 first build:<br>
 
