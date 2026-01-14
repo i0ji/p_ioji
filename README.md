@@ -2,6 +2,7 @@ I deicided to create my own page using ~~NEXT~~ React!
 
 0.3.0 ~~psykisk~~ test build:
 
+> <b>d: 13.01.26 v: 0.3.1 main markup set; simple pages and fullfilment; simple animations</b><br>
 > <b>d: 12.01.26 v: 0.3.0 deps update; new `--orphan` branch; set up env</b><br>
 
 0.2.3 build:<br>
