@@ -1,7 +1,7 @@
 {
   "name": "p_ioji",
   "private": true,
-  "version": "0.3.1",
+  "version": "0.3.2",
   "type": "module",
   "homepage": "https://i0ji.github.io/p_ioji",
   "packageManager": "pnpm@10.28.0",

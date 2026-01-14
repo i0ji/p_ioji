@@ -2,10 +2,12 @@ import Sidebar from "components/Sidebar";
 
 import { AnimatePresence, motion } from "framer-motion";
 import { About, Blog, Cat, Home, Portfolio } from "pages/index";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { useAppSelector } from "store/hooks";
 
 export default function App() {
   const [page, setPage] = useState<PageType>("home");
+  const themeMode = useAppSelector((s) => s.theme.mode);
 
   const renderPage = () => {
     switch (page) {
@@ -23,6 +25,10 @@ export default function App() {
         return <Home />;
     }
   };
+
+  useEffect(() => {
+    document.documentElement.dataset.theme = themeMode; // "light" | "dark"
+  }, [themeMode]);
 
   return (
     <div className="flex min-h-screen bg-gray-50 text-gray-800">
