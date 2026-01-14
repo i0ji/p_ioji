@@ -14,6 +14,7 @@ export default defineConfig({
       services: path.resolve(__dirname, "./src/services"),
       store: path.resolve(__dirname, "./src/store"),
       pages: path.resolve(__dirname, "./src/pages"),
+      styles: path.resolve(__dirname, "./src/styles"),
     },
   },
   plugins: [react(), tailwindcss()],

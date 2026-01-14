@@ -1,26 +1,47 @@
-import { Sidebar } from "components/index";
+import Sidebar from "components/Sidebar";
 
-import { About, Blog, Home } from "./pages/index";
-
+import { AnimatePresence, motion } from "framer-motion";
+import { About, Blog, Cat, Home, Portfolio } from "pages/index";
 import { useState } from "react";
 
-const pages = {
-  home: <Home />,
-  about: <About />,
-  blog: <Blog />,
-};
-
 export default function App() {
-  const [activePage, setActivePage] = useState("home");
+  const [page, setPage] = useState<PageType>("home");
+
+  const renderPage = () => {
+    switch (page) {
+      case "home":
+        return <Home />;
+      case "about":
+        return <About />;
+      case "cat":
+        return <Cat />;
+      case "blog":
+        return <Blog />;
+      case "portfolio":
+        return <Portfolio />;
+      default:
+        return <Home />;
+    }
+  };
 
   return (
-    <div className="app-container">
-      <main className="main-content">
-        {pages[activePage as keyof typeof pages] || <Home />}
+    <div className="flex min-h-screen bg-gray-50 text-gray-800">
+      <Sidebar activePage={page} setPage={setPage} />
+
+      <main className="relative ml-64 min-h-screen flex-1 overflow-hidden">
+        <AnimatePresence mode="wait">
+          <motion.div
+            key={page}
+            className="absolute inset-0"
+            initial={{ opacity: 0, x: 20 }}
+            animate={{ opacity: 1, x: 0 }}
+            exit={{ opacity: 0, x: -20 }}
+            transition={{ duration: 0.3 }}
+          >
+            {renderPage()}
+          </motion.div>
+        </AnimatePresence>
       </main>
-      <aside className="sidebar" role="complementary">
-        <Sidebar activePage={activePage} onPageChange={setActivePage} />
-      </aside>
     </div>
   );
 }

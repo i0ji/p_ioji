@@ -1,36 +1,40 @@
-interface SidebarProps {
-  activePage: string;
-  onPageChange: (page: string) => void;
-}
+import { motion } from "framer-motion";
 
-export default function Sidebar({ activePage, onPageChange }: SidebarProps) {
-  const navItems = [
-    { id: "home", label: "Главная", icon: "🏠" },
-    { id: "about", label: "Обо мне", icon: "👤" },
-    { id: "blog", label: "Блог", icon: "📝" },
-  ];
+export default function Sidebar({ activePage, setPage }) {
+  const menuItems: { id: PageType; label: string }[] = [
+    { id: "home", label: "Домашняя" },
+    { id: "about", label: "Обо мне" },
+    { id: "cat", label: "Кошка" },
+    { id: "portfolio", label: "Портфолио" },
+    { id: "blog", label: "Блог" },
+  ] as const;
 
   return (
-    <nav aria-label="Основная навигация" className="sidebar-nav">
-      <header className="h-card p-author">
-        <img src="/avatar.jpg" alt="Фото" className="u-photo" />
-        <h2 className="p-name">Имя Фамилия</h2>
-      </header>
-
-      <ul role="list">
-        {navItems.map((item) => (
-          <li key={item.id}>
-            <button
-              className={activePage === item.id ? "active" : ""}
-              onClick={() => onPageChange(item.id)}
-              aria-current={activePage === item.id ? "page" : undefined}
-            >
-              <span>{item.icon}</span>
-              {item.label}
-            </button>
-          </li>
+    <aside className="fixed top-0 left-0 flex h-screen w-64 flex-col border-r border-gray-800 bg-gray-900 p-6 text-white">
+      <h1 className="mb-10 text-2xl font-bold text-blue-400">welcome</h1>
+      <nav className="flex flex-col gap-4">
+        {menuItems.map((item) => (
+          <button
+            key={item.id}
+            onClick={() => setPage(item.id)}
+            className={`relative rounded-lg px-4 py-2 text-left transition-all duration-300 ${
+              activePage === item.id
+                ? "font-medium text-white"
+                : "text-gray-400 hover:bg-gray-800 hover:text-white"
+            }`}
+          >
+            {activePage === item.id && (
+              <motion.div
+                layoutId="active-bg"
+                className="absolute inset-0 -z-10 rounded-lg bg-blue-600"
+                initial={false}
+                transition={{ type: "spring", stiffness: 300, damping: 30 }}
+              />
+            )}
+            {item.label}
+          </button>
         ))}
-      </ul>
-    </nav>
+      </nav>
+    </aside>
   );
 }
