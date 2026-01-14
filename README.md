@@ -1,8 +1,12 @@
 I deicided to create my own page using ~~NEXT~~ React!
 
-Current build:<br>
+0.3.0 ~~psykisk~~ test build:
 
-> <b>d: 12.01.26 v: 0.1.6 deps update;</b><br>
+> <b>d: 13.01.26 v: 0.3.1 main markup set; simple pages and fullfilment; simple animations</b><br>
+> <b>d: 12.01.26 v: 0.3.0 deps update; new `--orphan` branch; set up env</b><br>
+
+0.2.3 build:<br>
+
 > <b>d: 11.12.25 v: 0.2.3 deps update; deploy older version of interface with tailwind and css/scss updates</b><br>
 > <b>d: 06.12.25 v: 0.2.0 critical update: next/react/tailwind configs;</b><br>
 > <b>d: 12.10.25 v: 0.1.6 deps update;</b><br>
@@ -23,7 +27,7 @@ Current build:<br>
 
 > `React 19, RTK, vite, framer-motion, pnpm,  commitlint/commitizen/husky, TS, SASS, tailwind, linter/prettier, postcss, swiper, clsx`;<br>
 
-Old build:<br>
+<0.1 first build:<br>
 
 > d: 11.03.25 v: 0.0.1 First commit, add deps, reset style, markup, aliases;<br>
 > d: 12.03.25 v: 0.0.1 Make preliminary style and folder structure; add glitch; set deploy to gh-pages;<br>
