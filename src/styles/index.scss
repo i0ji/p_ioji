@@ -1,5 +1,4 @@
 @forward "reset";
 @forward "mixin";
-
-@use "font";
-@use "themes";
+@forward "themes";
+@forward "font";

@@ -16,7 +16,7 @@ export default function Toggle() {
         //LATER
         //FIXME
         checked={themeMode === "dark"}
-        onChange={() => {
+        onClick={() => {
           dispatch(toggleTheme());
           console.log(themeMode);
         }}
