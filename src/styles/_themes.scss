@@ -1,14 +1,23 @@
-@use "./colors" as c;
+$brand_main: #252617;
+$accent_one: #58733d;
+$accent_two: #41592f;
+$accent_three: #d9aa8f;
+$brand_light: #f2f2f2;
 
 @layer base {
   :root {
     --token-bg: #f9fafb;
     --token-fg: #1f2937;
+    
+    --token-accent-1: #{c.$accent_one};
+    --token-accent-2: #{c.$accent_two};
+    --token-accent-3: #{c.$accent_three};
   }
 
   [data-theme="light"] {
     --token-bg: #{c.$brand_main};
     --token-fg: #{c.$brand_light};
+
     --token-accent-1: #{c.$accent_one};
     --token-accent-2: #{c.$accent_two};
     --token-accent-3: #{c.$accent_three};
@@ -17,5 +26,9 @@
   [data-theme="dark"] {
     --token-bg: #0b1220;
     --token-fg: #e5e7eb;
+
+    --token-accent-1: #{c.$accent_one};
+    --token-accent-2: #{c.$accent_two};
+    --token-accent-3: #{c.$accent_three};
   }
 }
