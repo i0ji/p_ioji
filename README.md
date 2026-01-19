@@ -1,9 +1,11 @@
 I deicided to create my own page using ~~NEXT~~ React!
 
-Tech stack: ```React 19, RTK, vite, framer-motion, pnpm,  commitlint/commitizen/husky, TS, SASS, tailwind, linter/prettier, postcss, swiper, clsx```;
+Stack: ```React 19, RTK, vite, framer-motion, pnpm,  commitlint/commitizen/husky, TS, SASS, tailwind, linter/prettier, postcss, swiper, clsx```;
 
 <h2>Current version: 0.3.1 ~~psykisk~~ test build</h2>
 
+> <b>d: 19.01.26 v: 0.3.3 deps update;</b><br>
+> <b>d: 14.01.26 v: 0.3.3 theme toggle set; set state management;</b><br>
 > <b>d: 13.01.26 v: 0.3.1 main markup set; simple pages and fullfilment; simple animations; set state, store, actions to implement themes changes - `now in progress`</b> <br>
 > <b>d: 12.01.26 v: 0.3.0 deps update; new `--orphan` branch; set up env</b><br>
 
