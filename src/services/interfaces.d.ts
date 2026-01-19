@@ -4,13 +4,5 @@ interface SidebarProps {
 }
 
 interface ThemeModel {
-  mode: 'light' | 'dark';
-}
-
-//LATER
-interface ProjectsStateModel {
-  projects: SlidesDataModel[];
-  error: string | null;
-  pending: boolean;
-  loaded: boolean;
+  mode: "light" | "dark";
 }

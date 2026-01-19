@@ -7,7 +7,7 @@ import { useAppSelector } from "store/hooks";
 
 export default function App() {
   const [page, setPage] = useState<PageType>("home");
-  const themeMode = useAppSelector((s) => s.theme.mode);
+  const mode = useAppSelector((s) => s.theme.mode);
 
   const renderPage = () => {
     switch (page) {
@@ -27,11 +27,11 @@ export default function App() {
   };
 
   useEffect(() => {
-    document.documentElement.dataset.theme = themeMode; // "light" | "dark"
-  }, [themeMode]);
+    document.documentElement.dataset.theme = mode;
+  }, [mode]);
 
   return (
-    <div className="flex min-h-screen bg-gray-50 text-gray-800">
+    <div className="flex min-h-screen bg-bg text-gray-800">
       <Sidebar activePage={page} setPage={setPage} />
 
       <main className="relative ml-64 min-h-screen flex-1 overflow-hidden">
