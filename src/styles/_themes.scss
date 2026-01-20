@@ -1,34 +1,38 @@
-$brand_main: #252617;
-$accent_one: #58733d;
-$accent_two: #41592f;
-$accent_three: #d9aa8f;
-$brand_light: #f2f2f2;
+$light_bg: #F8FAF8;
+$light_fg: #1A2F2A;
+$light_accent_1: #58733d;
+$light_accent_2: #41592f;
+$light_accent_3: #d9aa8f;
+
+$dark_bg: #010221;
+$dark_fg: #0A7373;
+$dark_accent_1: #B7BF99;
+$dark_accent_2: #EDAA25;
+$dark_accent_3: #C43302;
+
 
 @layer base {
   :root {
-    --token-bg: #f9fafb;
-    --token-fg: #1f2937;
-
-    --token-accent-1: #{$accent_one};
-    --token-accent-2: #{$accent_two};
-    --token-accent-3: #{$accent_three};
-  }
-
-  [data-theme="light"] {
-    --token-bg: yellow;
-    --token-fg: #{$brand_light};
-
-    --token-accent-1: #{$accent_one};
-    --token-accent-2: #{$accent_two};
-    --token-accent-3: #{$accent_three};
+    --token-bg: #{$light_bg};
+    --token-fg: #{$light_fg};
+    --token-accent-1: #{$light_accent_1};
+    --token-accent-2: #{$light_accent_2};
+    --token-accent-3: #{$light_accent_3};
   }
 
   [data-theme="dark"] {
-    --token-bg: red;
-    --token-fg: #e5e7eb;
+    --token-bg: #{$dark_bg};
+    --token-fg: #{$dark_fg};
+    --token-accent-1: #{$dark_accent_1};
+    --token-accent-2: #{$dark_accent_2};
+    --token-accent-3: #{$dark_accent_3};
+  }
 
-    --token-accent-1: #{$accent_one};
-    --token-accent-2: #{$accent_two};
-    --token-accent-3: #{$accent_three};
+  [data-theme="light"] {
+    --token-bg: #{$light_bg};
+    --token-fg: #{$light_fg};
+    --token-accent-1: #{$light_accent_1};
+    --token-accent-2: #{$light_accent_2};
+    --token-accent-3: #{$light_accent_3};
   }
 }

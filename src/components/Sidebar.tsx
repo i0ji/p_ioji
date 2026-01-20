@@ -1,5 +1,6 @@
 import Toggle from "./Toggle";
 
+import clsx from "clsx";
 import { motion } from "framer-motion";
 import { useEffect } from "react";
 import { useAppSelector } from "store/hooks";
@@ -21,7 +22,11 @@ export default function Sidebar({ activePage, setPage }) {
   }, [themeMode]);
 
   return (
-    <aside className="fixed top-0 left-0 flex h-screen w-64 flex-col border-r border-gray-800 bg-gray-900 p-6 text-white">
+    <aside className={clsx(
+      "fixed top-0 left-0",
+      "flex h-screen w-64 p-6 flex-col",
+      "border-r border-accent-1 bg-fg text-white"
+      )}>
       <h1 className="mb-10 text-2xl font-bold">welcome</h1>
       <Toggle />
       <nav className="flex flex-col gap-4">

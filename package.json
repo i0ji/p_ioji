@@ -1,7 +1,7 @@
 {
   "name": "p_ioji",
   "private": true,
-  "version": "0.3.3",
+  "version": "0.3.4",
   "type": "module",
   "homepage": "https://i0ji.github.io/p_ioji",
   "packageManager": "pnpm@10.28.1",
@@ -62,7 +62,7 @@
     "swiper": "^12.0.3",
     "tailwindcss": "^4.1.17",
     "typescript": "~5.9.3",
-    "typescript-eslint": "^8.53.0",
+    "typescript-eslint": "^8.53.1",
     "vite": "^7.3.1"
   }
 }
