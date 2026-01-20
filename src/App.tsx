@@ -31,7 +31,7 @@ export default function App() {
   }, [mode]);
 
   return (
-    <div className="flex min-h-screen bg-bg text-gray-800">
+    <div className="flex min-h-screen bg-bg text-fg">
       <Sidebar activePage={page} setPage={setPage} />
 
       <main className="relative ml-64 min-h-screen flex-1 overflow-hidden">

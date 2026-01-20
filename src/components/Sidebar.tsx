@@ -22,13 +22,14 @@ export default function Sidebar({ activePage, setPage }) {
   }, [themeMode]);
 
   return (
-    <aside className={clsx(
-      "fixed top-0 left-0",
-      "flex h-screen w-64 p-6 flex-col",
-      "border-r border-accent-1 bg-fg text-white"
-      )}>
-      <h1 className="mb-10 text-2xl font-bold">welcome</h1>
-      <Toggle />
+    <aside
+      className={clsx(
+        "fixed top-0 left-0",
+        "flex h-screen w-64 flex-col justify-between p-6",
+        "border-accent-1 bg-fg border-r text-white",
+      )}
+    >
+      <h1 className="mb-10 text-2xl font-bold text-accent-2">Salute!</h1>
       <nav className="flex flex-col gap-4">
         {menuItems.map((item) => (
           <button
@@ -43,7 +44,7 @@ export default function Sidebar({ activePage, setPage }) {
             {activePage === item.id && (
               <motion.div
                 layoutId="active-bg"
-                className="absolute inset-0 -z-10 rounded-lg bg-blue-600"
+                className="absolute inset-0 -z-10 rounded-lg bg-accent-3"
                 initial={false}
                 transition={{ type: "spring", stiffness: 300, damping: 30 }}
               />
@@ -52,6 +53,7 @@ export default function Sidebar({ activePage, setPage }) {
           </button>
         ))}
       </nav>
+      <Toggle />
     </aside>
   );
 }
