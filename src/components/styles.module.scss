@@ -1,43 +1,50 @@
 @use "styles/mixin" as *;
 
 .toggle {
-  // background-color: white;
+  position: relative;
+
   @include flex(null, center, flex-end);
 
-  height: 5%;
+  width: fit-content;
+  height: 3rem;
 
-  font-size: 11px;
+  padding: 8px;
+
+  font-size: 1rem;
   line-height: 15px;
+
+  border: 1px solid red;
 
   input[type="checkbox"] {
     display: none;
   }
 
   label {
-    position: relative;
     cursor: pointer;
   }
 
   input[type="checkbox"] + label::before {
     position: absolute;
-    top: -20px;
-    left: 14px;
+    top: 0px;
+    left: 0px;
+
+    @apply bg-red-600;
 
     display: block;
 
     height: 21px;
-    width: 45px;
+    width: 70px;
 
     border: 1px solid var(--token-accent-2);
-    border-radius: 5px;
+    border-radius: 16px;
 
     content: " ";
   }
 
   input[type="checkbox"] + label::after {
     position: absolute;
-    top: -17px;
-    left: 17px;
+    top: 3px;
+    left: 3px;
 
     display: block;
 
@@ -45,7 +52,7 @@
     width: 15px;
 
     border: 1px solid var(--token-accent-2);
-    border-radius: 5px;
+    border-radius: 50%;
 
     background: var(--token-accent-2);
     transition: all 0.3s ease-in;
@@ -54,7 +61,7 @@
   }
 
   input[type="checkbox"]:checked + label::after {
-    left: 41px;
+    left: 52px;
     transition: all 0.3s ease-in;
     background: var(--token-accent-2);
   }

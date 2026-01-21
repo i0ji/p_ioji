@@ -29,7 +29,7 @@ export default function Sidebar({ activePage, setPage }) {
         "border-accent-1 bg-fg border-r text-white",
       )}
     >
-      <h1 className="mb-10 text-2xl font-bold text-accent-2">Salute!</h1>
+      <h1 className="p-2 text-2xl font-bold text-accent-2">Salute!</h1>
       <nav className="flex flex-col gap-4">
         {menuItems.map((item) => (
           <button

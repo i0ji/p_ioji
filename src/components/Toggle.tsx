@@ -13,13 +13,13 @@ export default function Toggle() {
         type="checkbox"
         id="temp"
         checked={themeMode === "dark"}
-        onClick={() => {
+        onChange={() => {
           dispatch(toggleTheme());
           console.log(themeMode);
         }}
       />
-      <label className="text-fg" htmlFor="temp">
-        {themeMode === "dark" ? `светлая` : `тёмная`} тема
+      <label className={styles.light_label} htmlFor="temp">
+        {themeMode === "dark" ? `Олива` : `Мята`}
       </label>
     </div>
   );
