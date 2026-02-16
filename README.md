@@ -4,6 +4,8 @@ I decided to create my own page using ~~NEXT~~ React!
 ```React 19, RTK, vite, framer-motion, pnpm,  commitlint/commitizen/husky, TS, SASS, tailwind, linter/prettier, postcss, swiper, clsx```;
 <h3>Commit / process history:</h3>          
 <details><summary><b>Current version: 0.3.1 ~~psykisk~~ test build</b></summary>
+d: 16.02.26 v: 0.3.4 deps update;<br>
+d: 12.02.26 v: 0.3.4 deps & docs update; vulerabilities check;
 d: 19.01.26 v: 0.3.3 deps update;<br>
 d: 14.01.26 v: 0.3.3 theme toggle set; set state management;<br>
 d: 13.01.26 v: 0.3.1 main markup set; simple pages and fullfilment; simple animations; set state, store, actions to implement themes changes - `now in progress`<br>
@@ -31,7 +33,7 @@ d: 31.03.25 v: 0.1.5.4a Chore/updates;<br>
 </details>
 <hr>
 <details> 
-<summary><b><0.1 first build:<br></b></summary>
+<summary><b> &lt;0.1 first build: </b></summary>
 d: 11.03.25 v: 0.0.1 First commit, add deps, reset style, markup, aliases;<br>
 d: 12.03.25 v: 0.0.1 Make preliminary style and folder structure; add glitch; set deploy to gh-pages;<br>
 d: 13.03.25 v: 0.0.2 Set paths, glitch effect + dart sass 3 adaptation;<br>
